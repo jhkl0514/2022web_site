@@ -40,8 +40,38 @@
         .visual{width: 1440px; height: 643px; margin: 0 auto; padding-top: 230px;}
         .visual>h2{font-size:50px; color:white;  }
 
-        /* section */
-        .section{background-color: pink; width: 1440px; height: 300px; margin: 0 auto;}
+        /* section 1st */
+        .sec_1st{width: 1440px; margin: 0 auto; background-color: skyblue; padding: 120px 0 60px 0;}
+        .sec_1st>h2{
+            margin: 0 auto;text-align: center; font-size: 40px; line-height: 45px;
+            margin-bottom: 50px;
+        }  /* 마진을 두번 써도 되는데 마진 0 쭉 실행후 50실행 */
+        
+        .sec_1st>.content{}
+        /* .sec_1st>.content>div{float: left; width: 454.666px; background-color: pink; margin-right: 38px;} */
+        .sec_1st>.content>div{float: left; width: 701px;  margin-right: 38px;}
+        .sec_1st>.content>div:last-child{margin-right: 0;}
+        /* .sec_1st>.content>div:first-child{margin-right: 38px;} */
+        /* .sec_1st>.content>div{float:left; width: 701px; background-color: pink; margin-right: 38px;} */
+        /* .sec_1st>.content>div:last-child{margin-right: 0;} */
+        /* .sec_1st>.content>div:nth-child(2){margin-right: 0;} 자식 몇번째 컨텐츠*/
+        /* .sec_1st>.content>div.conRight{float: right;} 3개일 경우는 쓰기 힘듬*/
+        /* .sec_1st>.content>div.conLeft{margin-right: 38px;} */
+
+        .sec_1st .conLeft>div{float: left;}
+        /* 바로 위 자손이기 때문에  빈칸하나를 둔다. */
+
+        .sec_1st .conItem>div{float: left;}
+        .sec_1st .conItem>div.img{
+            background-color: #f6f6f6;
+            border-radius:81px ;
+            margin-right: 40px;
+        }
+        .sec_1st .conItem>div.img>img{display: block;}
+        /* 이미지를 블럭단위로 만들어야 꽉참 */
+        .sec_1st .conItem>div.textWrap{padding-top: 30px;}
+        .sec_1st .conItem>div.textWrap>h3{font-size: 22px; margin-bottom: 10px;}
+        .sec_1st .conItem>div.textWrap>p{font-size: 18px; color: #7c7c7c;}
 
     </style>
 </head>
@@ -64,6 +94,80 @@
         </div>
     </div>
 
-    <section class="section"></section>
+    
+    <section class="sec_1st">
+        <h2>해외 마켓 전문가가<br>수출을 도와드립니다</h2>
+
+        <div class="content clearfix">
+           
+            <!-- 아마존 입점 시작 -->
+            <div class="conItem clearfix">
+                <div class="img"><img src="images/logo_amazon.png" alt=""></div>
+                <div class="textWrap">
+                    <h3>아마존 입점</h3>
+                    <p>전 세계 3억명의 아마존 고객을 대상으로<br>
+                        고객사의 온라인 스토어를 오픈 및 운영 대행</p>
+                </div>
+            </div>
+            <!-- 아마존 입점 끝 -->
+
+            <!-- 알리바바 입점 시작 -->
+            <div class="conItem clearfix">
+                <div class="img"><img src="images/logo_alibaba.png" alt=""></div>
+                <div class="textWrap">
+                    <h3>아마존 입점</h3>
+                    <p>전 세계 3억명의 아마존 고객을 대상으로<br>
+                        고객사의 온라인 스토어를 오픈 및 운영 대행</p>
+                </div>
+            </div>
+            <!-- 알리바바 입점 끝 -->
+            
+            <!-- <div class="conRight">3</div> -->
+        </div>
+
+
+        <section class="sec_1st">
+            <h2>해외 마켓 전문가가<br>수출을 도와드립니다</h2>
+    
+            <div class="content clearfix">
+               
+                <!-- 쇼핑몰 제작 시작 -->
+                <div class="conItem clearfix">
+                    <div class="img"><img src="images/logo_amazon.png" alt=""></div>
+                    <div class="textWrap">
+                        <h3>아마존 입점</h3>
+                        <p>전 세계 3억명의 아마존 고객을 대상으로<br>
+                            고객사의 온라인 스토어를 오픈 및 운영 대행</p>
+                    </div>
+                </div>
+                <!-- 쇼핑몰 제작 끝 -->
+    
+                <!-- 국내몰 운영 시작 -->
+                <div class="conItem clearfix">
+                    <div class="img"><img src="images/logo_alibaba.png" alt=""></div>
+                    <div class="textWrap">
+                        <h3>아국내몰 운영</h3>
+                        <p>전 세계 3억명의 아마존 고객을 대상으로<br>
+                            고객사의 온라인 스토어를 오픈 및 운영 대행</p>
+                    </div>
+                </div>
+                <!-- 국내몰 운영 끝 -->
+                
+                <!-- <div class="conRight">3</div> -->
+            </div>
+    </section>
+
+    <!-- 버튼 만들기
+    <style>
+        .button{
+            background-color: pink;
+            padding: 20px 50px;
+            display:inline-block;
+            border-radius: 30px;
+        }
+    </style>
+    <div class="button">상담하기</div> -->
+    
+
 </body>
 </html>
