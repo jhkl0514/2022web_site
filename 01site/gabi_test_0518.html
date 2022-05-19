@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
     <style>
         /* reset */
         *{margin: 0; padding: 0;}
@@ -20,7 +24,7 @@
         a:hover{color:#333}
         
         body{
-            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif; 
         }
 
         /* header */
@@ -34,9 +38,9 @@
         }
 
         /* visual */
-        .visualWrap{
+        /* .visualWrap{
             height: 643px; background-image: url(images/210616_bg.jpg);
-        }
+        } */
         .visual{width: 1440px; height: 643px; margin: 0 auto; padding-top: 230px;}
         .visual>h2{font-size:50px; color:white;  }
 
@@ -44,10 +48,10 @@
         .sec_1st{width: 1440px; margin: 0 auto; padding: 120px 0 50px 0;
                 }
         .sec_1st>h2{margin: 0; font-size: 40px; text-align: center;
-                    line-height: 45px; margin-bottom: 50px;     
+                    line-height: 45px; margin-bottom: 50px;      
                    }
         
-        .sec_1st>.content{}
+        .sec_1st>.content{padding: 70px 0 70px 0;}
         .sec_1st>.content>div{float: left; width: 701px; margin-right: 38px;}
         .sec_1st>.content>div:last-child{margin-right: 0;}
         .sec_1st .conItem>div{float: left;}
@@ -57,7 +61,43 @@
         .sec_1st .conItem>.textWrap>h3{font-size: 22px; margin-bottom: 10px;}
         .sec_1st .conItem>.textWrap>p{font-size: 18px; color: #7c7c7c;}
 
+
+        /* section 2st */
+        .bg1{background-color: #f6f6f6; padding: 120px 0 120px 0;}
+        .sec_2st{width: 1440px; margin: 0 auto;}
+        .sec_2st h2{font-size: 40px; line-height: 45px;}
+        .sec_2st>.left{width: 440px; float: left;}
+        .sec_2st>.right{width: 1000px; float: left;}
+        .sec_2st>.right li{float: left; margin-right: 16px; margin-bottom: 16px;}
+        .sec_2st>.right li:nth-child(2), .sec_2st>.right li:nth-child(4) {margin-right: 0;}
+        .sec_2st>.right li:last-child {width: 100%; margin-bottom: 0;}
+
+        /* tel */
+        .telWrap{background-image: url(images/bg_ask.jpg); height: 329px;}
+     
+
+        /* common */
+
+        /* bislide */
+        .bx-wrapper {
+            -moz-box-shadow: 0 0 0 #ccc;
+            -webkit-box-shadow: 0 0 0 #ccc;
+            box-shadow: 0 0 0 #ccc;
+            border: none;            
+        }
+
     </style>
+    <script>
+        $(document).ready(function(){
+            $(".slider").bxSlider( {
+                // mode:"vertical",
+                // pager:false,
+                // controls:false,
+                auto:true
+            })
+        })
+    </script>
+
 </head> 
 <body>
     <header class="headerWrap clearfix">
@@ -72,10 +112,19 @@
         </nav>
     </header>
 
-    <div class="visualWrap">
+    <!-- <div class="visualWrap">
         <div class="visual">
             <h2>중소벤처기업진흥공단<br>온라인수출지원사업</h2>
         </div>
+    </div> -->
+
+    <!-- 슬라이드 -->
+    <div class="visualWrap">
+        <ul class="slider">
+            <li><img src="images/210616_bg.jpg" alt=""></li>
+            <li><img src="images/210616_bg.jpg" alt=""></li>
+            <li><img src="images/210616_bg.jpg" alt=""></li>
+        </ul>
     </div>
 
     <section class="sec_1st">
@@ -125,5 +174,31 @@
             </div>
         </div>
     </section>
+    
+    <section class="bg1">
+        <section class="sec_2st clearfix">
+            <div class="left">
+                <h2>가비아 글로벌이<br>더 특별한 이유</h2>
+            </div>
+            <div class="right">
+                <ul class="clearfix">
+                    <li><img src="images/banner1.png" alt=""></li>
+                    <li><img src="images/banner1.png" alt=""></li>
+                    <li><img src="images/banner1.png" alt=""></li>
+                    <li><img src="images/banner1.png" alt=""></li>
+                    <li><img src="images/banner2.png" alt=""></li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+    <div class="telWrap">
+        <div class="tel">
+            <h2>간단한 궁금증이라도 지금 바로 확인해보세요</h2>
+            <p>가비아CNS의 해외 마켓 전문가가 답변을 드립니다.</p>
+            <p>070-4331-5361</p>
+        </div>
+    </div>
+    
 </body>
 </html>
