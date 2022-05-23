@@ -48,19 +48,24 @@
         .visual>h2{font-size:50px; color:white;  }
         .visualWrap .txtWrap{
             position: absolute;
-            left:220px; top:200px;
+            left:220px; top:100px;
             color: #fff;
         }
 
         
 
-        .visualWrap .txtWrap h2{margin-bottom: 10px;}
-        .visualWrap .txtWrap p{margin-bottom: 10px;}
+        .visualWrap .txtWrap h2{margin-bottom: 10px; }
+        .visualWrap .txtWrap p{margin-bottom: 10px; padding: 30px 0 30px 0;}
         .visualWrap .txtWrap .btn{
             display:inline-block; padding: 10px 40px;
             border-radius:21px;
             border: 1px solid #fff;
             color: #fff; transition: 0.3s;
+        }
+
+        .visualWrap .txtWrap .btn:hover{
+            background-color: #fff;
+            color:#000;
         }
 
         
@@ -111,10 +116,94 @@
 
 
         /* tel */
-        .telWrap{background-image: url(images/bg_ask.jpg); height: 392px; width: 100%;}
+        .telWrap{
+            background-image: url(images/bg_ask.jpg); height: 392px; width: 100%;
+            margin-bottom: 140px;
+        }
         .tel{width: 1400px; margin: 0 auto; text-align: center; color: #fff;}        
         .tel>p{font-size: 20px; margin: 20px 0 20px 0;}
         .tel>.font40{font-size: 40px;}
+        
+        .telWrap .tel .btn{
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            padding: 10px 40px;
+            border-radius: 21px;
+            border: 1px solid #fff;
+            color: #fff; transition: 0.3s;
+        }
+
+        .telWrap .tel .btn:hover{
+            background-color: #fff;
+            color: #000;
+        }
+
+
+        /* notice */
+        .noticeWrap {            
+            
+        }
+        .notice{
+           width: 1400px; margin: 0 auto;
+           margin-bottom: 100px;           
+
+        }
+
+        
+
+        .notice h2{
+           padding-bottom: 47px;
+
+        }
+
+        .notice .new_list{
+                      
+        }
+        .notice .new_list li{
+            float:left;
+            margin-right: 30px;
+            width: calc( ( 1400px - 90px ) / 4 ) ;
+            
+            
+        }
+        .notice .new_list li:last-child{margin-right: 0; }
+        .notice .new_list .tag ul{float: left;}
+        .notice .new_list p{margin-bottom: 8px;}
+        .notice .new_list .btn{
+            display:inline-block; padding: 4px 6px;
+            font-size: 12px;
+            border-radius:5px;
+            border: 1px solid #7c7c7c;
+            transition: 0.3s; 
+            
+        }
+
+        .notice .new_list .btn:hover{            
+            color:#000;
+        }
+
+        .notice .new_list p .txtbtn{
+            display:inline-block;
+            font-size: 16px; font-weight: bold;
+            color: #222;
+            line-height: 20px;
+            padding: 12px 0;              
+           
+        }
+
+        .notice .new_list .txtbtn:hover{            
+            color:#000;
+            text-decoration:underline; 
+        }
+        
+        .notice .new_list .date{
+            color: #666;
+            font-size: 12px;
+        }
+
+        
+        
 
        
 
@@ -131,7 +220,12 @@
             -moz-box-shadow: 0 0 0 #ccc;
             -webkit-box-shadow: 0 0 0 #ccc;
             box-shadow: 0 0 0 #ccc;
-            border: 0 none;        
+            border: 0 none;
+            margin-bottom:0;        
+        }
+
+        .bx-wrapper .bx-pager{
+            bottom: 30px;
         }
 
     </style>
@@ -165,14 +259,31 @@
         <ul class="slider">
             <li>
                 <div class="txtWrap">
-                    <h2>중소벤처기업진흥공단<br>온라인수출지원사업 수행기관 선정</h2>
-                    <p>2016년부터 7년 연속 선정, 가비아CNS</p>
-                    <a href="#" class="btn">제세히보기</a>
+                    <p><img src="./images/210616_logo.png" alt=""></p>
+                    <h2>알리바바닷컴<br>GGS 멤버쉽 할인</h2>
+                    <p>골드서프라이어(GGS) 멤버쉽 및 GGS플러스 멤버쉽 단기 할인 프로모션</p>
+                    <a href="#" class="btn">자세히보기</a>
                 </div>
                 <img src="images/210616_bg.jpg" alt="">
             </li>
-            <li><img src="images/210616_bg.jpg" alt=""></li>
-            <li><img src="images/210616_bg.jpg" alt=""></li>
+            <li>
+                <div class="txtWrap">
+                    <p><img src="./images/210616_logo.png" alt=""></p>
+                    <h2>중소벤처기업진흥공단<br>온라인수출지원사업 수행기관 선정</h2>
+                    <p>2016년부터 7년 연속 선정, 가비아CNS</p>
+                    <a href="#" class="btn">자세히보기</a>
+                </div>
+                <img src="images/210616_bg.jpg" alt="">
+            </li>
+            <li>
+                <div class="txtWrap">
+                    <p><img src="./images/210616_logo.png" alt=""></p>
+                    <h2>중소벤처기업진흥공단<br>온라인수출지원사업 수행기관 선정</h2>
+                    <p>2016년부터 7년 연속 선정, 가비아CNS</p>
+                    <a href="#" class="btn">자세히보기</a>
+                </div>
+                <img src="images/210616_bg.jpg" alt="">
+            </li>
         </ul>
     </div>
 
@@ -262,6 +373,55 @@
             <h2>간단한 궁금증이라도 지금 바로 확인해보세요</h2>
             <p>가비아CNS의 해외 마켓 전문가가 답변을 드립니다.</p>
             <p class="font40">070-4331-5361</p>
+            <a href="#" class="btn">상담하기</a>
+        </div>
+    </div>
+
+    <!-- Notice -->
+    
+    <div class="noticeWrap">
+        <div class="notice">
+            <h2>가비아 글로벌의 새소식</h2>
+            <div class="new_list">
+                <ul class="clearfix">
+                    <li>
+                        <p><img src="images/notice_01.jpg" alt=""></p>
+                        <div class="tag clearfix">
+                            <a href="#" class="btn">새소식</a>
+                            <a href="#" class="btn">공지</a>
+                        </div>
+                        <p><a href="#" class="txtbtn">소상공인 누구나 완판셀러에 도전하세요!</a></p>
+                        <span class="date">2022.04.25</span>     
+                    </li>
+                    <li>
+                        <p><img src="images/notice_02.jpg" alt=""></p>
+                        <div class="tag clearfix">
+                            <a href="#" class="btn">새소식</a>
+                            <a href="#" class="btn">공지</a>
+                        </div>
+                        <p><a href="#" class="txtbtn">2022년 북미 지역 (아마존) 수출 참여 기업 모집!<br> 문의 전화 070-4331-5317</a></p>
+                        <span class="date">2022.04.25</span>     
+                    </li>
+                    <li>
+                        <p><img src="images/notice_03.jpg" alt=""></p>
+                        <div class="tag clearfix">
+                            <a href="#" class="btn">새소식</a>
+                            <a href="#" class="btn">공지</a>
+                        </div>
+                        <p><a href="#" class="txtbtn">RCEP 활용 & 알리바바 진출 전략 웨비나</a></p>
+                        <span class="date">2022.04.25</span>     
+                    </li>
+                    <li>
+                        <p><img src="images/notice_04.jpg" alt=""></p>
+                        <div class="tag clearfix">
+                            <a href="#" class="btn">새소식</a>
+                            <a href="#" class="btn">공지</a>
+                        </div>
+                        <p><a href="#" class="txtbtn">Go Global Go Export 알리바바 웨비나<br> 3월 3일 개최!</a></p>
+                        <span class="date">2022.04.25</span>     
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
