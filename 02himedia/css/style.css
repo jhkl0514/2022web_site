@@ -14,9 +14,11 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 .topMenu li:last-child:after{display: none;}
 .topMenu li a{display: block; padding: 7px 10px; font-size: 12px; line-height: 12px;}
 
-#headerWrap h1{margin: 0 auto; width: 151px; margin-bottom: 16px;}
-#headerWrap h1 a{color:#333}
+.logoWrap{width: 980px; margin: 0 auto;}
+#headerWrap .logoWrap h1{margin: 0 auto; width: 151px; margin-bottom: 16px;}
+#headerWrap .logoWrap h1 a{color:#333}
 
+/* 칼큰 시작*/
 #headerWrap .toggle{
     width: 48px; height: 48px;
     border: 1px solid #cdcdcd;
@@ -35,6 +37,8 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 }
 .toggle div:first-child{top:calc( 50% - 9px)}
 .toggle div:last-child{top:calc( 50% + 7px)}
+/* 칼큰 */
+
 
 /* #navbarWrap{background-color: #1D5DA4;}
 #navbarWrap .navbar{width: 980px;margin: 0 auto; height: 45px; margin-top: 14px;}
@@ -68,4 +72,33 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 }
 
 
+/* visual */
+.visualWrap{
+    /* background-image: url(../images/main_bg01.jpg); */
+    /* background-repeat: no-repeat; */
+    /* 반복을 안한다 */
+    /* background-position: 0 0; */
+    /* 백그라운 안에서 떨어진다. */
+    /* background-position: center; */
+    /* background-color: #213C6B; */
+    background: #213C6B url(../images/main_bg01.jpg) no-repeat center;
+    /* 축약형 : 순서 지켜라 */
+}
+.visualWrap .visual{
+    width: 980px; height: 400px;margin: 0 auto; position: relative;
+    overflow: hidden; 
+    /* 짤라내는거 */
+}
+.visualWrap .visual .txt{
+    position: absolute; top: 100px;
+    color: #EFF0EE; font-size: 20px;
+}
+.visualWrap .visual h3{
+    line-height: 80px; font-size: 76.6px; letter-spacing: 0.34em;
+    /* color:#EFF0EE; position: absolute; top: 120px; */
+    margin-bottom: 10px;
+}
+.visualWrap .visual img{position: absolute; right: 0;}
+
+.box {background-color: red; width: 100%; height: 100px;}
 
