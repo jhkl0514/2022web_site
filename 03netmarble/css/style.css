@@ -2,8 +2,8 @@
 
 body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
 
-.headerWrap{width: 980px; margin: 0 auto;}
-.headerWrap .logoWrap{float:left; margin: 21px 0 0 32px;}
+.headerWrap{width: 1280px; margin: 0 auto;}
+.headerWrap .logoWrap{float:left;width: 400px; margin: 21px 0 0 32px ;}
 
 .mainMenu ul{float: right; width: 510px;}
 .mainMenu ul li{
@@ -15,11 +15,50 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
 
 .visualWrap{margin: 0 auto;}
 .visualWrap ul{}
-.visualWrap li{width: 100%; height: 1080px; }
+.visualWrap li{ }
 .visualWrap .txtWrap{
-    margin: 0 auto; 
-    width: 1216px;
-    color: #fff;
+    width: 100%; height: 1080px;
+    margin: 0 auto; width: 1216px; color: #fff; padding-top: 320px;
+    margin-bottom: 132px;
 }
-.visualWrap h2{font-size:80px; font-weight: 700; letter-spacing: -2.6px;}
+.visualWrap .txt{}
+.visualWrap h2{
+    font-size:80px; font-weight: 700; letter-spacing: -2.6px; padding-bottom: 34px;
+}
+.section .sec01{position: relative}
+.section .sec01 h3{    
+    font-size: 44px; font-weight: 700; line-height: 1.41;
+    letter-spacing: -2px; text-indent: -2px; padding-bottom:25px ;
+}
+.section .sec01 p:after {
+    content: "";position: absolute; bottom: 0; left: 0; width: 70px; height: 5px;
+    background-color: #ffd44a; display: block;
+}
+
+.section .sec02 h4{    
+    padding-left: 624px; font-size: 18px; font-weight:100; line-height: 26px; letter-spacing: 0.6px;
+    padding-bottom: 100px;
+}
+
+.section .sec03 li{
+    float: left;width:calc( ( 100% - 32px * 2 ) / 3 );
+    margin-right:32px; 
+    position: relative;   
+}
+.sec03 li:last-child{margin-right: 0;}
+.sec03 li img{width: 100%; padding-bottom: 25px;}
+.sec03 li:hover .img{
+    position: absolute; top: -10px;left: 0; transition: 0.3s;
+}
+.sec03 li h5{
+    padding-left: 28px;  font-size: 21px;  font-weight: 700;  padding-bottom: 18px;
+}
+.sec03 li p{
+    padding-left: 28px; font-size: 15px; line-height: 24px; letter-spacing: -0.6px;
+}
+
+
+
+/* container  */
+.container{width: 1216px;margin: 0 auto}
 
