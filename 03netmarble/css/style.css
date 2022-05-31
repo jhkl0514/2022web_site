@@ -13,28 +13,39 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
     width:calc( 100% / 3 );
 }
 
-.visualWrap{margin: 0 auto; height: 100vh;}
+.visualWrap{position: relative; height: 100vh; margin-bottom: 168px;}
 .visualWrap ul{}
-.visualWrap li{ }
-.visualWrap .txtWrap{
-    
+.visualWrap li>img{width: 100%; }
+.visualWrap .txtWrap{    
     margin: 0 auto; width: 1216px; color: #fff; padding-top: 320px;
     margin-bottom: 132px;
 }
-.visualWrap .txt{}
+
+.visualWrap .btnWrap .prev{
+    
+}
 
 /* background */
 .visualWrap .slideItem{
-    height: 100vh; min-height: 400px;
+    height: 100vh; min-height: 600px;
     background-color: orange;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
 }
 
+.next{position: absolute; right:100px; top:50%; margin-top: -50px; cursor: pointer;}
+.prev{position: absolute; left:100px; top:50%; margin-top: -50px; cursor: pointer;}
+
+
+
 .visualWrap h2{
     font-size:80px; font-weight: 700; letter-spacing: -2.6px; padding-bottom: 34px;
 }
+
+
+
+
 .section .sec01{position: relative}
 .section .sec01 h3{    
     font-size: 44px; font-weight: 700; line-height: 1.41;

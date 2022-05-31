@@ -19,7 +19,20 @@
 
     <script>
         $(document).ready(function(){
-            $(".slider").bxSlider({auto:true,controls:false});
+            var slide = $(".slider").bxSlider({
+                // auto:true,
+                // mode:'vertical',
+                controls:false
+            });
+
+            $(".next").click(function(){
+                slide.goToNextSlide();
+            });
+            $(".prev").click(function(){
+                slide.goToPrevSlide();
+            });
+
+       
         })
     </script>
 </head>
@@ -75,6 +88,14 @@
                 </div>
             </li>
         </ul>
+        
+            <div class="next">
+                <img src="images/btn_next.png" alt="">
+            </div>
+            <div class="container prev">
+                <img src="images/btn_prev.png" alt="">
+            </div>
+        
     </div>
     <!-- section -->
     <div class="section">
