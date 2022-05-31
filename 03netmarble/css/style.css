@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
+
+.headerWrap{width: 980px; margin: 0 auto;}
+.headerWrap .logoWrap{float:left; margin: 21px 0 0 32px;}
+
+.mainMenu ul{float: right; width: 510px;}
+.mainMenu ul li{
+    float: left; margin: 0 auto;
+    display: block; font-size: 20px; font-weight: 400;  line-height: 76px;    
+    letter-spacing: -0.03em; text-align: center;
+    width:calc( 100% / 3 );
+}
+
+.visualWrap{margin: 0 auto;}
+.visualWrap ul{}
+.visualWrap li{width: 100%; height: 1080px; }
+.visualWrap .txtWrap{
+    margin: 0 auto; 
+    width: 1216px;
+    color: #fff;
+}
+.visualWrap h2{font-size:80px; font-weight: 700; letter-spacing: -2.6px;}
+
