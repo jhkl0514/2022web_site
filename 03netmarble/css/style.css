@@ -13,7 +13,7 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
     width:calc( 100% / 3 );
 }
 
-.visualWrap{position: relative; height: 100vh; margin-bottom: 168px;}
+.visualWrap{position: relative; height: 100vh; min-height: 600px; margin-bottom: 168px;}
 .visualWrap ul{}
 .visualWrap li>img{width: 100%; }
 .visualWrap .txtWrap{    
@@ -34,8 +34,8 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
     background-size: cover; 
 }
 
-.next{position: absolute; right:100px; top:50%; margin-top: -50px; cursor: pointer;}
-.prev{position: absolute; left:100px; top:50%; margin-top: -50px; cursor: pointer;}
+.next{position: absolute; right:200px; top:50%; margin-top: -50px; cursor: pointer;}
+.prev{position: absolute; left:200px; top:50%; margin-top: -50px; cursor: pointer;}
 
 
 
