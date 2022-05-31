@@ -13,7 +13,9 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
     width:calc( 100% / 3 );
 }
 
-.visualWrap{position: relative; height: 100vh; min-height: 600px; margin-bottom: 168px;}
+.visualWrap{
+    margin: 0 auto; position: relative; 
+    height: 100vh; min-height: 600px; margin-bottom: 168px;}
 .visualWrap ul{}
 .visualWrap li>img{width: 100%; }
 .visualWrap .txtWrap{    
@@ -46,7 +48,10 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
 .next{position: absolute; right:200px; top:50%; margin-top: -50px; cursor: pointer;}
 .prev{position: absolute; left:200px; top:50%; margin-top: -50px; cursor: pointer;}
 
-
+/* .visualWrap .slideBtn{   
+    position: absolute; top:50%; margin-top: 120px; cursor: pointer;   
+    background-color: #ffd44a;
+} */
 
 
 
@@ -67,6 +72,9 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
     padding-bottom: 100px;
 }
 
+.section .sec03 ul{
+    margin-bottom: 185px;
+}
 .section .sec03 li{
     float: left;width:calc( ( 100% - 32px * 2 ) / 3 );
     margin-right:32px; 
@@ -85,9 +93,35 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
 }
 
 
+.sec04 {position: relative; padding-bottom: 160px;}
+.sec04 .txtBox{
+    width: 1114px;  height: 338px;  padding: 102px 520px 102px 104px;
+    -webkit-box-sizing: border-box;  box-sizing: border-box;
+    background-color: #ffd44a;    
+}
+.sec04 .txtBox p{font-size: 28px; font-weight: 500;  line-height: 40px;  letter-spacing: -1px;}
+
+.sec04 .imgBox{
+    position: absolute; top: 102px; right: 0;  width: 592px;  height: 360px;
+   
+}
+
 
 /* container  */
 .container{width: 1216px;margin: 0 auto}
 
+/* notice */
+
+.notice{ padding: 160px 0;}
+.notice .not01{position: relative;;}
+
+.notice .not01 h3{    
+    font-size: 44px; font-weight: 700; line-height: 1.41;
+    letter-spacing: -2px; text-indent: -2px; padding-bottom:25px ;
+}
+.notice .not01 p:after{
+    content: ""; position: absolute; bottom: 0; left: 0; width: 70px; height: 5px;
+    background-color: #ffd44a; display: block;
+}
 
 /* bxSlider */
