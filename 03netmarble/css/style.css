@@ -45,8 +45,12 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
     background-size: cover; 
 }
 
-.next{position: absolute; right:200px; top:50%; margin-top: -50px; cursor: pointer;}
-.prev{position: absolute; left:200px; top:50%; margin-top: -50px; cursor: pointer;}
+
+img.prev,img.next{position: absolute; bottom:250px; margin-top: -50px; cursor: pointer;}
+img.next{left: 400px;}
+img.prev{left: 350px;}
+/* .next{position: absolute; right:30%; top:50%; margin-top: -50px; cursor: pointer;}
+.prev{position: absolute; left:70%; top:50%; margin-top: -50px; cursor: pointer;} */
 
 /* .visualWrap .slideBtn{   
     position: absolute; top:50%; margin-top: 120px; cursor: pointer;   
@@ -81,12 +85,16 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
     position: relative;   
 }
 .sec03 li:last-child{margin-right: 0;}
-.sec03 li img{width: 100%; padding-bottom: 25px;}
-.sec03 li:hover .img{
-    position: absolute; top: -10px;left: 0; transition: 0.3s;
+.sec03 li img{width: 100%;}
+.sec03 img:hover{
+    transform: translate(0,-20px);
+    box-shadow: 0 15px 15px rgba(0,0,0,0.3); 
+    transition: 0.3s;
+    cursor: pointer;
+    
 }
 .sec03 li h5{
-    padding-left: 28px;  font-size: 21px;  font-weight: 700;  padding-bottom: 18px;
+    padding: 26px 0 18px 28px;  font-size: 21px;  font-weight: 700;
 }
 .sec03 li p{
     padding-left: 28px; font-size: 15px; line-height: 24px; letter-spacing: -0.6px;
@@ -112,7 +120,7 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
 
 /* notice */
 
-.notice{ padding: 160px 0;}
+.notice{ padding: 160px 0; background-color: #F7F8F9;}
 .notice .not01{position: relative;;}
 
 .notice .not01 h3{    
@@ -124,4 +132,47 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
     background-color: #ffd44a; display: block;
 }
 
-/* bxSlider */
+.notice .not02{position: relative; margin-bottom: 60px;}
+.notice .not02 ul{position: absolute; right: 0; }
+.notice .not02 li{
+    float: left; display: inline-block; height: 38px; margin-left: 8px; padding: 0 24px;
+    font-size: 14px;  line-height: 38px; font-weight: normal;
+}
+.notice .not02 li:hover{
+    border-radius: 19px; color: #1e1e1e;  background-color: #f0f1f2;
+    font-weight: bold; 
+
+}
+
+.notice .not03 li{
+    float: left; width: calc( ( 100% - 25px * 2 ) / 3 );
+    height: 466px; padding: 35px;      
+    box-sizing: border-box;
+    margin-right: 25px;
+    background-color: #fff;
+    transition:0.3s;
+}
+    
+
+.notice .not03 li:last-child{
+    margin-right: 0;
+}
+
+
+.notice .not03 .not_card h3{
+    font-size: 21px; font-weight: 500; line-height: 32px;
+}
+
+.notice .not03 li:hover{
+    transform: translate(0,-20px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.notice .not03 li:last-child:hover {
+    transform: translate(0,-20px);
+    box-shadow: 0 20px 20px rgba(0,0,0,0.3);
+   
+}
+
+ 
+
