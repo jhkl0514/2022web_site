@@ -165,7 +165,7 @@ img.prev{left: 350px;}
 
 .notice .not03 li:hover{
     transform: translate(0,-20px);
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 20px rgba(0,0,0,0.3);
     cursor: pointer;
 }
 
