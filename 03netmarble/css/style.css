@@ -5,16 +5,21 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
 .headerWrap{width: 1280px; margin: 0 auto;}
 .headerWrap .logoWrap{float:left;width: 400px; margin: 21px 0 0 32px ;}
 
-.mainMenu ul{float: right; width: 510px;}
+.mainMenu ul{float: right; width: 536px; }
 .mainMenu ul li{
-    float: left; margin: 0 auto;
+    float: right; 
     display: block; font-size: 20px; font-weight: 400;  line-height: 76px;    
     letter-spacing: -0.03em; text-align: center;
-    width:calc( 100% / 3 );
+    margin-left: 94px; position: relative;
 }
-.mainMenu li a:after{
-    content: ""; position: absolute; bottom: 5px; left: 0; width: 70px; height: 5px;
-    background-color: #ffd44a; display: block;
+.mainMenu ul li:last-child{margin-right: 26px;}
+
+.mainMenu ul li a{
+    width: 72px; margin: 0 auto; display: block;
+}
+.mainMenu ul li a:hover:after{
+    display: block; content: ""; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 5px; background-color: #ffd44a; 
 }
 
 
@@ -75,10 +80,13 @@ img.prev{padding-left: 440px;} */
     font-size: 44px; font-weight: 700; line-height: 1.41;
     letter-spacing: -2px; text-indent: -2px; padding-bottom:25px ;
 }
-.section .container .sec01 p:after{
-    content: "";position: absolute; bottom: 50px; left: 0; width: 70px; height: 5px;
-    background-color: #ffd44a; display: block;
+
+.section .sec01 h3::after{    
+    display: block; content: "";position: absolute; bottom: 0; left: 0;
+    width: 70px; height: 5px; background-color: #ffd44a;
 }
+
+
 
 .section .sec02 h4{    
     padding-left: 624px; font-size: 18px; font-weight:100; line-height: 26px; letter-spacing: 0.6px;
@@ -135,10 +143,12 @@ img.prev{padding-left: 440px;} */
     font-size: 44px; font-weight: 700; line-height: 1.41;
     letter-spacing: -2px; text-indent: -2px; padding-bottom:25px ;
 }
-.notice .not01 p:after{
-    content: ""; position: absolute; bottom: 0; left: 0; width: 70px; height: 5px;
-    background-color: #ffd44a; display: block;
+
+.notice .not01 h3::after{    
+    display: block; content: "";position: absolute; bottom: 0; left: 0;
+    width: 70px; height: 5px; background-color: #ffd44a;
 }
+
 
 .notice .not02{position: relative; margin-bottom: 100px;}
 .section .sec02 h4{    
@@ -205,20 +215,20 @@ img.prev{padding-left: 440px;} */
 }
 .footerWrap .footer .footerLogo{margin-bottom: 30px;}
 .footerWrap .footer .footerLogo .box{
-    float: right; font-size: 10px; line-height: 32px;
+    float: right; font-size: 11px; line-height: 32px;
     width: 180px; background-color: #080808; padding-left: 32px;
-    color: #6D6D6D; 
+    color: #9B9B9B; 
 }
 .footerWrap .footer p{
-    font-size: 11px; line-height: 20px; color: #757575;
+    font-size: 11px; line-height: 20px; color: #9B9B9B;
+    letter-spacing: -0.055em; 
     margin-bottom: 50px;
 }
-.footerWrap .footer .footerInfo {color: #757575;}
+.footerWrap .footer .footerInfo {color: #9B9B9B;}
 
 .footerWrap .footer .footerInfo .policy{float: left;}
 .footerWrap .footer .footerInfo .policy a{
-    ;font-size: 12px;  line-height: 20px; color: #757575;
-}
+    font-size: 12px; line-height: 20px; color: #9B9B9B; font-weight: 600;}
 .footerWrap .footer .footerInfo .sns{float: right;}
 .footerWrap .footer .footerInfo .sns li{
     float: left; margin-right: 25px;
