@@ -4,10 +4,15 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
 
 .headerTopWrap{width: 100%; background-color: #333; height: 40px;}
 .headerTop{width: 1200px; margin: 0 auto}
-.headerTop .navbar ul li{
+.headerTop .navbar {
     float: left;
 }
-.headerTop .navbar ul li a{
+.headerTop .navbar ul li{
+    float: left;
+    
+}
+.headerTop .navbar ul li a{ 
+    display: block;  
     width: 120px; margin-right: 1px;
     background-color: #1296ad;
     text-align: center; 
@@ -15,22 +20,67 @@ body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
     font-size: 15px; color:#fff;
 }
 
-.headerTop .navbarUtlMenu ul{ 
-   width: 500px;
+.headerTop .navbarUtlMenu{    
    float: right;  
 }
 
 .headerTop .navbarUtlMenu ul li{
-    float: left;
-    background-color:aqua;
+    float: left;    
 }
-.headerTop .navbarUtlMenu ul li a{    
-    background-color: pink;
-    
+.headerTop .navbarUtlMenu ul li a{          
     text-align: center;
     font-size: 12px; color:#ddd;
     line-height: 40px;
     margin-right: 20px; 
     display: block;
 }
+.headerTop .navbarUtlMenu .btnBox{   
+    display: inline-block;    
+    cursor: pointer;
+    padding: 5px;
+    height: 20px;    
+    min-width: auto;        
+    border: 1px solid #ddd;
+    /* overflow: hidden; */  
+    margin-top: 10px;
+    position: relative;
+}
+.headerTop .navbarUtlMenu.txt{  
+    position: absolute;
+    top:10px;     
+    font-size: 20px; color:#ddd;
+    line-height: 40px;
+    margin-right: 20px; 
+    display: block;
+}
 
+
+.headerMenu{
+    width: 1200px; height: 100px; background-color: bisque; margin: 0 auto;
+    
+    
+}
+.headerMenu .logoWrap{float: left; margin: 20px 0 20px 0; }
+.headerMenu .mainMenu{
+    float: left;
+    width: 800px;
+    background: pink;
+}
+.headerMenu .mainMenu ul li{
+    float: left;
+    line-height: 100px;
+    
+   
+    /* position:absolute;
+    left: 50%; top: 50%; translate(-50%,-50%); */
+}
+
+.headerMenu .mainJoin {float: left; background-color: #1296ad;}
+.headerMenu .mainJoin ul li{
+    float: left;
+}
+.headerMenu .mainJoin ul li a{
+    display: block;
+    line-height: 100px;
+    width: 80px;
+}
