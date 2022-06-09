@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+body{font-family: 'Noto Sans','Noto Sans KR', sans-serif;}
+
+.headerTopWrap{width: 100%; background-color: #333; height: 40px;}
+.headerTop{width: 1200px; margin: 0 auto}
+.headerTop .navbar ul li{
+    float: left;
+}
+.headerTop .navbar ul li a{
+    width: 120px; margin-right: 1px;
+    background-color: #1296ad;
+    text-align: center; 
+    line-height: 40px;
+    font-size: 15px; color:#fff;
+}
+
+.headerTop .navbarUtlMenu ul{ 
+   width: 500px;
+   float: right;  
+}
+
+.headerTop .navbarUtlMenu ul li{
+    float: left;
+    background-color:aqua;
+}
+.headerTop .navbarUtlMenu ul li a{    
+    background-color: pink;
+    
+    text-align: center;
+    font-size: 12px; color:#ddd;
+    line-height: 40px;
+    margin-right: 20px; 
+    display: block;
+}
+
