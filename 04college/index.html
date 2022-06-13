@@ -14,6 +14,29 @@
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var slide = $(".slider").bxSlider({
+                auto:true,                
+                controls:false
+            });
+
+            $(".next").click(function(){
+                slide.goToNextSlide();
+            });
+            $(".prev").click(function(){
+                slide.goToPrevSlide();
+            });
+
+       
+        })    
+    </script>
+
 </head>
 <body>
     <!-- header -->
@@ -96,11 +119,25 @@
         <div class="sec2st container">
             <!-- ul.clearfix>li*8>{$} -->
             <ul class="clearfix">
-                <!-- sec2st 슬라이드 01 -->j
+                <!-- sec2st bxSlider 01 -->j
                 <li>
                     <div class="sliderWrap">
-                        <ul>
+                        <ul class="slider">
                             <li style="background-image: url(images/main_img01.png);" class="slideItem">
+                                <div class="txtWrap">
+                                    <div>
+                                        <div class="txt clearfix">
+                                            <h2>PULSE OF INNOVATION</h2>
+                                            <p>THE BEST FOR A BETTER WORLD</p>                                                                                                                      
+                                        </div>
+                                        <div class="moreBtn">
+                                            <a><div class="moreTxt">자세히보기</div>
+                                            <div class="moreIcon"><img src="images/icon_next.png" alt=""></div></a>                                        
+                                        </div> 
+                                    </div>                                  
+                                </div>
+                            </li>
+                            <!-- <li style="background-image: url(images/main_img02.png);" class="slideItem">
                                 <div class="txtWrap">
                                     <div class="txt clearfix">
                                         <h2>PULSE OF INNOVATION</h2>
@@ -108,14 +145,43 @@
                                     </div>
                                     <div class="moreBtn">
                                         <a><div class="moreTxt">자세히보기</div>
-                                           <div class="moreIcon"><img src="images/bnt_more.png" alt=""></div></a>                                        
+                                           <div class="moreIcon"><img src="images/icon_next.png" alt=""></div></a>                                        
                                     </div>                                    
                                 </div>
+                            </li> -->
+                            <li style="background-image: url(images/main_img03.png);" class="slideItem">
+                                <div class="txtWrap">
+                                    <div>
+                                        <div class="txt clearfix">
+                                            <h2>PULSE OF INNOVATION</h2>
+                                            <p>THE BEST FOR A BETTER WORLD</p>                                                                                                                      
+                                        </div>
+                                        <div class="moreBtn">
+                                            <a><div class="moreTxt">자세히보기</div>
+                                            <div class="moreIcon"><img src="images/icon_next.png" alt=""></div></a>                                        
+                                        </div> 
+                                    </div>                                  
+                                </div>
                             </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li style="background-image: url(images/main_img04.png);" class="slideItem">
+                                <div class="txtWrap">
+                                    <div>
+                                        <div class="txt clearfix">
+                                            <h2>PULSE OF INNOVATION</h2>
+                                            <p>THE BEST FOR A BETTER WORLD</p>                                                                                                                      
+                                        </div>
+                                        <div class="moreBtn">
+                                            <a><div class="moreTxt">자세히보기</div>
+                                            <div class="moreIcon"><img src="images/icon_next.png" alt=""></div></a>                                        
+                                        </div> 
+                                    </div>                                  
+                                </div>
+                            </li>                          
                         </ul>
+                        <div class="btn">
+                            <img src="images/btn_prev.png" alt="" class="prev">
+                            <img src="images/btn_next.png" alt="" class="next">
+                        </div>
                     </div>
                 </li>
                 <!-- sec2st 02 -->                
@@ -126,7 +192,7 @@
                         </div>
                          <div class="moreBtn">
                              <a><div class="moreTxt">자세히보기</div>
-                             <div class="moreIcon"><img src="images/bnt_more.png" alt=""></div></a>                                        
+                             <div class="moreIcon"><img src="images/icon_next.png" alt=""></div></a>                                        
                         </div>  
                     </div>
                 </li>

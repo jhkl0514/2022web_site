@@ -111,7 +111,7 @@
 
 .sec1st .sliderWrap li>img{width: 100%; }
 .sliderWrap .txtWrap{    
-    color: #FFF; padding: 100px 0; padding-left: 120px; height: 450px;
+    color: #FFF; padding: 100px 0 100px 120px;  height: 450px;    
 }
 
 .sliderWrap .txtWrap .txt h2{
@@ -124,7 +124,53 @@
  padding: 0px 30px 0px 30px; text-decoration: none;
  display: flex; justify-content: space-between; align-items: center;  cursor: pointer; 
 }
+.sliderWrap .txtWrap .moreBtn a:hover{
+    border: 1px solid #039db8; font-size: 14px; border-radius: 25px;
+    box-sizing: border-box;  width: 180px;  height: 40px;
+    padding: 0px 30px 0px 30px; text-decoration: none;
+    display: flex; justify-content: space-between; align-items: center;  cursor: pointer; 
+   }
 
+
+/* bsSlider */
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 transparent;
+    /* 다른 브라우저에 보이게 하기 위해서 */
+    box-shadow: 0 0 0 transparent;
+    border: 0 transparent;            
+}
+
+.sliderWrap .btn{   
+   position: relative;  
+}
+
+.sliderWrap .next,.prev{position: absolute; top:50%; margin-top: -310px; cursor: pointer;}
+.sliderWrap .next{right: 20px;}
+.sliderWrap .prev{left: 20px;}
+.sliderWrap .next,.prev:hover{transition:0.3s;}
+
+
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #fff;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  .bx-wrapper .bx-pager.bx-default-pager a.active,
+  .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #039db8;
+  }
+
+/* sec2st */
 .sec2st .conRight{
     background-image: url(../images/main_right_banner_01.png);height: 450px;
     padding: 100px 30px;
@@ -137,7 +183,14 @@
     box-sizing: border-box;  width: 180px;  height: 40px;
     padding: 0px 30px 0px 30px; text-decoration: none;
     display: flex; justify-content: space-between; align-items: center;  cursor: pointer; 
-   }
+}
+
+ .sec2st .conRight .moreBtn a:hover{    
+    background-color: #1296ad; color:#fff; font-size: 14px; border-radius: 25px;
+    box-sizing: border-box;  width: 180px;  height: 40px;
+    padding: 0px 30px 0px 30px; text-decoration: none;
+    display: flex; justify-content: space-between; align-items: center;  cursor: pointer; 
+}
 
 
 
