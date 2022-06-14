@@ -184,7 +184,6 @@
     padding: 0px 30px 0px 30px; text-decoration: none;
     display: flex; justify-content: space-between; align-items: center;  cursor: pointer; 
 }
-
  .sec2st .conRight .moreBtn a:hover{    
     background-color: #1296ad; color:#fff; font-size: 14px; border-radius: 25px;
     box-sizing: border-box;  width: 180px;  height: 40px;
@@ -192,6 +191,80 @@
     display: flex; justify-content: space-between; align-items: center;  cursor: pointer; 
 }
 
+/* sec2st 03 Hot link */
+.sec2st .hotLinkWrap{background-color: #039db8; height: 225px; padding: 30px;}
+.sec2st .hotLinkWrap h3{
+    font-size: 20px; font-weight: 400px; color:#fff; margin-bottom: 25px;
+    position: relative;
+}
+.hotLinkWrap h3:after{
+    display: block; content: ""; position: absolute; top: 30px; left: 0;
+    width: 94px; height: 1px; background-color:#ddd; 
+}
+.hotBanner li{
+    float: left; text-align: center; width:calc( ( 100% - 15px ) / 3 );
+    line-height: 13px; background-color: pink; margin-right: 7px;
+}
+.hotBanner li:last-child{ margin-right: 0;}
+.hotBanner li a{color: #ddd; font-size: 12px;}
+.hotBanner li img{margin-bottom: 15px;}
+
+/* sec2st 04 Notice */
+.sec2st .noticeWrap{background-color: #004c86; height: 225px; padding: 30px;}
+.nTitle li{float: left;}
+.nTitle {position: relative;}
+.nTitle li h3{position: relative; font-size: 20px; font-weight: 400px; color:#fff; margin-bottom: 25px;}
+.nTitle li h3:after{
+    display: block; content: ""; position: absolute; top: 30px; left: 0;
+    width: 72px; height: 1px; background-color:#ddd; 
+}
+.nTitle img{position: absolute; right: 0; top:7px}
+
+.nContents ul{position: relative;}
+.nContents ul li:last-child{margin-bottom: 0;}
+.nContents ul li{margin-bottom: 12px; position: relative; }
+.nContents ul li:after{    
+    display: block; content: ""; position: absolute; bottom:-7px;
+    width: 100%; height: 1px; background-color:#ddd; opacity: 30%;
+}
+.nContents ul li:last-child a:after{    
+    display: none;
+}
+.nContents ul li span{float: right;}
+.nContents ul li a{font-size: 14px; color: #ddd;}
+.nContents ul li span{font-size: 12px; color: #ddd; line-height: 20px;}
+.nContents ul li{list-style:inside; font-size: 12px; color: #ddd;}
+
+/* sec2st 05 SNS */
+.sec2st .snsWrap{padding: 30px;}
+.sTitle{position: relative;}
+.sTitle h3{
+    font-size: 20px; font-weight: 400px; color:#1296ad; margin-bottom: 25px;
+    position: relative;
+}
+.sTitle h3:after{
+    display: block; content: ""; position: absolute; top: 30px; left: 0;
+    width: 105px; height: 1px; background-color:#1296ad; 
+}
+.sTitle .sIcon{position: absolute; right: 0; top: 7px; width: 100px;}
+.sTitle .sIcon li{float: left; width: calc( 100% / 4 );}
+.sNews img{margin-bottom: 10px;}
+.sNews p{
+    color: #666; font-size: 14px; line-height: 20px;
+    letter-spacing: -1px;}
+
+/* sec2st 06 tour */
+.sec2st .tourWrap{
+    background-image: url(../images/trour_img.png); height: 450px;
+    position: relative;
+}
+.tourWrap .tour{
+    position: absolute; bottom: 0;
+    height: 45px; background-color: #000; opacity: 50%;    
+}
+.tourWrap .tour p{
+    color: #fff; font-weight: 400; text-align: center; line-height: 16px;
+}
 
 
 
@@ -199,12 +272,15 @@
 /* 꼭 > 을써야 한다 다음에 써야 할 것이 있기 때문에 */
 
 
+
+
+
 #section .sec2st>ul>li{background: white;}
 #section .sec2st>ul>li:nth-child(2n){background-color:pink;}
 
 #section .sec2st>ul>li:nth-child(1){width: 900px; height: 450px;}
 #section .sec2st>ul>li:nth-child(2){height: 450px;}
-#section .sec2st>ul>li:nth-child(3){}
+#section .sec2st>ul>li:nth-child(3){height: 225px;}
 #section .sec2st>ul>li:nth-child(4){}
 #section .sec2st>ul>li:nth-child(5){}
 #section .sec2st>ul>li:nth-child(6){}
