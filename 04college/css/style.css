@@ -192,7 +192,7 @@
 }
 
 /* sec2st 03 Hot link */
-.sec2st .hotLinkWrap{background-color: #039db8; height: 225px; padding: 30px;}
+.sec2st .hotLinkWrap{background-color: #039db8; height: 450px; padding: 30px;}
 .sec2st .hotLinkWrap h3{
     font-size: 20px; font-weight: 400px; color:#fff; margin-bottom: 25px;
     position: relative;
@@ -202,8 +202,9 @@
     width: 94px; height: 1px; background-color:#ddd; 
 }
 .hotBanner li{
-    float: left; text-align: center; width:calc( ( 100% - 15px ) / 3 );
-    line-height: 13px; background-color: pink; margin-right: 7px;
+    float: left; text-align: center; width:calc( ( 100% - 25px ) / 3 );
+    line-height: 13px; margin-right: 12px;
+    
 }
 .hotBanner li:last-child{ margin-right: 0;}
 .hotBanner li a{color: #ddd; font-size: 12px;}
@@ -255,15 +256,82 @@
 
 /* sec2st 06 tour */
 .sec2st .tourWrap{
-    background-image: url(../images/trour_img.png); height: 450px;
-    position: relative;
+    background-image: url(../images/trour_img.png); width: 100%; height: 100%;
+    display: flex; align-items:flex-end; 
 }
-.tourWrap .tour{
-    position: absolute; bottom: 0;
-    height: 45px; background-color: #000; opacity: 50%;    
+.tourWrap .tTitle {     
+    height: 45px; width: 100%; background-color:rgba(0, 0, 0, 0.8);
+    text-align: center; padding-top: 10px;
 }
-.tourWrap .tour p{
-    color: #fff; font-weight: 400; text-align: center; line-height: 16px;
+.tourWrap .tTitle a{color: #fff; font-weight: 400;}
+
+/* sec2st 07 video */
+.sec2st .movieWrap{
+    background-image: url(../images/movie_img.png); padding: 30px;
+    width: 100%; height: 100%;
+    display: flex; justify-content: center; align-items: center;
+}
+/* sec2st 08 banner */
+.sec2st .bannerWrap{width: 100%; height: 100%; color: #FFF;}
+.sec2st .bannerWrap .txtWrap{padding: 50px;}
+.bannerWrap .txtWrap .txt h2{
+    font-size:25px; font-weight: 700; padding-bottom: 5px;
+}
+.bannerWrap .txtWrap .txt p{padding-bottom: 26px;}
+.bannerWrap .txtWrap .moreBtn a{    
+    border: 1px solid #fff; color:#fff; font-size: 14px; border-radius: 25px;
+    box-sizing: border-box;  width: 180px;  height: 40px;
+    padding: 0px 30px 0px 30px; text-decoration: none;
+    display: flex; justify-content: space-between; align-items: center;  cursor: pointer;
+}
+.bannerWrap .txtWrap .moreBtn a:hover{
+    background-color: #1296ad; color:#fff; font-size: 14px; border-radius: 25px;
+    box-sizing: border-box;  width: 180px;  height: 40px;
+    padding: 0px 30px 0px 30px; text-decoration: none;
+    display: flex; justify-content: space-between; align-items: center;  cursor: pointer; 
+}
+
+        /* swipr */
+        .swiper{width: 900px; height: 100%; position: relative;}
+        .swiper-slide{
+            /* text-align: center;
+            font-size: 18px; display: flex;
+            justify-content: center; align-items: center; */
+        }
+        .swiper-pagination {
+            position: absolute; left: 0;
+        }
+       
+        
+
+/* footer top */
+#footer .fTopWrap{width: 100%; background-color: #333333; }
+.fTopWrap .inner ul{display: flex; justify-content:space-between; }
+.fTopWrap .inner li{height: 65px;}
+.fTopWrap .inner{padding-left: 160px;}
+.inner ul li a{
+    color: #ddd; font-size: 14px; height: 100%; display: flex; justify-content: center; align-items: center;
+}
+
+
+/* footer bottom */
+#footer .footerBottomWrap{
+    width: 100%; background-color: #464646; height: 185px; 
+}
+.footerInfo {padding-top: 38px;}
+.footerInfo .addressWrap ul li{ float: left; color: #c0c0c0; font-size: 14px;}
+.addressWrap .add01 {width: 160px; padding-right: 100px;}
+.addressWrap .add02 {width: 410px;}
+.add02 h4,
+.add03 h4
+{color:#ddd; padding-bottom: 16px;}
+.add02 p.copy{font-size: 12px; padding-top: 35px;}
+.addressWrap .add03 {width: 440px;}
+.addressWrap .add04 {width: 190px;}
+.add04 ul li{float: left; margin-right: 3px; padding-bottom: 15px;}
+.add04 .site a{
+    height: 44px; width: 185px; display: block; background-color: #333;
+    color:#ababab; font-size: 14px; text-align: center; line-height: 44px;
 }
 
 
@@ -280,7 +348,7 @@
 
 #section .sec2st>ul>li:nth-child(1){width: 900px; height: 450px;}
 #section .sec2st>ul>li:nth-child(2){height: 450px;}
-#section .sec2st>ul>li:nth-child(3){height: 225px;}
+#section .sec2st>ul>li:nth-child(3){}
 #section .sec2st>ul>li:nth-child(4){}
 #section .sec2st>ul>li:nth-child(5){}
 #section .sec2st>ul>li:nth-child(6){}
