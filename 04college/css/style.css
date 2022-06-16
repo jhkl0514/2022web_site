@@ -59,10 +59,7 @@
     
     position: relative;
 }
-.headerMenu .mainMenu ul li:hover{
 
-    
-}
 
 .headerMenu .mainMenu ul li:hover a:after{    
     display: block; content: ""; position: absolute;bottom: 5px;
@@ -261,6 +258,10 @@
 }
 .tourWrap .tTitle {     
     height: 45px; width: 100%; background-color:rgba(0, 0, 0, 0.8);
+    padding-top: 180px;
+}
+.tourWrap .tTitle {     
+    height: 45px; background-color: #000; opacity: 0.8;
     text-align: center; padding-top: 10px;
 }
 .tourWrap .tTitle a{color: #fff; font-weight: 400;}
@@ -333,6 +334,28 @@
     height: 44px; width: 185px; display: block; background-color: #333;
     color:#ababab; font-size: 14px; text-align: center; line-height: 44px;
 }
+.movieWrap .video img{display: block; margin: 0 auto; padding-top: 25% ;}
+
+/* sec2st 08 banner */
+.sec2st .bannerWrap{width: 100%; height: 100%; color: #FFF;}
+.sec2st .bannerWrap li{padding: 50px;}
+.bannerWrap .txtWrap .txt h2{
+    font-size:25px; font-weight: 700; padding-bottom: 5px;
+}
+.bannerWrap .txtWrap .txt p{padding-bottom: 26px;}
+.bannerWrap .txtWrap .moreBtn a{    
+    border: 1px solid #fff; color:#fff; font-size: 14px; border-radius: 25px;
+    box-sizing: border-box;  width: 180px;  height: 40px;
+    padding: 0px 30px 0px 30px; text-decoration: none;
+    display: flex; justify-content: space-between; align-items: center;  cursor: pointer;
+}
+.bannerWrap .txtWrap .moreBtn a:hover{
+    background-color: #1296ad; color:#fff; font-size: 14px; border-radius: 25px;
+    box-sizing: border-box;  width: 180px;  height: 40px;
+    padding: 0px 30px 0px 30px; text-decoration: none;
+    display: flex; justify-content: space-between; align-items: center;  cursor: pointer; 
+}
+
 
 
 
