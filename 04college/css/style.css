@@ -170,7 +170,9 @@
 /* sec2st */
 .sec2st .conRight{
     background-image: url(../images/main_right_banner_01.png);height: 450px;
-    padding: 100px 30px;
+    padding: 100px 30px; transition:0.3s; overflow: hidden; background-size: 100%;
+    background-position: center;
+
 }
 .sec2st .conRight .txt p{
     font-size: 30px; color: #e3e3e3; margin-bottom: 80px;
@@ -188,6 +190,11 @@
     display: flex; justify-content: space-between; align-items: center;  cursor: pointer; 
 }
 
+.sec2st .conRight:hover{    
+    background-size: 120%;
+}
+
+
 /* sec2st 03 Hot link */
 .sec2st .hotLinkWrap{background-color: #039db8; height: 450px; padding: 30px;}
 .sec2st .hotLinkWrap h3{
@@ -204,8 +211,11 @@
     
 }
 .hotBanner li:last-child{ margin-right: 0;}
-.hotBanner li a{color: #ddd; font-size: 12px;}
-.hotBanner li img{margin-bottom: 15px;}
+.hotBanner li a{color: #ddd; font-size: 12px; }
+.hotBanner li img{margin-bottom: 15px; width: 100%; transition: 0.1s;}
+.hotBanner li:hover img{
+    transform: scale(1.1);
+}
 
 /* sec2st 04 Notice */
 .sec2st .noticeWrap{background-color: #004c86; height: 225px; padding: 30px;}
@@ -245,26 +255,52 @@
     width: 105px; height: 1px; background-color:#1296ad; 
 }
 .sTitle .sIcon{position: absolute; right: 0; top: 7px; width: 100px;}
-.sTitle .sIcon li{float: left; width: calc( 100% / 4 );}
+.sTitle .sIcon li{float: left; width: calc( 100% / 4 ); position: relative;}
 .sNews img{margin-bottom: 10px;}
 .sNews p{
     color: #666; font-size: 14px; line-height: 20px;
     letter-spacing: -1px;}
 
+.snsWrap .sIcon .snsI-b{position: absolute; left: 0;top: 0; display: none;}
+.snsWrap .sIcon li:hover .snsI-b{ display: block;}
+.snsWrap .sNews p:hover{
+    text-decoration: underline; cursor: pointer; color:#004c86
+}
+.snsWrap .sNews{
+    overflow: hidden
+}
+.snsWrap .sNews img{
+    transform: scale(1);
+    transition: 0.3s ;
+  
+}
+.snsWrap .sNews img:hover{
+    transform: scale(1.1);
+    
+}
+
 /* sec2st 06 tour */
 .sec2st .tourWrap{
     background-image: url(../images/trour_img.png); width: 100%; height: 100%;
     display: flex; align-items:flex-end; 
+    transition:0.3s; overflow: hidden; 
+}
+.sec2st .tourWrap:hover{
+    opacity: 50%;
 }
 .tourWrap .tTitle {     
     height: 45px; width: 100%; background-color:rgba(0, 0, 0, 0.8);
-    padding-top: 180px;
+    padding-bottom: 25px; transition: 0.3s;
 }
-.tourWrap .tTitle {     
-    height: 45px; background-color: #000; opacity: 0.8;
-    text-align: center; padding-top: 10px;
+
+.tourWrap .tTitle a{color: #fff; font-weight: 400; text-align: center; display: block;}
+.tourWrap .tTitle:hover{
+    height: 75px; padding-bottom: 25px; background-color:rgba(3, 89, 116, 0.9);
+    font-size: 18px;
 }
-.tourWrap .tTitle a{color: #fff; font-weight: 400;}
+
+
+
 
 /* sec2st 07 video */
 .sec2st .movieWrap{
@@ -272,6 +308,15 @@
     width: 100%; height: 100%;
     display: flex; justify-content: center; align-items: center;
 }
+.sec2st .movieWrap img{
+    transition: 0.3s; 
+}
+.sec2st .movieWrap img:hover{
+    opacity: 90%;
+    transform: scale(1.1);
+}
+
+
 /* sec2st 08 banner */
 .sec2st .bannerWrap{width: 100%; height: 100%; color: #FFF;}
 .sec2st .bannerWrap .txtWrap{padding: 50px;}
@@ -293,16 +338,23 @@
 }
 
         /* swipr */
-        .swiper{width: 900px; height: 100%; position: relative;}
+        .swiper{width: 900px; height: 100%; }
         .swiper-slide{
+            position: relative;
             /* text-align: center;
             font-size: 18px; display: flex;
             justify-content: center; align-items: center; */
         }
-        .swiper-pagination {
-            position: absolute; left: 0;
-        }
-       
+        .sec2st .swiper-pagination {
+            width: 100px !important;
+            height: 40px !important;
+            top: 0;
+            right: 0;
+            position: absolute;           
+            bottom: initial;
+            left: initial;                                       
+            --swiper-theme-color: #00fffe;
+        }  
         
 
 /* footer top */
@@ -367,7 +419,7 @@
 
 
 #section .sec2st>ul>li{background: white;}
-#section .sec2st>ul>li:nth-child(2n){background-color:pink;}
+#section .sec2st>ul>li:nth-child(2n){background-color:#000;}
 
 #section .sec2st>ul>li:nth-child(1){width: 900px; height: 450px;}
 #section .sec2st>ul>li:nth-child(2){height: 450px;}

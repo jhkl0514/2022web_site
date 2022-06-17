@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/colorbox.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css"
@@ -23,6 +24,8 @@
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script src="js/script.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -270,10 +273,22 @@
                             <h3>SNS NEWS</h3>
                             <div class="sIcon">
                                 <ul class="clearfix">
-                                    <li><a href="#"><img src="images/sns_icon_01.png" alt=""></a></li>
-                                    <li><a href="#"><img src="images/sns_icon_02.png" alt=""></a></li>
-                                    <li><a href="#"><img src="images/sns_icon_03.png" alt=""></a></li>
-                                    <li><a href="#"><img src="images/sns_icon_04.png" alt=""></a></li>
+                                    <li >
+                                        <img src="images/sns_icon_01.png" alt="" class="snsI-a">
+                                        <img src="images/sns_icon_01_hover.png" alt="" class="snsI-b">
+                                    </li>
+                                    <li >
+                                        <img src="images/sns_icon_02.png" alt="" class="snsI-a">
+                                        <img src="images/sns_icon_02_hover.png" alt="" class="snsI-b">
+                                    </li>
+                                    <li >
+                                        <img src="images/sns_icon_03.png" alt="" class="snsI-a">
+                                        <img src="images/sns_icon_03_hover.png" alt="" class="snsI-b">
+                                    </li>
+                                    <li >
+                                        <img src="images/sns_icon_04.png" alt="" class="snsI-a">
+                                        <img src="images/sns_icon_04_hover.png" alt="" class="snsI-b">
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -293,8 +308,9 @@
                 <!-- sec2st 07 video -->
                 <li>
                     <div class="movieWrap">
-                        <a><img src="images/icon_play.png" alt=""></a>
-                    </div>
+                        <a href="https://www.youtube.com/embed/61SgDuK5WRg" class="youtube"><img src="images/icon_play.png" alt=""></a>
+                    </div>                   
+                    
 
                 </li>
                 <!-- sec2st 08 banner -->
