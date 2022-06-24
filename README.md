@@ -4,4 +4,4 @@
 3. netmarble https://jhkl0514.github.io/2022web_site/03netmarble
 4. college https://jhkl0514.github.io/2022web_site/04college
 5. korass https://jhkl0514.github.io/2022web_site/05korass
-5. travel https://jhkl0514.github.io/2022web_site/06travel
+6. travel https://jhkl0514.github.io/2022web_site/06travel
