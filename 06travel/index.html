@@ -9,9 +9,9 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Noto+Sans:wght@200;400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- style -->
@@ -22,7 +22,7 @@
     <!-- header -->
     <div class="headerWrap">
         <div class="header container">
-            <h1><img src="images/logo_bk_01.png" alt=""></h1>
+            <h1 class="logo"><a href="/">여행이지</a></h1>
             <div class="searchWrap">
                 <form action="#">
                     <input type="text" name="search" placeholder="검색어를 입력하세요" class="inp">
@@ -34,24 +34,34 @@
             </div>
             <div class="sns">
                 <ul>
-                    <li><a href=""><img src="images/sns_icon_01.png" alt=""></a></li>
-                    <li><a href=""><img src="images/sns_icon_02.png" alt=""></a></li>
-                    <li><a href=""><img src="images/sns_icon_03.png" alt=""></a></li>
-                    <li><a href=""><img src="images/sns_icon_04.png" alt=""></a></li>
+                    <li><img src="images/sns_icon_object_01.png" alt=""></li>
+                    <li><a href=""><img src="images/sns_icon_object_02.png" alt=""></a></li>
+                    <li><a href=""><img src="images/sns_icon_object_03.png" alt=""></a></li>
+                    <li><a href=""><img src="images/sns_icon_object_04.png" alt=""></a></li>
                 </ul>   
             </div>
         </div>
         <hr>
-        <nav class="navbar container">
-            <ul>
-                <li><a href="">여행도시</a></li>
-                <li><a href="">호텔예약</a></li>
-                <li><a href="">렌트카</a></li>
-                <li><a href="">여행TIP</a></li>
-                <li><a href="">회사소개</a></li>
-                <li><a href="">여행도시</a></li>
-            </ul>
-        </nav>
+        <div class="navWarp">
+            <nav class="navbar container">
+                <ul>
+                    <li><a href="">여행도시</a></li>
+                        <div class="submenu">
+                            <ul class="clearfix">
+                                <li><a href="#">여행도시_01</a></li>
+                                <li><a href="#">여행도시_02</a></li>
+                                <li><a href="#">여행도시_03</a></li>
+                                <li><a href="#">여행도시_04</a></li>
+                            </ul>
+                        </div>
+                    <li><a href="">호텔예약</a></li>
+                    <li><a href="">렌트카</a></li>
+                    <li><a href="">여행TIP</a></li>
+                    <li><a href="">국내여행</a></li>
+                    <li><a href="">이벤트</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>  
     <!-- section -->
     <section id="section">

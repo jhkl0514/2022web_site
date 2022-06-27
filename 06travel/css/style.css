@@ -17,20 +17,41 @@ body, html{width: 100%;}
 .box2{width: 234px; height: 240px; padding: 28px}
 
 /* headr */
-.headerWrap{background-color: #fff; width: 100%;}
+.headerWrap{background-color: #fff; width: 100%; position: relative;}
 .header{    
     height: 100px;  
     display: flex; justify-content:space-between; align-items: center;
 }
-.header h1{ width:125px;}
+.header h1{ width:125px; cursor: pointer;}
+.header .logo{    
+    background:url(../images/logo_bk_01.png) no-repeat;
+    background-size: 113px 33px; text-indent:-999em;
+    animation: logo_anime_01 6s infinite ease-in-out;
+}
+@keyframes logo_anime_01 {
+    0% {
+      background: url(../images/logo_bk_01.png) no-repeat;
+    }
+    40% {
+      background: url(../images/logo_bk_01.png) no-repeat;
+    }
+    70% {
+      background: url(../images/logo_bk_02.png) no-repeat;
+    }
+    100% {
+      background: url(../images/logo_bk_01.png) no-repeat;
+    }
+  }
 
 form{position: relative;}
 .searchWrap {position: absolute; width: 400px; top: 0%; left: 50%;  transform: translate(-50%, 50%);}
 .searchWrap .inp{
     width: 400px; height: 45px; text-indent: 90px;
     border: 3px solid #E44033;
-    border-radius: 25px;
+    border-radius: 25px;    
 }
+.searchWrap .inp:focus{outline:none;} 
+
 .searchWrap p.title,.icon{position: absolute;top: 50%;transform:translateY(-50%)}
 .searchWrap p.title{
     left: 15px; line-height: 14px; ;
@@ -40,7 +61,7 @@ form{position: relative;}
     width: 30px;height: 30px;background-color: #fff;
     border-radius: 50%;display: flex;justify-content: center;
     align-items: center;font-size:12px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
 }
 
 .header .sns ul{
@@ -48,20 +69,56 @@ form{position: relative;}
     display: flex; justify-content:space-between;
 }
 
+.header .sns ul li{
+    width: 35px; height: 35px; background-color: #999;
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 50px;    
+}
+.header .sns ul li:hover{
+    animation: sns 0.3s ease-in-out;
+    cursor: pointer;
+}
+@keyframes sns{
+	0% {transform: scaleX(1);}
+	25% {transform: scaleX(0);}
+	50% {transform: scaleX(1);}
+	75% {transform: scaleX(0);}
+	100% {transform: scaleX(1)}
+}
+
 .headerWrap hr{border-width: 1px 0 0 0; border-color: #E44033;}
 
 /* headr Navbar */
-.navbar ul{
-    display: flex;
-    justify-content:space-between;
+.navWarp{position:relative;};
+.navWrap:hover:after{
+    content: ""; display: block; width: 100%; height: 40px; background-color: pink;
+    position: absolute; z-index: 2;
 }
-.navbar ul li{       
+.navWrap:after{display: none;}
+
+.navbar ul{
+    display: flex; justify-content:space-between; 
+}
+.navbar>ul{position: relative;}
+.navbar ul li{  
+    position: relative;     
     height: 60px; width: calc( 100% / 6 ) ;  
     text-align: center;
-    line-height: 60px;
+    line-height: 60px; font-weight: 700;
     border-right: 1px solid #E5E5E5;
 }
-.navbar ul li:first-child {border-left: 1px solid #E5E5E5;}
+.navbar ul li:first-child{border-left: 1px solid #E5E5E5;}
+.navbar>ul>li:hover{background-color: #ddd;}
+.navbar>ul>li>a{
+    display:flex; height: 100%; justify-content: center; align-items: center;}
+
+.navbar>ul>li:hover .submenu{display: block;}
+.submenu{
+    display:none;
+    position: absolute; height: 40px; z-index: 3;}
+.submenu li{float: left; background-color: skyblue;}
+.submenu li a{display: block; padding: 5px 10px;}
+
 
 /* section */
 #section{
@@ -155,8 +212,9 @@ form{position: relative;}
 .sec3st ul li p{font-size: 14px; line-height: 18px; letter-spacing: -0.09em; padding-bottom: 20px;  z-index: 2;}
 .sec3st ul li span{
     position: absolute; left: 50%;
-    display: block; font-size: 18px; font-weight: bold; width: 25px; height: 20px; padding-bottom: 20px;
-    border-radius: 50%; border: 2px solid #FFF; z-index: 2;}
+    display: block; font-size: 18px; font-weight: bold; width: 30px; height: 30px;
+    border-radius: 50%; display: flex;justify-content: center;   align-items: center; padding-bottom: 5px;
+    border: 2px solid #FFF; z-index: 2;}
 .sec3st ul li .gr{
     content: ""; display: block; width: 234px;  height: 240px; 
     position: absolute; left: 0; top: 0;   

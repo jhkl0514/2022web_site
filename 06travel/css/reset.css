@@ -5,3 +5,8 @@ li{list-style: none;}
 a:link,a:visited{text-decoration: none; color: #333;}
 .clearfix:after{content: ""; display: block;clear: both;}
 img{display: block;}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Play', sans-serif;
+}
+    
