@@ -86,7 +86,7 @@ form{position: relative;}
 	100% {transform: scaleX(1)}
 }
 
-.headerWrap hr{border-width: 1px 0 0 0; border-color: #E44033;}
+.headerWrap hr{border: 0 none; border-top: 1px solid #E44033;}
 
 /* headr Navbar */
 .navWrap{position:relative; width: 100%;}
@@ -118,8 +118,8 @@ form{position: relative;}
 .navbar>ul>li:hover .submenu{display: block;}
 .submenu{
     display:none;
-    position: absolute; top:62px; z-index: 10;}
-.submenu ul{width: 100%;}    
+    position: absolute; top:60px; z-index: 10;}
+.submenu ul{width: 100%; _background-color: aqua;}    
 .submenu li{float: left; width:150px; height: 50px;}
 .submenu li:hover a{display: block; padding: 1px 10px; color: #E44033;}
 
@@ -144,13 +144,66 @@ form{position: relative;}
 .sec3st{height: 240px; width: 980px; margin-bottom: 75px;}
 
 
-/* section set1*/
+/* section set1st*/
 .sec1st {position: relative;}
+
+/* section set1st left_cont */
 .sec1st .left_cont{width: 482px; height: 556px;}
+
+/* section set1st right_cont */
+.sec1st .right_cont{width: 482px; height: 556px; position:absolute; right:0; top:0;}
 .sec1st .right_cont{
-    width: 482px; height: 556px; background-color:bisque;
-    position:absolute; right:0; top:0;
+    background-image: url(../images/content_01.png);
+    animation: content_01 4s infinite alternate;
 }
+
+@keyframes content_01 {
+    0% {
+      background: url(../images/content_01.png) ;
+    }
+    40% {
+      background: url(../images/content_01.png) ;
+    }
+    70% {
+      background: url(../images/content_01_02.png) ;
+    }
+    100% {
+      background: url(../images/content_01_02.png) ;
+    }    
+  }
+
+
+.sec1st .right_cont .mainTitle{color: #292929; position: relative; padding: 20px}
+.sec1st .right_cont .mainTitle h2{
+    font-size: 65px; line-height: 75px; margin-bottom: 10px;
+    animation: maintitle 2s ease-in-out;
+}
+@keyframes maintitle{
+    from{transform: translateX(-100px); opacity:0}
+    to{transform: translateX(0px); opacity:1}
+}
+.sec1st .right_cont .mainTitle h3{font-size: 34px; font-weight: 700; line-height: 52px; letter-spacing: -0.05em; margin-bottom: 24px;}
+.sec1st .right_cont .mainTitle p{font-weight: 400; font-size: 20px;  line-height: 32px; letter-spacing: -0.05em;}
+.sec1st .right_cont .mainTitle h2::after{
+    content: "";  display: block; position: absolute;  background: #E44033;
+    width: 82px; height: 6px; left: 287px; top: 85px; 
+    animation: maintitleAfter 2s ease-in-out;
+}
+@keyframes maintitleAfter{
+    from{transform: translateX(0px); opacity:0 }
+    to{transform: translateX(0px); opacity:1}
+}
+.sec1st .right_cont .content_03{animation: content_03 10s infinite alternate;}
+    
+@keyframes content_03{
+    /* from{transform: translateX(0px) translateY(50px);}
+    to{transform: translateX(100px) translateY(-30px);} */
+    0% {transform: translateX(0px) translateY(30px);}
+    25%{transform: translateX(100px) translateY(-20px);}
+    50%{transform: translateX(150px) translateY(30px);}
+    75%{transform: translateX(200px) translateY(-20px);}
+    100%{transform: translateX(300px) translateY(30px);}
+ }
 
 .sec1st .left_cont .reservation{
     height: 300px; width: 482px; background-color: #fff; margin-bottom: 16px;
@@ -173,7 +226,7 @@ form{position: relative;}
 .sec1st .cont01 .won,.cont02 .won{font-size: 12px;}
 .sec1st .cont01 .price .bNxt, .cont02 .price .bNxt{position: absolute; right: 0px; top:10px}
 
-/* section set2*/
+/* section set2st*/
 .sec2st ul{display: flex; justify-content:space-between; align-items: center;}
 
 /* sec2st hotel cont03-04 */
