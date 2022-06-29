@@ -10,13 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bxslidr_예약 -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- bxslidr_예약 -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -108,19 +113,68 @@
                 </ul>
             </nav>
         </div>
-    </div>  
+    </div> 
+    <!-- animation -->
+    <div class="animation">
+        <p><img src="images/content_02.png" alt="" ></p>
+        <img src="images/img_air.png" alt="" class="air">
+    </div>
     <!-- section -->
     <section id="section">
         <div class="sec1st container">
             <!-- sec1st left_cont-->
-            <div class="left_cont">
-                <div class="reservation">
-                    예약
-                </div>                 
+            <div class="left_cont">                
+
+                <!-- 예약 슬라이드 -->
+                <div class="slideWrap">
+                    <div class="slideTap">
+                        <ul>
+                            <li><a href="#" data-slide-index="0">menu1</a></li>
+                            <li><a href="#" data-slide-index="1">menu2</a></li>
+                            <li><a href="#" data-slide-index="2">menu3</a></li>
+                            <li><a href="#" data-slide-index="3">menu4</a></li>
+                        </ul>   
+                    </div>
+                    <div class="slideContents">
+                        <ul class="slide">
+                            <li>
+                                <div class="txtWrap">
+                                    slide01
+                                </div>                    
+                            </li>
+                            <li>
+                                <div class="txtWrap">
+                                    slide02
+                                </div>                    
+                            </li>
+                            <li>
+                                <div class="txtWrap">
+                                    slide03
+                                </div>                    
+                            </li>
+                            <li>
+                                <div class="txtWrap">
+                                    slide04
+                                </div>                    
+                            </li>
+                        </ul>
+                    </div>        
+                </div>
+                <script>
+                    $(document).ready(function(){     
+                        var slide = $(".slide").bxSlider({
+                            controls:false,              
+                            pagerCustom:".slideTap",
+                            mode:"vertical"            
+                        });
+                       
+                    });
+                </script>
+                <!-- 예약 슬라이드 끝-->
                 <div class="product">
                     <ul class="clearfix">
                         <!-- sec1st product cont01-->
-                        <li class="cont01 box1">
+                        <li class="cont01 box1 over-bg">
                             <h2 class="font_paly700">America</h2>
                             <p>미서부 vs 미동부 vs 뉴욕</p>
                             <div class="price">
@@ -155,6 +209,7 @@
                 <img src="images/content_03.png" alt="" class="content_03">
             </div>
         </div>
+        
         <div class="sec2st container">
             <ul>
                 <!-- sec2st hotel cont03-->

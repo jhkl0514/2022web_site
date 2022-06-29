@@ -207,11 +207,11 @@ form{position: relative;}
 }
 .sec1st .right_cont .mainTitle h3{
     font-size: 34px; font-weight: 700; line-height: 52px; letter-spacing: -0.05em; margin-bottom: 24px;
-    animation: fadeInUp 2s ease-in-out; animation-delay: 0.1s; 
+    animation: fadeInUp 2s ease-in-out forwards; animation-delay: 0.5s; opacity: 0;
 }
 .sec1st .right_cont .mainTitle p{
     font-weight: 400; font-size: 20px;  line-height: 32px; letter-spacing: -0.05em;
-    animation: fadeInUp 2s ease-in-out; animation-delay: 0.1s; 
+    animation: fadeInUp 2s ease-in-out forwards; animation-delay: 0.8s; opacity: 0;
 }
 @keyframes fadeInUp {
     from {opacity: 0; transform: translate3d(0, 100%, 0);}  
@@ -239,9 +239,41 @@ form{position: relative;}
     100%{transform: translateX(300px) translateY(30px);}
  }
 
-.sec1st .left_cont .reservation{
+ /* 예약 슬라이드 */
+/* .sec1st .left_cont .slideWrap{
     height: 300px; width: 482px; background-color: #fff; margin-bottom: 16px;
+} */
+.slideWrap{
+    width: 482px; height: 300px; margin: 0 auto;
+    position: relative; display: flex; justify-content: space-between;
+    margin-bottom: 16px;
 }
+.slideWrap .slideTap li>a.active{
+    background: rgba(255, 255, 255, 1); color: #333;
+    border-bottom: 3px solid #E44033;
+}
+.slideWrap .slideTap li>a{       
+    width: 132px; 
+    height: 75px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #A4A4A4;
+    display: flex; justify-content: center; align-items: center;
+}
+.slideWrap .slideTap li>a:hover{background: rgba(255, 255, 255, 1); color: #333;}
+
+.slideWrap .slideContents .txtWrap{
+   background: #fff;
+   width: 345px; height: 300px;
+}
+
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0px #ccc;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 0px #ccc;
+    border: 0px none;
+    background: #fff;
+}
+
 /* sec1st product cont01 */
 .sec1st .left_cont .product{
     height: 240px; width: 482px;
@@ -267,6 +299,23 @@ form{position: relative;}
 @keyframes pos{
   from {right: 10px;}
   to {right: 0px; opacity: 0; }
+}
+
+
+.sec1st .product li::after{
+    background-color: #E44033; z-index: 15; content:'';
+    height: 240px; width: 482px;
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%; 
+  background: #E44033; 
+  transform: skewX(-25deg);
+  content:'' */
 }
 
 /* section set2st*/
@@ -302,6 +351,12 @@ form{position: relative;}
     border: 1px solid #E44033; padding: 5px 10px; font-size: 16px;
     position: absolute; top:45%; left: 25%;
 }
+.sec2st .cont06 p{position:relative;z-index:1}
+.sec2st .cont06 p::before{position:absolute;top:0;left:0;width:100%; z-index:0;background:#E44033;transition:height .3s ease-in-out;content:''}
+.sec2st .cont06 p:hover{border-color:#E44033}
+.sec2st .cont06 p:hover::before{height:100%}
+
+
 
 /* section set3*/
 .sec3st ul{display: flex; justify-content:space-between; align-items: center;}
