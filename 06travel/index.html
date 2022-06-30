@@ -22,6 +22,26 @@
     <!-- bxslidr_예약 -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <!-- 달력 -->
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            $("#sdate,#edate").datepicker({
+                dateFormat:'yy/mm/dd',                
+                prevText: '이전 달',
+                nextText: '다음 달',
+                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                dayNames: ['일','월','화','수','목','금','토'],
+                dayNamesShort: ['일','월','화','수','목','금','토'],
+                dayNamesMin: ['일','월','화','수','목','금','토'],
+                showMonthAfterYear: true,
+                yearSuffix: '년'
+            })
+        })
+    </script>
 </head>
 <body>
     <!-- header -->
@@ -129,17 +149,72 @@
                 <div class="slideWrap">
                     <div class="slideTap">
                         <ul>
-                            <li><a href="#" data-slide-index="0">menu1</a></li>
-                            <li><a href="#" data-slide-index="1">menu2</a></li>
-                            <li><a href="#" data-slide-index="2">menu3</a></li>
-                            <li><a href="#" data-slide-index="3">menu4</a></li>
+                            <li><a href="#" data-slide-index="0"><i class="fa-solid fa-plane-departure"></i>&nbsp&nbsp공항예약</a></li>
+                            <li><a href="#" data-slide-index="1"><i class="fa-solid fa-square-h"></i>&nbsp&nbsp호텔예약</a></li>
+                            <li><a href="#" data-slide-index="2"><i class="fa-solid fa-car-rear"></i>&nbsp&nbsp렌&nbsp&nbsp트&nbsp&nbsp카</a></li>
+                            <li><a href="#" data-slide-index="3"><i class="fa-solid fa-umbrella-beach"></i>&nbsp휴&nbsp&nbsp양&nbsp&nbsp지</a></li>
                         </ul>   
                     </div>
                     <div class="slideContents">
                         <ul class="slide">
-                            <li>
+                            <li>                                
                                 <div class="txtWrap">
-                                    slide01
+                                    <!-- 항공예약 form -->
+                                    <form action="#" method="get">
+                                        <fieldset>
+                                            <div class="fieldAir">                                                
+                                                <legend class="blind">항공예약</legend>
+                                                <!-- <label for="go">어디에서 출발하세요</label> -->
+                                                <div class="airport">                                                    
+                                                    <div class="left">
+                                                        <label for="go" class="airTitle font_Noto700">ICN</label>
+                                                        <select name="golo">
+                                                            <option value="">선택</option>
+                                                            <option value="한국">한국</option>
+                                                            <option value="미국">미국</option>
+                                                            <option value="중국">중국</option>
+                                                            <option value="영국">영국</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="right">
+                                                        <label for="go" class="airTitle font_Noto700">도착</label>
+                                                        <select name="golo">
+                                                            <option value="">선택</option>
+                                                            <option value="한국">한국</option>
+                                                            <option value="미국">미국</option>
+                                                            <option value="중국">중국</option>
+                                                            <option value="영국">영국</option>
+                                                        </select>
+                                                    </div>                                                 
+                                                </div>
+                                            </div>
+                                         <div class="field date">
+                                            <div class="left">
+                                                <label for="sdate" class="blind">가는 날</label>
+                                                <i class="fa-regular fa-calendar-check"></i>
+                                                <input type="text" id="sdate" placeholder="가는 날" class="inp-field">                                                
+                                            </div>
+                                            <div class="right">
+                                                <label for="edate" class="blind">오는 날</label>
+                                                <input type="text" id="edate"  placeholder="오는 날" class="inp-field">        
+                                            </div>
+                                         </div>                                                                              
+                                         <div class="field air">
+                                            <div class="usernum">
+                                                <label for="number">좌석선택</label>                                              
+                                                <select name="" id=""  placeholder="일반석">                                                    
+                                                    <option value="일반석">일반석</option>
+                                                    <option value="비즈니스석">비즈니스석</option>
+                                                    <option value="일등석">일등석</option>
+                                                </select>
+                                            </div> 
+                                            <div>
+                                                <label for="number">인원선택</label>
+                                                <input type="number" name="user" id="number" placeholder="성인1명"  class="inp-field">
+                                            </div>                                           
+                                         </div>                                 
+                                        </fieldset>
+                                    </form>
                                 </div>                    
                             </li>
                             <li>
@@ -165,7 +240,8 @@
                         var slide = $(".slide").bxSlider({
                             controls:false,              
                             pagerCustom:".slideTap",
-                            mode:"vertical"            
+                            mode:"vertical",
+                            touchEnabled:false            
                         });
                        
                     });

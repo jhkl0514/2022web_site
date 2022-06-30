@@ -13,8 +13,14 @@ body, html{width: 100%;}
     font-family: 'play';
     font-weight: 700;    
 }
+
+.font_Noto700{
+    font-family: 'Noto Sans KR';
+    font-weight: 700;    
+}
 .box1{width: 234px; height: 240px; padding: 20px}
 .box2{width: 234px; height: 240px; padding: 28px}
+
 
 /* headr */
 .headerWrap{background-color: #fff; width: 100%; position: relative;}
@@ -45,7 +51,7 @@ body, html{width: 100%;}
   }
 
   /* headr form */
-form{position: relative;}
+.searchWrap form{position: relative;}
 .searchWrap {position: absolute; width: 400px; top: 0%; left: 50%;  transform: translate(-50%, 50%);}
 .searchWrap .inp{
     width: 400px; height: 45px; text-indent: 90px;
@@ -132,7 +138,6 @@ form{position: relative;}
 .navbar>ul>li:nth-child(6) .submenu{left: calc( 50% - 500px);}
 
 /* animation */
-
 .animation p{
     display: block; width: 100%;
     position: absolute;  top:750px; left: 0; 
@@ -172,6 +177,82 @@ form{position: relative;}
 
 /* section set1st left_cont */
 .sec1st .left_cont{width: 482px; height: 556px;}
+
+ /* section set1st left_cont 예약 메뉴*/
+ .slideWrap{
+    width: 482px; height: 300px; margin: 0 auto;
+    position: relative; display: flex; justify-content: space-between;
+    margin-bottom: 16px;
+}
+.slideWrap .slideTap li>a.active{
+    background: rgba(255, 255, 255, 1); color: #333;
+    border-bottom: 3px solid #E44033;
+    
+}
+/* .slideWrap .slideTap li i{display: none;}
+.slideWrap .slideTap li>a.active i{display: block;} */
+
+.slideWrap .slideTap li>a{       
+    width: 132px; 
+    height: 75px;
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #A4A4A4;
+    display: flex;  align-items: center;
+    padding-left: 20px;
+    font-weight: 700;    
+}
+.slideWrap .slideTap li>a:hover{
+    background: rgba(255, 255, 255, 1); color: #333;
+}
+.slideWrap .slideContents .txtWrap{
+   background: #fff;
+   width: 345px; height: 300px;
+   padding: 20px 25px;
+}
+ /* section set1st left_cont 예약 슬라이드 form 양식*/
+.slideContents input{background-color: #f5f7f8;}
+.slideContents select{background-color: #f5f7f8; font-size: 12px; color:#666}
+.slideContents fieldset{border: 0 none;}
+.slideContents .blind{display: block; position: absolute; left: 0; top: -9999px;}
+.slideContents form{width: 100%;}
+.slideContents .field label{display: block; padding: 5px 0; }
+.slideContents .field select{
+    width: 100%;  height: 35px; font-size: 1em;  padding: 0.3em 1em;   border-radius: 3px; border: 1px solid #ccc;
+}
+.slideContents .fieldAir {margin-bottom: 10px;}
+.slideContents .fieldAir label{display: block; padding: 5px 0 ; font-size: 25px;}
+
+
+.slideContents .fieldAir select{
+    width: 100%;    height: 35px; font-size: 1em;    padding: 0.3em 1em;   border-radius: 3px; border: 1px solid #ccc;
+}
+.slideContents .fieldAir .airport .left{width:142px}
+.slideContents .fieldAir .airport .right{width:142px}
+.slideContents .fieldAir .airport{display: flex; justify-content: space-between;}
+
+.slideContents .field {padding-bottom: 5px;}
+.slideContents .field label{font-size: 14px; color: #666;}
+
+.slideContents .field .usernum{width: 100%;}
+.slideContents .field select:focus{outline: none;}
+.slideContents .slide .txtWrap .field>div{width: calc( ( 100% - 10px ) / 2);}
+.slideContents .field div:nth-of-type(1){margin-right: 10px;}
+.slideContents .field.date,.field.air,.field.number{display: flex; position: relative;}
+.slideContents .field .inp-field{
+    width: 100%; font-size: 1em; height: 35px; text-align: right;
+    padding: 0 10px;  border-radius: 3px; border: 1px solid #ccc;
+}
+.slideContents .field.date .inp-field:focus{outline: none;}
+
+ /* section set1st left_cont 슬라이드*/
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0px #ccc;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 0px #ccc;
+    border: 0px none;
+    background: #fff;
+}
+
 
 /* section set1st right_cont */
 .sec1st .right_cont{width: 482px; height: 556px; position:absolute; right:0; top:0;}
@@ -239,40 +320,6 @@ form{position: relative;}
     100%{transform: translateX(300px) translateY(30px);}
  }
 
- /* 예약 슬라이드 */
-/* .sec1st .left_cont .slideWrap{
-    height: 300px; width: 482px; background-color: #fff; margin-bottom: 16px;
-} */
-.slideWrap{
-    width: 482px; height: 300px; margin: 0 auto;
-    position: relative; display: flex; justify-content: space-between;
-    margin-bottom: 16px;
-}
-.slideWrap .slideTap li>a.active{
-    background: rgba(255, 255, 255, 1); color: #333;
-    border-bottom: 3px solid #E44033;
-}
-.slideWrap .slideTap li>a{       
-    width: 132px; 
-    height: 75px;
-    background: rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid #A4A4A4;
-    display: flex; justify-content: center; align-items: center;
-}
-.slideWrap .slideTap li>a:hover{background: rgba(255, 255, 255, 1); color: #333;}
-
-.slideWrap .slideContents .txtWrap{
-   background: #fff;
-   width: 345px; height: 300px;
-}
-
-.bx-wrapper {
-    -moz-box-shadow: 0 0 0px #ccc;
-    -webkit-box-shadow: 0 0 0px #ccc;
-    box-shadow: 0 0 0px #ccc;
-    border: 0px none;
-    background: #fff;
-}
 
 /* sec1st product cont01 */
 .sec1st .left_cont .product{
