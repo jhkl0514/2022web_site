@@ -19,13 +19,18 @@
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 달력 -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!-- bxslidr_예약 -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <!-- swiper_ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css" integrity="sha512-303pOWiYlJMbneUN488MYlBISx7PqX8Lo/lllysH56eKO8nWIMEMGRHvkZzfXYrHj4j4j5NtBuWmgPnkLlzFCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- 달력 -->
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script>
         $(document).ready(function(){
             $("#sdate,#edate").datepicker({
@@ -152,7 +157,7 @@
                             <li><a href="#" data-slide-index="0"><i class="fa-solid fa-plane-departure"></i>&nbsp&nbsp공항예약</a></li>
                             <li><a href="#" data-slide-index="1"><i class="fa-solid fa-square-h"></i>&nbsp&nbsp호텔예약</a></li>
                             <li><a href="#" data-slide-index="2"><i class="fa-solid fa-car-rear"></i>&nbsp&nbsp렌&nbsp&nbsp트&nbsp&nbsp카</a></li>
-                            <li><a href="#" data-slide-index="3"><i class="fa-solid fa-umbrella-beach"></i>&nbsp휴&nbsp&nbsp양&nbsp&nbsp지</a></li>
+                            <li><a href="#" data-slide-index="3"><i class="fa-solid fa-umbrella-beach"></i>&nbsp패&nbsp&nbsp키&nbsp&nbsp지</a></li>
                         </ul>   
                     </div>
                     <div class="slideContents">
@@ -165,71 +170,300 @@
                                             <div class="fieldAir">                                                
                                                 <legend class="blind">항공예약</legend>
                                                 <!-- <label for="go">어디에서 출발하세요</label> -->
-                                                <div class="airport">                                                    
-                                                    <div class="left">
-                                                        <label for="go" class="airTitle font_Noto700">ICN</label>
-                                                        <select name="golo">
-                                                            <option value="">선택</option>
-                                                            <option value="한국">한국</option>
-                                                            <option value="미국">미국</option>
-                                                            <option value="중국">중국</option>
-                                                            <option value="영국">영국</option>
-                                                        </select>
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-plane-departure"></i>
+                                                    <div class="airport">                                                    
+                                                        <div class="left">
+                                                            <label for="go" class="airTitle font_paly700">ICN</label>
+                                                            <select name="golo"  class="sel-field">
+                                                                <option value="">선택</option>
+                                                                <option value="한국">한국</option>
+                                                                <option value="미국">미국</option>
+                                                                <option value="중국">중국</option>
+                                                                <option value="영국">영국</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="right">
+                                                            <label for="go" class="airTitle font_paly700">도착</label>
+                                                            <select name="golo" class="sel-field">
+                                                                <option value="">선택</option>
+                                                                <option value="한국">한국</option>
+                                                                <option value="미국">미국</option>
+                                                                <option value="중국">중국</option>
+                                                                <option value="영국">영국</option>
+                                                            </select>
+                                                        </div>                                                 
                                                     </div>
-                                                    <div class="right">
-                                                        <label for="go" class="airTitle font_Noto700">도착</label>
-                                                        <select name="golo">
-                                                            <option value="">선택</option>
-                                                            <option value="한국">한국</option>
-                                                            <option value="미국">미국</option>
-                                                            <option value="중국">중국</option>
-                                                            <option value="영국">영국</option>
-                                                        </select>
-                                                    </div>                                                 
                                                 </div>
                                             </div>
                                          <div class="field date">
                                             <div class="left">
                                                 <label for="sdate" class="blind">가는 날</label>
-                                                <i class="fa-regular fa-calendar-check"></i>
-                                                <input type="text" id="sdate" placeholder="가는 날" class="inp-field">                                                
+                                                <div class="i_icon">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                    <input type="text" id="sdate" placeholder="가는 날" class="inp-field">
+                                                </div>                                            
                                             </div>
                                             <div class="right">
                                                 <label for="edate" class="blind">오는 날</label>
-                                                <input type="text" id="edate"  placeholder="오는 날" class="inp-field">        
+                                                <div class="i_icon">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                     <input type="text" id="edate"  placeholder="오는 날" class="inp-field">        
+                                                </div>     
                                             </div>
                                          </div>                                                                              
                                          <div class="field air">
                                             <div class="usernum">
-                                                <label for="number">좌석선택</label>                                              
-                                                <select name="" id=""  placeholder="일반석">                                                    
-                                                    <option value="일반석">일반석</option>
-                                                    <option value="비즈니스석">비즈니스석</option>
-                                                    <option value="일등석">일등석</option>
-                                                </select>
+                                                <label for="number" class="blind">좌석선택</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-square-check"></i>                                        
+                                                    <select name="" id=""  placeholder="일반석"  class="inp-field">                                                    
+                                                        <option value="일반석" class="title">좌석선택</option>
+                                                        <option value="일반석">일반석</option>
+                                                        <option value="비즈니스석">비즈니스석</option>
+                                                        <option value="일등석">일등석</option>
+                                                    </select>
+                                                </div>
                                             </div> 
                                             <div>
-                                                <label for="number">인원선택</label>
+                                                <label for="number"  class="blind">인원</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-user-group"></i>
                                                 <input type="number" name="user" id="number" placeholder="성인1명"  class="inp-field">
+                                                </div>
                                             </div>                                           
-                                         </div>                                 
+                                         </div>
+                                         <div class="but"><button>항공권 검색하기</button></div>
                                         </fieldset>
                                     </form>
                                 </div>                    
                             </li>
-                            <li>
+                            <li>                                
                                 <div class="txtWrap">
-                                    slide02
+                                    <!-- 호텔예약 form -->
+                                    <form action="#" method="get">
+                                        <fieldset>
+                                            <div class="fieldAir">                                                
+                                                <legend class="blind">호텔예약</legend>
+                                                <!-- <label for="go">어디에서 출발하세요</label> -->
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-hotel"></i>
+                                                    <div class="airport">                                                    
+                                                        <div class="left">
+                                                            <label for="go" class="airTitle font_paly700">국내</label>
+                                                            <select name="golo"  class="sel-field">
+                                                                <option value="">선택</option>
+                                                                <option value="서울">서울</option>
+                                                                <option value="부산">부산</option>
+                                                                <option value="인천">인천</option>
+                                                                <option value="대구">대구</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="right">
+                                                            <label for="go" class="airTitle font_paly700">해외</label>
+                                                            <select name="golo" class="sel-field">
+                                                                <option value="">선택</option>
+                                                                <option value="동남아">동남아</option>
+                                                                <option value="유럽">유럽</option>
+                                                                <option value="북아메리카">북아메리카</option>
+                                                                <option value="중동">중동</option>
+                                                            </select>
+                                                        </div>                                                 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         <div class="field date">
+                                            <div class="left">
+                                                <label for="sdate" class="blind">가는 날</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                    <input type="text" id="sdate" placeholder="체크인" class="inp-field">
+                                                </div>                                            
+                                            </div>
+                                            <div class="right">
+                                                <label for="edate" class="blind">오는 날</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                     <input type="text" id="edate"  placeholder="체크아웃" class="inp-field">        
+                                                </div>     
+                                            </div>
+                                         </div>                                                                              
+                                         <div class="field air">
+                                            <div class="usernum">
+                                                <label for="number" class="blind">룸선택</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-square-check"></i>                                        
+                                                    <select name="" id=""  placeholder="일반석"  class="inp-field">                                                    
+                                                        <option value="일반석" class="title">룸선택</option>
+                                                        <option value="일반석">패밀리</option>
+                                                        <option value="비즈니스석">일반</option>
+                                                        <option value="일등석">로얄</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+                                            <div>
+                                                <label for="number"  class="blind">인원</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-user-group"></i>
+                                                <input type="number" name="user" id="number" placeholder="성인1명"  class="inp-field">
+                                                </div>
+                                            </div>                                           
+                                         </div>
+                                         <div class="but"><button>호텔검색하기</button></div>
+                                        </fieldset>
+                                    </form>
                                 </div>                    
                             </li>
-                            <li>
+                            <li>                                
                                 <div class="txtWrap">
-                                    slide03
+                                    <!-- 렌트카 form -->
+                                    <form action="#" method="get">
+                                        <fieldset>
+                                            <div class="fieldAir">                                                
+                                                <legend class="blind">렌트카예약</legend>
+                                                <!-- <label for="go">어디에서 출발하세요</label> -->
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-car-rear"></i>
+                                                    <div class="airport">                                                    
+                                                        <div class="left">
+                                                            <label for="go" class="airTitle font_paly700">국내</label>
+                                                            <select name="golo"  class="sel-field">
+                                                                <option value="">선택</option>
+                                                                <option value="한국">서울</option>
+                                                                <option value="미국">부산</option>
+                                                                <option value="중국">대구</option>
+                                                                <option value="영국">인천</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="right">
+                                                            <label for="go" class="airTitle font_paly700">해외</label>
+                                                            <select name="golo" class="sel-field">
+                                                                <option value="">선택</option>
+                                                                <option value="한국">캐나다</option>
+                                                                <option value="미국">미국</option>
+                                                                <option value="중국">중국</option>
+                                                                <option value="영국">영국</option>
+                                                            </select>
+                                                        </div>                                                 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         <div class="field date">
+                                            <div class="left">
+                                                <label for="sdate" class="blind">대여일</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                    <input type="text" id="sdate" placeholder="대여 일" class="inp-field">
+                                                </div>                                            
+                                            </div>
+                                            <div class="right">
+                                                <label for="edate" class="blind">반납일</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                     <input type="text" id="edate"  placeholder="반납 일" class="inp-field">        
+                                                </div>     
+                                            </div>
+                                         </div>                                                                              
+                                         <div class="field air">
+                                            <div class="usernum">
+                                                <label for="number" class="blind">대여차량</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-square-check"></i>                                        
+                                                    <select name="" id=""  placeholder="대여차랑"  class="inp-field">                                                    
+                                                        <option value="대여차량" class="title">대여차랑</option>
+                                                        <option value="대형">대형</option>
+                                                        <option value="중형">중형</option>
+                                                        <option value="소형">소형</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+                                            <div>
+                                                <label for="number"  class="blind">인원</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-user-group"></i>
+                                                <input type="number" name="user" id="number" placeholder="성인1명"  class="inp-field">
+                                                </div>
+                                            </div>                                           
+                                         </div>
+                                         <div class="but"><button>렌트카 검색하기</button></div>
+                                        </fieldset>
+                                    </form>
                                 </div>                    
                             </li>
-                            <li>
+                            <li>                                
                                 <div class="txtWrap">
-                                    slide04
+                                    <!-- 패키지 form -->
+                                    <form action="#" method="get">
+                                        <fieldset>
+                                            <div class="fieldAir">                                                
+                                                <legend class="blind">패키지</legend>
+                                                <!-- <label for="go">어디에서 출발하세요</label> -->
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-umbrella-beach"></i>
+                                                    <div class="airport">                                                    
+                                                        <div class="left">
+                                                            <label for="go" class="airTitle font_paly700">국내</label>
+                                                            <select name="golo"  class="sel-field">
+                                                                <option value="">선택</option>
+                                                                <option value="한국">한국</option>
+                                                                <option value="미국">미국</option>
+                                                                <option value="중국">중국</option>
+                                                                <option value="영국">영국</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="right">
+                                                            <label for="go" class="airTitle font_paly700">해외</label>
+                                                            <select name="golo" class="sel-field">
+                                                                <option value="">선택</option>
+                                                                <option value="한국">한국</option>
+                                                                <option value="미국">미국</option>
+                                                                <option value="중국">중국</option>
+                                                                <option value="영국">영국</option>
+                                                            </select>
+                                                        </div>                                                 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         <div class="field date">
+                                            <div class="left">
+                                                <label for="sdate" class="blind">가는 날</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                    <input type="text" id="sdate" placeholder="가는 날" class="inp-field">
+                                                </div>                                            
+                                            </div>
+                                            <div class="right">
+                                                <label for="edate" class="blind">오는 날</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-regular fa-calendar-check"></i>
+                                                     <input type="text" id="edate"  placeholder="오는 날" class="inp-field">        
+                                                </div>     
+                                            </div>
+                                         </div>                                                                              
+                                         <div class="field air">
+                                            <div class="usernum">
+                                                <label for="number" class="blind">모객선택</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-square-check"></i>                                        
+                                                    <select name="" id=""  placeholder="일반석"  class="inp-field">                                                    
+                                                        <option value="패키지형태" class="title">패키지형태</option>
+                                                        <option value="긴급모객">긴급모객</option>
+                                                        <option value="5팀이하">5팀이하</option>
+                                                        <option value="5팀이상">5팀이상</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+                                            <div>
+                                                <label for="number"  class="blind">인원</label>
+                                                <div class="i_icon">
+                                                    <i class="fa-solid fa-user-group"></i>
+                                                <input type="number" name="user" id="number" placeholder="성인1명"  class="inp-field">
+                                                </div>
+                                            </div>                                           
+                                         </div>
+                                         <div class="but"><button>패키지 검색하기</button></div>
+                                        </fieldset>
+                                    </form>
                                 </div>                    
                             </li>
                         </ul>
@@ -288,21 +522,88 @@
         
         <div class="sec2st container">
             <ul>
-                <!-- sec2st hotel cont03-->
-                <li class="cont03 box1">
-                    <div class="slide">slide</div>
-                    <div class="hotel">
-                        <h3>HILLTON HOTEL (PARIS)</h3>
-                        <img src="images/icon_star.png" alt="">
-                    </div>
+                <!-- sec2st hotel cont03 스와이퍼 슬라이드-->                              
+                <li class="cont03">
+                    <div class="sliderWrap">
+                        <div class="swiper mySwiper01">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide" style="background-image: url(images/poto_03.png);">                                
+                                <div class="hotel">
+                                    <h3>HILLTON HOTEL (PARIS)</h3>
+                                    <img src="images/icon_star.png" alt="">
+                                </div>
+                             </div>
+                             <div class="swiper-slide" style="background-image: url(images/poto_04.png);">
+                                <div class="hotel">
+                                    <h3>HILLTON HOTEL (PARIS)</h3>
+                                    <img src="images/icon_star.png" alt="">
+                                </div>
+                             </div>
+                             <div class="swiper-slide" style="background-image: url(images/poto_05.png);">
+                                <div class="hotel">
+                                    <h3>HILLTON HOTEL (PARIS)</h3>
+                                    <img src="images/icon_star.png" alt="">
+                                </div>
+                                <!-- <img src="images/poto_03.png" alt=""> -->
+                             </div>                              
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                          </div>
+                    </div>                    
                 </li>
+                <!-- Swiper JS 스와이퍼 -->
+                    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+                <!-- Initialize Swiper 스와이퍼 -->
+                    <script>
+                    var swiper = new Swiper(".mySwiper01", {
+                        loop: true,
+                        navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                        },
+                    });
+                    </script>                    
                 <!-- sec2st hotel cont04-->
-                <li class="cont04 box1">
-                    <div class="slide">slide</div>
-                    <div class="hotel">
-                        <h3>HILLTON HOTEL (PARIS)</h3>
-                        <img src="images/icon_star.png" alt="">
+                <li class="cont04">
+                    <div class="sliderWrap">
+                        <div class="swiper mySwiper02">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide" style="background-image: url(images/poto_03.png);">                                
+                                <div class="hotel">
+                                    <h3>HILLTON HOTEL (PARIS)</h3>
+                                    <img src="images/icon_star.png" alt="">
+                                </div>
+                             </div>
+                             <div class="swiper-slide" style="background-image: url(images/poto_04.png);">
+                                <div class="hotel">
+                                    <h3>HILLTON HOTEL (PARIS)</h3>
+                                    <img src="images/icon_star.png" alt="">
+                                </div>
+                             </div>
+                             <div class="swiper-slide" style="background-image: url(images/poto_05.png);">
+                                <div class="hotel">
+                                    <h3>HILLTON HOTEL (PARIS)</h3>
+                                    <img src="images/icon_star.png" alt="">
+                                </div>                                
+                             </div>                              
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                          </div>
                     </div>
+                     <!-- Initialize Swiper 스와이퍼 -->
+                     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                     <script>
+                        var swiper = new Swiper(".mySwiper02", {
+                            loop: true,
+                            navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                            },
+                        });
+                     </script>               
                 </li>
                 <!-- sec2st weather cont05-->
                 <li class="cont05 box1">
