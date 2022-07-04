@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/* header  */
+.headerTopWrap{
+    background: #0763a2 url(../images/topbg01.jpg) no-repeat center;
+}
+.headerTop{
+    width: 980px;margin: 0 auto;height: 90px;
+    display: flex;justify-content: space-between;
+}
+.headerTop h1{width: 130px;background: pink;}
+.headerTop h1 a{display: flex;height: 100%;justify-content: center;align-items: center;}
+.headerTop .search{width: 200px;background: orange;}
+.headerTop .sns{width: 150px;background: blue;}
+
+#header{border-bottom: 2px solid #0763a2;}
+.navbar ul{height: 60px;}
+.navbar ul li{width: calc( 100% / 6 );}
+.navbar ul li a{height: 100%;transition:.3s}
+.navbar ul li a.active,
+.navbar ul li a:hover{background: #333;color:white}
+
+/* section  */
+.contents{}
+.contents.main{
+    background: url(../images/bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* sub01  citytour */
+.contents.subpage{
+    background: skyblue;
+    padding-bottom: 50px;
+
+}
+.contents.subpage .visual{
+    /* background-image: url(../images/subimg01_.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+.contents.subpage .section{
+    margin-top: -50px;
+    background: white;
+    border-top: 3px solid #0763a2;
+    border-bottom: 3px solid #0763a2;
+}
+
+
+.contents.subpage .visual .txtWrap{
+    transform: translateY(-30px);
+}
+.contents.subpage .visual .txtWrap h3{
+    font-size: 2em;color:white;
+}
+.contents.citytour .visual{
+    background-image: url(../images/subimg01_.jpg);
+}
+
+
+
+.contents.citytour .section img{margin: 0 auto;}
+
+
+/* sub04 company  */
+.contents.company .visual{
+    /* background-image: url(../images/subimg02.jpg); */
+    background-color: pink;
+}
+
+
+
+
+/* footer  */
+
+/* common  */
+.container{width: 980px;margin: 0 auto;}
+.d-flex{display: flex !important;}
+.j-center{justify-content: center !important;}
+.j-between{justify-content: space-between !important;}
+.a-center{align-items: center !important;}
+.py-5{padding: 3em 0 !important;}
+.py-8{padding: 5em 0 !important;}
+

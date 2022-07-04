@@ -177,6 +177,40 @@ body, html{width: 100%;}
     margin: 0 auto;
 
 }
+.travel, .internal{
+    width: 100%; height: 750px; margin: 0 auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.hotel{
+    width: 100%; height: 975px; margin: 0 auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.honeymoon{
+    width: 100%; height: 814px; margin: 0 auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+/* sub01  travel */
+
+/* common  */
+.container{width: 980px;margin: 0 auto;}
+.d-flex{display: flex !important;}
+.j-center{justify-content: center !important;}
+.j-between{justify-content: space-between !important;}
+.a-center{align-items: center !important;}
+.py-5{padding: 3em 0 !important;}
+.py-8{padding: 5em 0 !important;}
+
+
+
 .sec1st{height: 560px; width: 980px; margin-bottom: 16px; margin-top: 60px;} 
 .sec2st{height: 240px; width: 980px; margin-bottom: 16px;}
 .sec3st{height: 240px; width: 980px; margin-bottom: 75px;}
@@ -385,7 +419,7 @@ body, html{width: 100%;}
 .sec2st .cont03{position: relative;}
 .sec2st .cont04{background-image: url(../images/poto_04.png); position: relative;}
 .sec2st .cont03 .hotel, .cont04 .hotel{
-    height: 75px; width: 234px; background: #fff;
+    height: 75px; width: 234px; background: #fff; 
     position: absolute; left:0px; bottom: 0px; padding: 0 25px;
 }
 .sec2st .cont03 .hotel h3, .cont04 .hotel h3{font-size: 18px; letter-spacing: -1.5px; padding-top: 12px; padding-bottom: 5px;}
@@ -532,6 +566,7 @@ body, html{width: 100%;}
 
 
 /* footer */
+#footer hr{border: 0 none; border-top: 1px solid #666}
 .footerWrap{height: 300px; position: relative;}
 .footterMenu{margin: 40px 0 40px 0; display: flex; justify-content: space-between;}
 .footterMenu a{font-weight:700; font-size: 14px; letter-spacing: -0.42px;}

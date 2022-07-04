@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>여행이지</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bxslidr_예약 -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <!-- style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 달력 -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- bxslidr_예약 -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <!-- swiper_ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css" integrity="sha512-303pOWiYlJMbneUN488MYlBISx7PqX8Lo/lllysH56eKO8nWIMEMGRHvkZzfXYrHj4j4j5NtBuWmgPnkLlzFCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- 달력 -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#sdate,#edate").datepicker({
+                dateFormat:'yy/mm/dd',                
+                prevText: '이전 달',
+                nextText: '다음 달',
+                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                dayNames: ['일','월','화','수','목','금','토'],
+                dayNamesShort: ['일','월','화','수','목','금','토'],
+                dayNamesMin: ['일','월','화','수','목','금','토'],
+                showMonthAfterYear: true,
+                yearSuffix: '년'
+            })
+        })
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <div class="headerWrap">
+        <div class="header container">
+            <h1 class="logo"><a href="./">여행이지</a></h1>
+            <div class="searchWrap">
+                <form action="#">
+                    <input type="text" name="search" placeholder="검색어를 입력하세요" class="inp">
+                </form>
+                <p class="title font_paly700">SEARCH</p>
+                <div class="icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="sns">
+                <ul>
+                    <li><img src="images/sns_icon_object_01.png" alt=""></li>
+                    <li><a href=""><img src="images/sns_icon_object_02.png" alt=""></a></li>
+                    <li><a href=""><img src="images/sns_icon_object_03.png" alt=""></a></li>
+                    <li><a href=""><img src="images/sns_icon_object_04.png" alt=""></a></li>
+                </ul>   
+            </div>
+        </div>
+        <hr>
+        <div class="navWrap">
+            <nav class="navbar container">
+                <ul>
+                    <li><a href="travel.html">해외여행</a>
+                        <div class="submenu">
+                            <ul class="clearfix">
+                                <li><a href="travel.html">해외여행_01</a></li>
+                                <li><a href="travel.html">해외여행_02</a></li>
+                                <li><a href="travel.html">해외여행_03</a></li>
+                                <li><a href="travel.html">해외여행_04</a></li>
+                            </ul>
+                        </div>
+                    </li>    
+                    <li><a href="hotel.html">호텔예약</a>
+                        <div class="submenu">
+                            <ul class="clearfix">
+                                <li><a href="hotel.html">호텔예약_01</a></li>
+                                <li><a href="hotel.html">호텔예약_02</a></li>
+                                <li><a href="hotel.html">호텔예약_03</a></li>
+                                <li><a href="hotel.html">호텔예약_04</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="honeymoon.htm">허니문</a>
+                        <div class="submenu">
+                            <ul class="clearfix">
+                                <li><a href="honeymoon.html">허니문_01</a></li>
+                                <li><a href="honeymoon.html">허니문_02</a></li>
+                                <li><a href="honeymoon.html">허니문_03</a></li>
+                                <li><a href="honeymoon.html">허니문_04</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="honeymoon.html">허니문</a>
+                        <div class="submenu">
+                            <ul class="clearfix">
+                                <li><a href="tip.html">여행TIP_01</a></li>
+                                <li><a href="tip.html">여행TIP_02</a></li>
+                                <li><a href="tip.html">여행TIP_03</a></li>
+                                <li><a href="tip.html">여행TIP_04</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="internal.html">국내여행</a>
+                        <div class="submenu">
+                            <ul class="clearfix">
+                                <li><a href="internal.html">국내여행_01</a></li>
+                                <li><a href="internal.html">국내여행_02</a></li>
+                                <li><a href="internal.html">국내여행_03</a></li>
+                                <li><a href="internal.html">국내여행_04</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="event.html">이벤트</a>
+                        <div class="submenu">
+                            <ul class="clearfix">
+                                <li><a href="event.html">이벤트_01</a></li>
+                                <li><a href="event.html">이벤트_02</a></li>
+                                <li><a href="event.html">이벤트_03</a></li>
+                                <li><a href="event.html">이벤트_04</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div> 
+    <!-- section -->   
+
+    <section id="section subpage">               
+   
+        <div class="container">
+            <p><img src="images/sub_tip_con_01.jpg" alt=""></p>
+            <p class=" py-8"><img src="images/sub_tip_con_02.jpg" alt=""></p>
+        </div>
+        
+
+    </section>
+    <!-- footer -->
+    <footer id="footer">        
+        <div class="footerWrap container"><hr>
+            <div class="footterMenu">
+                <a href="#">여행정보</a>
+                <a href="#">홍보센터</a>
+                <a href="#">여행약관</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">기업/단체문의</a>
+                <a href="#">대리점안내</a>
+                <a href="#">신용카드</a>
+                <a href="#">무이자</a>
+                <a href="#">할부안내</a>
+                <a href="#">여행이지</a>
+                <a href="#">전화번호안내</a>
+            </div>
+            <div class="footer-cont">
+                <dl>
+                    <dt>Address & Contact</dt>
+                    <dd>대표번호 : 1588-0040<br>
+                        서울특별시 종로구 청계천로 51-1, 교원투어 빌딩 8~14층<br>
+                        부산지사 대표번호 : 051-469-9415<br>
+                        부산광역시 동구 중앙대로 216 교원빌딩 3층</dd>
+                </dl>
+                <dl>
+                    <dt>Information</dt>
+                    <dd>
+                        (주)교원투어 대표 : 장동하<br>
+                        서울특별시 종로구 청계천로 51-1, 교원투어 빌딩 8~14층<br>
+                        본사 사업자등록번호 : 104-81-48192<br>
+                        부산지사 사업자등록 번호 : 296-85-00568<br>
+                        관광사업자등록번호 : 제 1999-000007호<br>
+                        통신판매업신고번호 : 중구 04250호<br>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>Follow Us</dt>
+                    <dd>
+                        여행자 배상책임보험 20억원 가입<br>
+                        일반여행업 보증금외 15억원 가입<br>
+                        kyowontour@kyowon.co.kr<br>
+                        copyrights 2022. all rights reserved by (주)교원투어
+                    </dd>
+                </dl>
+            </div>
+            <div class="footer-family">
+                <button type="button" class="btn-family">
+                    <span>Family Sitle</span>                    
+                </button>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
