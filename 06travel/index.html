@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/colorbox.css"><!-- 모달 -->
     <link rel="stylesheet" href="css/style.css">
+    
     
     <!-- 달력 -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
@@ -26,6 +28,8 @@
     <!-- bxslidr_예약 -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <!-- 모달_라이트박스 -->
+    <script src="js/jquery.colorbox-min.js"></script>
     <!-- swiper_ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css" integrity="sha512-303pOWiYlJMbneUN488MYlBISx7PqX8Lo/lllysH56eKO8nWIMEMGRHvkZzfXYrHj4j4j5NtBuWmgPnkLlzFCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -234,7 +238,7 @@
                                                 </div>
                                             </div>                                           
                                          </div>
-                                         <div class="but"><button>항공권 검색하기</button></div>
+                                         <div class="but"><button>항공권 검색하기</a></button></div>
                                         </fieldset>
                                     </form>
                                 </div>                    
@@ -503,7 +507,7 @@
                             <div class="price">
                                 <ul>
                                     <li class="font_paly400" >1,129,000 <span class="won">원</span></li>
-                                    <li  class="bNxt"><img src="images/btn_next.png" alt=""></li>
+                                    <li class="bNxt"><img src="images/btn_next.png" alt=""></li>
                                 </ul>
                             </div>
                         </li>
@@ -514,6 +518,7 @@
             <div class="right_cont ">
                 <div class="mainTitle">
                     <h2 class="font_paly700">TRAVEL GO</h2>
+                    <span></span>
                     <h3>그래, 이게 바로 여행이지!</h3>
                     <p>떠나고 싶은 마음에게 쉽게 답을 드리는<br>
                     여행이지와 함께 특별한 경험을 시작하세요.</p>
@@ -532,19 +537,19 @@
                               <div class="swiper-slide" style="background-image: url(images/poto_16.png);">                                
                                 <div class="hotel">
                                     <h3>HILLTON HOTEL (PARIS)</h3>
-                                    <img src="images/icon_star.png" alt="">
+                                    <a href="hotel.html"><img src="images/icon_star.png" alt=""></a>
                                 </div>
                              </div>
                              <div class="swiper-slide" style="background-image: url(images/poto_17.png);">
                                 <div class="hotel">
                                     <h3>HILLTON HOTEL (PARIS)</h3>
-                                    <img src="images/icon_star.png" alt="">
+                                    <a href="hotel.html"><img src="images/icon_star.png" alt=""></a>
                                 </div>
                              </div>
                              <div class="swiper-slide" style="background-image: url(images/poto_04.png);">
                                 <div class="hotel">
                                     <h3>HILLTON HOTEL (PARIS)</h3>
-                                    <img src="images/icon_star.png" alt="">
+                                    <a href="hotel.html"><img src="images/icon_star.png" alt=""></a>
                                 </div>                                
                              </div>                              
                             </div>                            
@@ -643,9 +648,16 @@
                     <span>+</span>
                     <div class="gr"></div>                             
                 </li>
+                <script>
+                    $(document).ready(function(){                        
+                        $(".youtube").colorbox({iframe:true, innerWidth:1280, innerHeight:720}); 
+                    });
+                </script>
                 <li class="cont10 box2">                     
                     <p class="title">그래, 바로이게 여행이지!</p> <br>                   
-                    <img src="images/icon_youtube_02.png" alt="">
+                    <a href="https://www.youtube.com/embed/4_dnbJS_PT0" class="youtube">
+                        <img src="images/icon_youtube_02.png" alt="">                       
+                    </a>
                     <div class="gr"></div>                             
                 </li>
             </ul>
