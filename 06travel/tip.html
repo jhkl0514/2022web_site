@@ -52,7 +52,7 @@
     <!-- header -->
     <div class="headerWrap">
         <div class="header container">
-            <h1 class="logo"><a href="./">여행이지</a></h1>
+            <a href="./"><h1 class="logo">여행이지</h1></a>
             <div class="searchWrap">
                 <form action="#">
                     <input type="text" name="search" placeholder="검색어를 입력하세요" class="inp">
@@ -95,7 +95,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="honeymoon.htm">허니문</a>
+                    <li><a href="honeymoon.html">허니문</a>
                         <div class="submenu">
                             <ul class="clearfix">
                                 <li><a href="honeymoon.html">허니문_01</a></li>
@@ -105,13 +105,13 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="honeymoon.html">허니문</a>
+                    <li><a href="tip.html">골프TIP</a>
                         <div class="submenu">
                             <ul class="clearfix">
-                                <li><a href="tip.html">여행TIP_01</a></li>
-                                <li><a href="tip.html">여행TIP_02</a></li>
-                                <li><a href="tip.html">여행TIP_03</a></li>
-                                <li><a href="tip.html">여행TIP_04</a></li>
+                                <li><a href="tip.html">골프TIP_01</a></li>
+                                <li><a href="tip.html">골프TIP_02</a></li>
+                                <li><a href="tip.html">골프TIP_03</a></li>
+                                <li><a href="tip.html">골프TIP_04</a></li>
                             </ul>
                         </div>
                     </li>
@@ -125,34 +125,64 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="event.html">이벤트</a>
+                    <li><a href="event.html">기획전</a>
                         <div class="submenu">
                             <ul class="clearfix">
-                                <li><a href="event.html">이벤트_01</a></li>
-                                <li><a href="event.html">이벤트_02</a></li>
-                                <li><a href="event.html">이벤트_03</a></li>
-                                <li><a href="event.html">이벤트_04</a></li>
+                                <li><a href="event.html">기획전_01</a></li>
+                                <li><a href="event.html">기획전_02</a></li>
+                                <li><a href="event.html">기획전_03</a></li>
+                                <li><a href="event.html">기획전_04</a></li>
                             </ul>
                         </div>
                     </li>
                 </ul>
             </nav>
         </div>
+        <hr>
     </div> 
     <!-- section -->   
 
-    <section id="section subpage">               
-   
-        <div class="container">
-            <p><img src="images/sub_tip_con_01.jpg" alt=""></p>
-            <p class=" py-8"><img src="images/sub_tip_con_02.jpg" alt=""></p>
+    <section id="section" class="subpage" style="background:#fff">                
+        <!-- Swiper -->
+        <div class="swiper mySwiper sub_main_img bg">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide bg" style="background-image: url(images/sub_tip_01.jpg);"></div>
+            <div class="swiper-slide bg" style="background-image: url(images/sub_tip_02.jpg);"></div>
+            <div class="swiper-slide bg" style="background-image: url(images/sub_tip_03.jpg);"></div>
+            <div class="swiper-slide bg" style="background-image: url(images/sub_tip_04.jpg);"></div>
+            </div>
+            <div class="swiper-button-prev1"><img src="images/btn_pre.png" alt=""></div>
+            <div class="swiper-button-next1"><img src="images/btn_next.png" alt=""></div>
         </div>
-        
+   
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        rewind: true,
+        autoplay:true,
+        navigation: {
+            nextEl: ".swiper-button-next1",
+            prevEl: ".swiper-button-prev1",
+        },
+        });
+    </script>
+
+    <div class="container">
+        <p class=" py-8"><img src="images/sub_tipgolf_con_01.jpg" alt=""></p>
+        <p class=" py-8"><img src="images/sub_tipgolf_con_02.jpg" alt=""></p>
+        <p class=" py-8"><img src="images/sub_tipgolf_con_03.jpg" alt=""></p>
+        <p class=" py-8"><img src="images/sub_tipgolf_con_04.jpg" alt=""></p>
+    </div>    
 
     </section>
+
     <!-- footer -->
-    <footer id="footer">        
-        <div class="footerWrap container"><hr>
+    <footer id="footer">
+        <hr>        
+        <div class="footerWrap container">
             <div class="footterMenu">
                 <a href="#">여행정보</a>
                 <a href="#">홍보센터</a>
