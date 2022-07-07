@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/colorbox.css"><!-- 모달 -->
     <link rel="stylesheet" href="css/style.css">
-    
+        
     
     <!-- 달력 -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
@@ -35,6 +35,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- 달력 -->
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    
     <script>
         $(document).ready(function(){
             $("#sdate,#edate,#adate,#bdate,#cdate,#ddate,#xdate,#ydate").datepicker({
@@ -49,11 +50,26 @@
                 showMonthAfterYear: true,
                 yearSuffix: '년'
             })
-        })
+            
+            // 모달
+            $(".youtube").colorbox({iframe:true, innerWidth:1280, innerHeight:720}); 
+
+            //Bxslide
+            var slide = $(".slide").bxSlider({
+                controls:false,              
+                pagerCustom:".slideTap",
+                mode:"vertical",
+                touchEnabled:false,
+                infiniteLoop:false          
+            });
+        });
     </script>
+                             
+    
 </head>
 <body>
     <!-- header -->
+    
     <div class="headerWrap">
         <div class="header container">
             <a href="./"><h1 class="logo">여행이지</h1></a>
@@ -76,6 +92,8 @@
             </div>
         </div>
         <hr>
+        
+        
         <div class="navWrap">
             <nav class="navbar container">
                 <ul>
@@ -144,11 +162,7 @@
         </div>
         <hr>
     </div> 
-    <!-- animation -->
-    <div class="animation">
-        <p><img src="images/content_02.png" alt="" ></p>
-        <img src="images/img_air.png" alt="" class="air">
-    </div>
+    
     <!-- section -->
     <section id="section">
         <div class="sec1st container">
@@ -473,35 +487,23 @@
                             </li>
                         </ul>
                     </div>        
-                </div>
-                <script>
-                    $(document).ready(function(){     
-                        var slide = $(".slide").bxSlider({
-                            controls:false,              
-                            pagerCustom:".slideTap",
-                            mode:"vertical",
-                            touchEnabled:false,
-                            infiniteLoop:false          
-                        });
-                       
-                    });
-                </script>
+                </div>                
                 <!-- 예약 슬라이드 끝-->
                 <div class="product">
                     <ul class="clearfix">
                         <!-- sec1st product cont01-->
-                        <li class="cont01 box1 over-bg">
+                        <li class="cont01 box1 over-bg" onclick="location.href='travel.html'">
                             <h2 class="font_paly700">America</h2>
                             <p>미서부 vs 미동부 vs 뉴욕</p>
                             <div class="price">
                                 <ul>
-                                    <li class="font_paly400" >1,129,000 <span class="won">원</span></li>
+                                    <li class="font_paly400">1,129,000 <span class="won">원</span></li>
                                     <li class="bNxt"><img src="images/btn_next.png" alt=""></li>
                                 </ul>
                             </div>
                         </li>
                         <!-- sec1st product cont02-->
-                        <li class="cont02 box1">
+                        <li class="cont02 box1" onclick="location.href='travel.html'">
                             <h2 class="font_paly700">Da Nang</h2>
                             <p>지금 우리는 다낭중</p>
                             <div class="price">
@@ -526,6 +528,11 @@
                 <img src="images/content_03.png" alt="" class="content_03">
             </div>
         </div>
+        <!-- animation -->
+        <div class="animation">
+            <p><img src="images/content_02.png" alt="" ></p>
+            <img src="images/img_air.png" alt="" class="air">
+        </div>
         
         <div class="sec2st container">
             <ul>
@@ -534,19 +541,19 @@
                     <div class="sliderWrap">
                         <div class="swiper mySwiper01">
                             <div class="swiper-wrapper">
-                              <div class="swiper-slide" style="background-image: url(images/poto_16.png);">                                
+                              <div class="swiper-slide" onclick="location.href='hotel.html'" style="background-image: url(images/poto_16.png);">                                
                                 <div class="hotel">
                                     <h3>HILLTON HOTEL (PARIS)</h3>
                                     <a href="hotel.html"><img src="images/icon_star.png" alt=""></a>
                                 </div>
                              </div>
-                             <div class="swiper-slide" style="background-image: url(images/poto_17.png);">
+                             <div class="swiper-slide" onclick="location.href='hotel.html'" style="background-image: url(images/poto_17.png);">
                                 <div class="hotel">
                                     <h3>HILLTON HOTEL (PARIS)</h3>
                                     <a href="hotel.html"><img src="images/icon_star.png" alt=""></a>
                                 </div>
                              </div>
-                             <div class="swiper-slide" style="background-image: url(images/poto_04.png);">
+                             <div class="swiper-slide" onclick="location.href='hotel.html'" style="background-image: url(images/poto_04.png);">
                                 <div class="hotel">
                                     <h3>HILLTON HOTEL (PARIS)</h3>
                                     <a href="hotel.html"><img src="images/icon_star.png" alt=""></a>
@@ -559,37 +566,26 @@
                     </div>                    
                 </li>
                 <!-- Swiper JS 스와이퍼 -->
-                    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-                <!-- Initialize Swiper 스와이퍼 -->
-                    <script>
-                    var swiper = new Swiper(".mySwiper01", {
-                        loop: true,
-                        autoplay:true,
-                        navigation: {
-                        nextEl: ".swiper-button-prev1",
-                        prevEl: ".swiper-button-next1",
-                        },
-                    });
-                    </script>                    
+                
+                        
                 <!-- sec2st hotel cont04-->
                 <li class="cont04">
                     <div class="sliderWrap">
                         <div class="swiper mySwiper02">
                             <div class="swiper-wrapper">
-                              <div class="swiper-slide" style="background-image: url(images/poto_15.png);">                                
+                              <div class="swiper-slide" onclick="location.href='travel.html'" style="background-image: url(images/poto_15.png);">                                
                                 <div class="hotel">
                                     <h3>대표 휴양지 푸켓</h3>
                                     <img src="images/icon_star.png" alt="">
                                 </div>
                              </div>
-                             <div class="swiper-slide" style="background-image: url(images/poto_14.png);">
+                             <div class="swiper-slide" onclick="location.href='travel.html'" style="background-image: url(images/poto_14.png);">
                                 <div class="hotel">
                                     <h3>긴 기다림 드디어, 호주!</h3>
                                     <img src="images/icon_star.png" alt="">
                                 </div>
                              </div>
-                             <div class="swiper-slide" style="background-image: url(images/poto_18.png);">
+                             <div class="swiper-slide" onclick="location.href='travel.html'" style="background-image: url(images/poto_18.png);">
                                 <div class="hotel">
                                     <h3>대한항공 괌 츠바키</h3>
                                     <img src="images/icon_star.png" alt="">
@@ -601,64 +597,52 @@
                           </div>
                     </div>
                      <!-- Initialize Swiper 스와이퍼 -->
-                     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                     <script>
-                        var swiper = new Swiper(".mySwiper02", {
-                            loop: true,
-                            navigation: {
-                            nextEl: ".swiper-button-next1",
-                            prevEl: ".swiper-button-prev1",
-                            },
-                        });
-                     </script>               
+                     
                 </li>
                 <!-- sec2st weather cont05-->
-                <li class="cont05 box1">
+                <li class="cont05 box1" onclick="location.href='honeymoon.html'">
                     <h2 class="font_paly700">TOKYO</h2>
-                    <div class="weather">
+                    <div class="weather" onclick="location.href='tip.html'">
                         <h3>20c 구름조금</h3>
                         <p>습도 60% 바람 남남동 2m/s</p>
                     </div>
                 </li>
                 <!-- sec2st review cont06-->
-                <li class="cont06 box1">
+                <li class="cont06 box1" >
                     <h4>이달의 베스트<br><span>여행후기</span></h4>
-                    <p>여행후기작성</p>                    
+                    <a href="event.html"><p>여행후기작성</p></a>                 
                 </li>
             </ul>
         </div>
         <div class="sec3st container">
             <ul>
                 <!-- sec3st 여행정보 cont07-->
-                <li class="cont07 box2">                     
+                <li class="cont07 box2" onclick="location.href='honeymoon.html'">                     
                     <h5>여행정보</h5>
                     <p>다양한 나라의 명소와 맞집 등상세한 정보를 볼수 있습니다.</p>
                     <span>+</span>
                     <div class="gr"></div>                             
                 </li>
-                <li class="cont08 box2">                     
+                <li class="cont08 box2" onclick="location.href='internal.html'">                     
                     <h5>맛집정보</h5>
                     <p>다양한 나라의 명소와 맞집 등상세한 정보를 볼수 있습니다.</p>
                     <span>+</span>
                     <div class="gr"></div>                             
                 </li>
-                <li class="cont09 box2">                     
+                <li class="cont09 box2" onclick="location.href='tip.html'">                     
                     <h5>숙박정보</h5>
                     <p>다양한 나라의 명소와 맞집 등상세한 정보를 볼수 있습니다.</p>
                     <span>+</span>
                     <div class="gr"></div>                             
                 </li>
-                <script>
-                    $(document).ready(function(){                        
-                        $(".youtube").colorbox({iframe:true, innerWidth:1280, innerHeight:720}); 
-                    });
-                </script>
-                <li class="cont10 box2">                     
+                
+                <li class="cont10 box2">    <a href="https://www.youtube.com/embed/4_dnbJS_PT0" class="youtube">                 
                     <p class="title">그래, 바로이게 여행이지!</p> <br>                   
-                    <a href="https://www.youtube.com/embed/4_dnbJS_PT0" class="youtube">
+                   
                         <img src="images/icon_youtube_02.png" alt="">                       
-                    </a>
-                    <div class="gr"></div>                             
+                   
+                    <div class="gr"></div>   
+                </a>                          
                 </li>
             </ul>
         </div>
@@ -718,6 +702,32 @@
             </div>
 
         </div>
+        
     </footer>
+    
+    <!-- Swiper JS 스와이퍼 -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper 스와이퍼 -->
+        <script>
+        var swiper = new Swiper(".mySwiper01", {
+            loop: true,
+            autoplay:true,
+            navigation: {
+            nextEl: ".swiper-button-prev1",
+            prevEl: ".swiper-button-next1",
+            },
+        });
+        </script>          
+        
+        <script>
+           var swiper = new Swiper(".mySwiper02", {
+               loop: true,
+               navigation: {
+               nextEl: ".swiper-button-next1",
+               prevEl: ".swiper-button-prev1",
+               },
+           });
+        </script>       
 </body>
 </html>
