@@ -1,0 +1,39 @@
+@charset "utf-8";
+/********** css responsive init **********/
+.container{width: 1240px;margin: 0 auto;}
+
+/* header */
+.submenu{display: none;}
+
+
+/* visual */
+.visualWrap{
+    height: 100vh;
+    background-image: url(../images/mainimg01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/********** css responsive **********/
+@media (max-width: 1399px) {
+
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+
+}
