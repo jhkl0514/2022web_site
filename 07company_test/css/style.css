@@ -9,7 +9,7 @@
 .navbar>ul{display: flex; height: 100%;}
 .navbar>ul>li{position: relative;}
 .navbar>ul>li>a{
-    height: 100%; display: flex;align-items: center;justify-content: center;
+    height: 100%; display: flex; align-items: center;justify-content: center;
     padding: 0 30px; font-size: 18px; font-weight: bold;
 }
 .navbar>ul>li .aBar{
@@ -25,8 +25,8 @@
     opacity: 0; visibility: hidden; box-shadow: 0 0 10px rgba(0,0,0,.3);
 }
 .submenu li{display: block; line-height: 30px; text-align: center;}
-.navbar>ul>li:hover .submenu{transform: translateY(0px); opacity: 1; visibility: visible;}
-.navbar>ul>li:hover .aBar{transform: scale(1);}
+.navbar>ul>li.on .submenu{transform: translateY(0px); opacity: 1; visibility: visible;}
+.navbar>ul>li.on .aBar{transform: scale(1);}
 
 .toggle{
     width: 40px;height: 40px;background: skyblue;
@@ -40,6 +40,7 @@
 .toggle .bar1{transform: translateY(-8px);}
 .toggle .bar3{transform: translateY(8px);}
 
+.navbarClone,.overlay{display: none;}
 
 /* visual */
 .visualWrap{
@@ -63,13 +64,30 @@
 }
 
 @media (max-width: 991px) {
-    .navbar{display: none;}
-    .navbarWrap{padding: 20px 20px;}
-    .toggle{display: flex; margin-left: auto;}
+    
 
 }
 
 @media (max-width: 767px) {
+    .navbar{display: none;}
+    .navbarWrap{padding: 20px 20px;}
+    .toggle{display: flex; margin-left: auto;}
+    .navbarClone{
+        position: fixed;
+        width: 95%; height: 100%;
+        top:0; left: -100%;
+        background-color: pink;
+        display: block;
+        transition: 0.5s;      
+    }
+    .overlay{
+        display: none;
+        position: fixed;
+        width: 100%; height: 100%;
+        left: 0; top: 0;
+        background: #000;
+        opacity: 0.5;
+    }
 
 }
 
