@@ -1,15 +1,59 @@
 @charset "utf-8";
 /********** css responsive init **********/
-.container{width: 1240px;margin: 0 auto;}
+.container{width: 1260px;margin: 0 auto;}
 
-/* header */
-.submenu{display: none;}
+/*------------------- header ---------------------*/
+#header{
+    position: fixed; width: 100%; background: #fff;    
+}
+#header .navbarWrap{  
+    background-color: beige;
+}
+#header .navbarWrap .util{
+    width: 200px; height: 40px; margin-left: auto;
+}
+#header .navbarWrap .util ul {
+    display: flex; justify-content: space-between; align-items: center; height: 40px; }
+
+#header .navbarWrap .util ul li a{
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: -0.8px;
+}
+
+#header .headerWrap{display: flex; height: 80px; background-color:white }
+#header .logo {display: flex; align-items: center; padding-right: 50px;}
+#header .logo a{
+    display: block; 
+    width: 90px; height: 31px;
+    background-image: url(../images/logo1.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 0;    
+}
+#header .navbar {margin-right: auto; width: 100%;}
+#header .navbar>ul{display: flex; height: 100%; float: right;}
+
+#header .navbar>ul>li>a{
+    height: 100%; width: 100%;
+    display: flex; align-items: center;justify-content:space-between;
+    padding: 0 0 0 100px; font-size: 18px; font-weight: bold;
+    
+}
+
+#header .navbar>li>a:last-child{
+    padding-right: 0;
+  }
+
+#header .navbar .submenu{display: none;}
 
 
 /* visual */
 .visualWrap{
     height: 100vh;
-    background-image: url(../images/mainimg01.jpg);
+    background-image: url(../images/main_bar_bg_01.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
