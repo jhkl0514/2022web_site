@@ -1,1 +1,9 @@
 console.log("test");
+<script>
+        $(".bg").slideUp()
+        $(".navWrap").hover(function(){
+            $(".bg,.submenu").stop().slideDown()
+        },function(){
+            $(".bg,.submenu").stop().slideUp()
+        })
+</script>

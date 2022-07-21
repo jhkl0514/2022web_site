@@ -74,12 +74,21 @@
                     </nav>
                 </div>
             </div>        
+            <div class="bg"></div>
     </header>
     <div class="visualWrap">
         slide
     </div>
     <section style="height: 1000px;"></section>
 
-<script src="js/script.js"></script>
+    <script>
+        $(".bg").slideUp()
+        $(".navbar").hover(function(){
+            $(".bg,.submenu").stop().slideDown()
+        },function(){
+            $(".bg,.submenu").stop().slideUp()
+        })
+    </script>
+
 </body>
 </html>
