@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H.Point</title>
+    <title>index</title>
+    <!-- bxslidr_예약 -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <!-- style -->
     <link rel="icon" href="images/favicon.svg" type="images/svg+xml">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- bxslidr_예약 -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
 </head>
 <body>
     <header id="header">            
@@ -18,21 +29,21 @@
                     <ul>
                         <li><a href="#">로그인</a></li>
                         <li><a href="#">회원가입</a></li>
-                        <li><a href="#">ENG</a></li>
+                        <li><a href="#"><span class="color01">ENG</span></a></li>
                     </ul>
                 </div>
                 <div class="headerWrap">
                     <h1 class="logo"><a href="/"></a></h1>
                     <nav class="navbar">
                         <ul>
-                            <li><a href="#">소개</a>
+                            <li><a href="#" class="on">소개</a>
                                 <ul class="submenu">
                                     <li><a href="#">H.Point 소개</a></li>
                                     <li><a href="#">사용처안내</a></li>
                                     <li><a href="#">가입혜택</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">쌓기</a>
+                            <li><a href="#" class="on">쌓기</a>
                                 <ul class="submenu">
                                     <li><a href="#">즐길거리</a></li>
                                     <li><a href="#">전환하기</a></li>
@@ -40,14 +51,14 @@
                                     <li><a href="#">영수증/쿠폰</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">쓰기</a>
+                            <li><a href="#" class="on">쓰기</a>
                                 <ul class="submenu">
                                     <li><a href="#">포인트샵</a></li>
                                     <li><a href="#">선물하기</a></li>
                                     <li><a href="#">기부하기</a></li>                 
                                 </ul>
                             </li>
-                            <li><a href="#">혜택</a>
+                            <li><a href="#" class="on">혜택</a>
                                 <ul class="submenu">
                                     <li><a href="#">이벤트</a></li>
                                     <li><a href="#">쿠론</a></li>
@@ -55,7 +66,7 @@
                                     <li><a href="#">제휴카드안내</a></li>               
                                 </ul>
                             </li>
-                            <li><a href="#">H.매거진</a>
+                            <li><a href="#" class="on">H.매거진</a>
                                 <ul class="submenu">
                                     <li><a href="#">사운드핏</a></li>
                                     <li><a href="#">패션</a></li>
@@ -63,7 +74,7 @@
                                     <li><a href="#">푸드</a></li>               
                                 </ul>
                             </li>
-                            <li><a href="#">고객지원</a>
+                            <li><a href="#" class="on">고객지원</a>
                                 <ul class="submenu">
                                     <li><a href="#">FAQ</a></li>
                                     <li><a href="#">1:1문의</a></li>
@@ -71,24 +82,27 @@
                                 </ul>
                             </li>
                         </ul>
-                    </nav>
+                    </nav>                    
+                </div>
+                <div class="toggle">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
                 </div>
             </div>        
             <div class="bg"></div>
+            <div class="overlay"></div>
+            <div class="navbarClone">                    
+                <div class="mMenu">    
+                </div>                
+            </div>
     </header>
     <div class="visualWrap">
         slide
     </div>
     <section style="height: 1000px;"></section>
 
-    <script>
-        $(".bg").slideUp()
-        $(".navbar").hover(function(){
-            $(".bg,.submenu").stop().slideDown()
-        },function(){
-            $(".bg,.submenu").stop().slideUp()
-        })
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>

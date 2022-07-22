@@ -5,10 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
+    <!-- bxslidr_예약 -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- bxslidr_예약 -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(function(){
+            var slide = $(".slider").bxSlider({
+                
+                mode:"fade",
+                controls:false
+            })
+
+            $(".next").click(function(){
+                slide.goToNextSlide()
+            });
+            $(".prev").click(function(){
+                slide.goToPrevSlide()
+            });
+        })
+       
+    </script>
 </head>
 <body>
     <header id="header">
@@ -86,59 +110,105 @@
 
     <section class="contents container bg_gray">
         <ul>
-            <li onclick="location.href='http://www.naver.com'">
+            <li onclick="location.href='sub01_01.html'">
                 <div>
                     <img src="images/icon01_01.png" alt="">
-                    <h3>뉴스레터</h3>
-                </div>
-            </li>
-            <li><img src="images/icon01_06.png" alt=""></li>
-            <li style="background-image: url(images/img01_02.jpg)">3</li>
-            <li>
-                <div>
-                    <img src="images/icon01_01.png" alt="">
-                    <h3>뉴스레터</h3>
+                    <h3>뉴스레터111111111</h3>
                 </div>
             </li>
             <li>
-                <div>
-                    <img src="images/icon01_01.png" alt="">
-                    <h3>뉴스레터</h3>
+                <img src="images/icon01_06.png" alt="">
+            </li>
+            <li>
+                <ul class="slider">
+                    <li class="sItems">
+                        <div class="itemWrap">
+                            <div class="sTxt">
+                                <div class="txt">
+                                    <h3>뉴스1</h3>
+                                    <p>01Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, in.</p>
+                                </div>
+                            </div>
+                            <div class="sImg"><img src="images/img01_02.jpg" alt=""></div>
+                        </div>
+                    </li>
+                    <li class="sItems">
+                        <div class="itemWrap">
+                            <div class="sTxt">
+                                <div class="txt">
+                                    <h3>뉴스2</h3>
+                                    <p>02Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, in.</p>
+                                </div>
+                            </div>
+                            <div class="sImg"><img src="images/img01_02.jpg" alt=""></div>
+                        </div>
+                    </li>
+                    <li class="sItems">
+                        <div class="itemWrap">
+                            <div class="sTxt">
+                                <div class="txt">
+                                    <h3>뉴스3</h3>
+                                    <p>03Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, in.</p>
+                                </div>
+                            </div>
+                            <div class="sImg"><img src="images/img01_02.jpg" alt=""></div>
+                        </div>
+                    </li>
+                    
+                </ul>
+                <div class="sBtn">
+                    <div class="prev"><img src="images/btn01_01.jpg" alt=""></div>
+                    <div class="next"><img src="images/btn01_02.jpg" alt="" ></div>        
                 </div>
             </li>
-            <li style="background-image: url(images/img01_03.jpg)">6
-                <div class="txt-card">
-                    <h4>전력 및 에너지 플랜트</h4>
-                    <P>세상을 밝히는 <br> 빛과 에너지</P>
-                </div>
-            </li>
-            <li style="background-image: url(images/img01_06.jpg)">
-                <div class="txt-card">
-                    <h4>전력 및 에너지 플랜트</h4>
-                    <P>세상을 밝히는 <br> 빛과 에너지</P>
-                </div>7</li>
-            <li style="background-image: url(images/img01_04.jpg)">
-                <div class="txt-card">
-                    <h4>전력 및 에너지 플랜트</h4>
-                    <P>세상을 밝히는 <br> 빛과 에너지</P>
-                </div>8</li>
             <li>
                 <div>
                     <img src="images/icon01_01.png" alt="">
-                    <h3>뉴스레터</h3>
+                    <h3>뉴스레터111111111</h3>
                 </div>
             </li>
             <li>
                 <div>
                     <img src="images/icon01_01.png" alt="">
-                    <h3>뉴스레터</h3>
+                    <h3>뉴스레터111111111</h3>
                 </div>
             </li>
-            <li style="background-image: url(images/img01_05.jpg)">
+            <li style="background-image: url(images/img01_03.jpg);">
+               <div class="txt-card">
+                <h4>전력 및 에너지 플랜트</h4>
+                <p>세상을 밝히는<br>빛과에너지</p>
+               </div>
+            </li>
+            <li style="background-image: url(images/img01_06.jpg);">
                 <div class="txt-card">
                     <h4>전력 및 에너지 플랜트</h4>
-                    <P>세상을 밝히는 <br> 빛과 에너지</P>
-                </div>11</li>
+                    <p>세상을 밝히는<br>빛과에너지</p>
+                </div>
+            </li>
+            <li style="background-image: url(images/img01_04.jpg);">
+                <div class="txt-card">
+                    <h4>전력 및 에너지 플랜트</h4>
+                    <p>세상을 밝히는<br>빛과에너지</p>
+                </div>
+            </li>
+            <li >
+                <div>
+                    <img src="images/icon01_01.png" alt="">
+                    <h3>뉴스레터111111111</h3>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="images/icon01_01.png" alt="">
+                    <h3>뉴스레터111111111</h3>
+                </div>
+            </li>
+            <li style="background-image: url(images/img01_05.jpg);">
+                <div class="txt-card">
+                    <h4>전력 및 에너지 플랜트</h4>
+                    <p>세상을 밝히는<br>빛과에너지</p>
+                  </div>
+            </li>
         </ul>
     </section>
 
