@@ -46,7 +46,7 @@
 
 /*------------------- header ---------------------*/
 #header{
-    position: fixed; width: 100%; background: #fff;    
+    position: fixed; width: 100%; background: #fff; z-index: 100;
 }
 #header .navbarWrap{   
 }
@@ -114,7 +114,7 @@
 .toggle{
     width:40px;height: 40px;background: white;
     justify-content: center;align-items: center;
-    display: none;
+    display: none; cursor: pointer;
 }
 .toggle div{
     width: 24px;height: 3px;background: #000;position: absolute;border-radius: 2px;transition: .3s;
@@ -128,16 +128,112 @@
 
 .navbarClone,.overlay{display: none;}
 
+.util_m{display: none;}
+
 
 
 /* visual */
 .visualWrap{
-    height: 100vh;
-    background-image: url(../images/main_bar_bg_01.png);
+    height: 780px; width: 100%; 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* main Swiper */
+.visualWrap .slide_inner {    
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+.visualWrap .slide_bg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+.visualWrap .slide_bg > div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+.visualWrap .wrap_txt {
+    z-index: 10;
+    /* position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px; */
+    /* width: 100%;   
+    padding: 0 30px;
+    margin: 0 auto;    
+    display: flex;   
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;    
+    height: 100%; */
+  }
+  
+.visualWrap .wrap_txt .b_txt {
+    font-family: "S-CoreDream-6Bold";  
+    font-size: 60px;
+    color: #fff;
+    line-height: 80px;
+    transition: all .4s ease;
+  }
+  
+.visualWrap .wrap_txt .s_txt {
+    height: 105px;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+    line-height: 34px;
+    letter-spacing: -0.8px;
+    margin-top: 60px;
+    transition: all .4s ease;
+  }
+
 
 
 
@@ -159,7 +255,17 @@
     #header .headerWrap .navbar{display: none; }
     #header .navbarWrap .util{display: none;}
     #header .navbarWrap {display:flex; align-items: center;  padding: 0 20px;}
-    #header .toggle{display:flex; position: absolute; right: 20px;}
+    #header .util_m{display:flex; position: absolute; right: 60px; z-index: 10;}
+    #header .util_m ul {display: flex;}
+    #header .util_m ul li a{
+        font-family: 'Noto Sans KR'; font-weight: 400; 
+        font-size: 13px; padding: 5px; color: #999;
+        letter-spacing: -0.8px; cursor: pointer;
+    }
+    #header .toggle{
+        display:flex; position: absolute; right: 10px;
+        cursor: pointer; 
+    }
     
     #header .navbarClone{
         position: fixed;
@@ -169,49 +275,57 @@
         background: white;
         display: block;
         transition:0.5s
-
     }
     .overlay{
         display: none;
         position: fixed;
         width: 100%;height: 100%;
         left: 0;top: 0;
-        background: fff;
-        opacity: 0.5;
-    }
-    
+        _background: rgb(255, 255, 255);
+        _opacity: 0.5;
+
+    }   
 
     #header .navbarClone .mMenu {padding: 50px 20px 20px 40px;}    
     #header .navbarClone .mMenu>ul>li>a{
         display: block;    
-        padding-right: 120px; line-height: 80px;
+        padding-right: 120px; line-height: 60px;
         font-size: 20px;
-        font-family: 'S-CoreDream-5Medium';     
+        font-family: 'S-CoreDream-6Bold';     
         color:#111;     
     }
-    #header .navbarClone .mMenu >ul>li:hover a{color: #4e2bf4;}
+    #header .navbarClone .mMenu >ul>li:hover  a{color: #4e2bf4;}
     #header .navbarClone .mMenu >ul>li a.on:after{
         content: ""; transition:0.3s; opacity: 0;
         position: absolute; left: -5px; top: 7px;
         width: 6px; height: 6px; border-radius: 50%;
         background: #4e2bf4;}
-    #header .navbarClone .mMenu >ul>li:hover a.on:after{ opacity: 1;}
-    #header .navbarClone .mMenu>ul>li:hover a.on:after{ opacity: 1;}
+    #header .navbarClone .mMenu>ul>li:hover a.on:after{ opacity: 1;}    
     #header .navbarClone .mMenu>ul>li:last-child a {padding-right: 0px;}
     #header .navbarClone .mMenu>ul>li{padding: 0 0 20px 0; position: relative;}  
     #header .navbarClone .mMenu>ul>li>.submenu{
         position: absolute; display: none; 
         z-index: 2; width: 180px; height: 180px; top: 15px; left: 150px;
         padding-bottom:20px ;
-    }
-    #header .navbarClone .mMenu>ul>li>.submenu ul{        
-    }
+    }  
     #header .navbarClone .mMenu>ul>li>.submenu li a{
         padding: 5px;
         display: block;line-height: 30px; border: 0;
         font-family:'Noto Sans KR';  font-weight: 400;  font-size: 16px; color: #111;  letter-spacing: -0.8px;
     }
     #header .navbarClone .mMenu>ul>li>.submenu li:hover a{color: #4e2bf4;}
+    #header .navbarClone .loginText{padding: 15px 0 0 20px; margin-bottom: 20px;}
+    #header .navbarClone .appbanner{
+        width: 100%; height: 65px; background: #f1f3ff;
+        text-align: center; font-size: 14px; line-height: 65px; font-weight: bold;
+    }
+    #header .navbarClone .appbanner span{
+        padding: 9px 55px 9px 0;
+        background-image: url(../images/ic_app1.png);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: right center;
+    }
 
 
     

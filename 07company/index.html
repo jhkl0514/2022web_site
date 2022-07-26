@@ -21,6 +21,13 @@
     <!-- bxslidr_예약 -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+
+    <!-- swiper_ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css" integrity="sha512-303pOWiYlJMbneUN488MYlBISx7PqX8Lo/lllysH56eKO8nWIMEMGRHvkZzfXYrHj4j4j5NtBuWmgPnkLlzFCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
 </head>
 <body>
     <header id="header">            
@@ -84,23 +91,71 @@
                         </ul>
                     </nav>                    
                 </div>
-                <div class="toggle">
+                
+                <div class="toggle"><!-- 모바일 -->
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </div>
+                <div class="util_m">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#"><span class="color01">ENG</span></a></li>
+                    </ul>
+                </div>
             </div>        
             <div class="bg"></div>
             <div class="overlay"></div>
-            <div class="navbarClone">                    
-                <div class="mMenu">    
-                </div>                
+            <div class="navbarClone">
+                <div class="loginText"><span class="color01">로그인</span>하고 쉽고 편한<br>
+                    포인트혜택을 누려보세요.
+                </div>
+                <div class="appbanner"><span><a href="#">포인트의 모든것! H.Point APP 다운받기</a></span></div>                  
+                <div class="mMenu"></div>       
             </div>
-    </header>
+    </header><!-- header -->
+    
     <div class="visualWrap">
-        slide
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">            
+                <div class="swiper-slide">
+                    <div class="slide_inner">
+                        <div class="slide_bg">											
+                                <div class="mo_none" style="background-image: url('images/main_bar_bg_01.png');">sfsadsfadfadfadfd</div>	                               
+                        </div>
+                        <div class="wrap_txt container">
+                            <p class="b_txt">현대백화점그룹의<br>다양한 제휴사를 만나보세요!</p>
+                            <p class="s_txt">다양한 브랜드에서 적립하고 사용하는<br>즐거운 일상의 H.Point!</p>
+                        </div>
+                    </div>
+                    <!-- <div class="slide_inner">
+                        <div class="slide_bg">											
+                                <div class="mo_none" style="background-image: url('images/main_bar_bg_01.png');"></div>	
+                                <div class="mo_only" style="background-image: url('/cma/image/1000532071.nhd');"></div>
+                        </div>
+                        <div class="wrap_txt">
+                            <p class="b_txt" data-swiper-parallax="400" id="dispNm0">현대백화점그룹의<br>다양한 제휴사를 만나보세요!</p>
+                            <p class="s_txt" data-swiper-parallax="450" id="dispSub0">다양한 브랜드에서 적립하고 사용하는<br>즐거운 일상의 H.Point!</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="swiper-slide"><img src="images/main_bar_bg_02.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/main_bar_bg_03.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/main_bar_bg_04.png" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+  
+      
+        
     </div>
-    <section style="height: 1000px;"></section>
+    <section style="height: 1000px;">
+    </section>
+        
 
     <script src="js/script.js"></script>
 

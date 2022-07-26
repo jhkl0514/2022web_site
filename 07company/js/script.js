@@ -11,12 +11,12 @@ console.log("test");
 // 토글
 $(".toggle").click(function(){
     $(".navbarClone").css("left",0);
-    $(".toggle").addClass("active")
+    $(".toggle").addClass("active"); 
     $(".overlay").show();
 })
 $(".overlay").click(function(){
     $(".navbarClone").css("left","-100%");
-    $(".toggle").removeClass("active")
+    $(".toggle").removeClass("active");
     $(".overlay").hide();
 
 })
@@ -33,3 +33,18 @@ $(".navbarClone .mMenu>ul>li").mouseover(function(){
   $(".navbarClone .mMenu>ul>li").mouseout(function(){
     $(this).find(".submenu").stop().slideUp(200);
   })
+
+//  메인 Initialize Swiper
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+ 
