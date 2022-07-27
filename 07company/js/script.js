@@ -48,3 +48,6 @@ $(".navbarClone .mMenu>ul>li").mouseover(function(){
           },
         });
  
+
+// 메인 스와이퍼 를 자져와서 복제하고 appendTo를 한다 ()
+$(".visualWrap>div").clone().appendTo(".mMswiper")

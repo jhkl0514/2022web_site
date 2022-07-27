@@ -134,49 +134,28 @@
 
 /* visual */
 .visualWrap{
-    height: 780px; width: 100%; 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-/* swiper */
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+    height: 780px; width: 100%;    
+    position: absolute;
+    left: 0;
+    top: 100px;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
+    position: relative;
+    z-index: 1;
+}  
 
-  .swiper-slide img {
-    display: block;
+      
+ .visualWrap .swiper-mySwiper {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-  }
-
-  .swiper {
-    margin-left: auto;
-    margin-right: auto;
-  }
+    position: absolute;
+    left: 0;
+    top: 0;
+ }
+      
+ .visualWrap .swiper-slide {
+    overflow: hidden;
+    color: #fff;
+ }
 
 /* main Swiper */
 .visualWrap .slide_inner {    
@@ -199,19 +178,20 @@
   }
   
 .visualWrap .wrap_txt {
-    z-index: 10;
-    /* position: absolute;
+    position: absolute;
     left: 0;
     right: 0;
-    top: 50px; */
-    /* width: 100%;   
+    top: 0;
+    width: 100%;
+    max-width: 1284px;
+    min-width: 280px;
     padding: 0 30px;
-    margin: 0 auto;    
-    display: flex;   
-    flex-direction: column;    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;    
-    height: 100%; */
+    align-items: flex-start;
+    height: 100%;
   }
   
 .visualWrap .wrap_txt .b_txt {
@@ -219,7 +199,7 @@
     font-size: 60px;
     color: #fff;
     line-height: 80px;
-    transition: all .4s ease;
+    transition: all .4s ease;  
   }
   
 .visualWrap .wrap_txt .s_txt {
@@ -234,6 +214,85 @@
     transition: all .4s ease;
   }
 
+
+  .visualWrap .wrap_swiper_navi {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 100%;
+    max-width: 1565px;
+    margin: 0 auto;
+  }
+  
+  .visualWrap .wrap_swiper_navi .swiper-button-next {
+    right: 30px;   
+    background-image: url("../images/ic_arrow_b_prev.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;   
+    transform: translateY(-50%) rotate(180deg); 
+    color: none;   
+  }
+  
+  .visualWrap .wrap_swiper_navi .swiper-button-prev {
+    left: 30px;
+    background-image: url("../images/ic_arrow_b_prev.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;   
+    transform: translateY(-50%) rotate(360deg);   
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+  display: none;
+}
+
+.visualWrap .wrap_swiper_tools {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 75%;
+    width: 100%;  
+    margin: 0 auto; 
+  }
+  .visualWrap .wrap_swiper_tools .swiper-pagination {
+    text-align: left;
+    padding-left: 30px;
+}
+  
+.visualWrap .wrap_swiper_tools {    
+    max-width: 1284px;
+    min-width: 280px;
+    margin: 0 auto;
+    background-color: #a391ff;
+  }
+  :root {
+    --swiper-theme-color: #fff !important;
+    --swiper-navigation-size: 44px !important; 
+    --swiper-theme-color: #fff;
+    --swiper-pagination-bullet-vertical-gap:25px;
+    --swiper-pagination-bullet-width:40px;
+    --swiper-pagination-bullet-height:5px;
+
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    border-radius: 0;
+}
+.swiper-pagination .swiper-pagination-bullet {
+    border-radius: 0;
+} 
+.mo_none {
+    display:block !important;
+  }
+
+.mo_only {
+    display: none !important;
+  }
+
+/* main Swiper end */
 
 
 
@@ -327,6 +386,44 @@
         background-position: right center;
     }
 
+
+    /* 스와이퍼 */
+    .visualWrap .wrap_txt {
+        padding: 0 20px;
+        display: block;
+        height: auto;
+        margin-top: 90px;
+    }
+    .visualWrap .wrap_txt .b_txt{
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .visualWrap .wrap_txt .s_txt{       
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+    .visualWrap .wrap_swiper_navi {
+        visibility:hidden;
+    }
+    .mo_none {
+        display: none !important;
+      }
+    
+    .mo_only {
+        display: block !important;
+      }
+
+      .visualWrap .wrap_swiper_tools {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40%;
+        width: 100%;  
+        margin: 0 auto; 
+      }
 
     
 
