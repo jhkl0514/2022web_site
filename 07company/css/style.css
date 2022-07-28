@@ -36,8 +36,15 @@
 .fontC6{font-family: 'S-CoreDream-6Bold'}
 .fontK400{font-family: 'Noto Sans KR'; font-weight: 400; color:red;}
 .fontK500{font-family: 'Noto Sans KR'; font-weight: 500; }
+.fontS25{font-size: 25px;}
 .fontS20{font-size: 20px;}
+.fontS14{font-size: 14px;}
+.fontS12{font-size: 12px;}
 .fontS16{font-size: 16px;}
+.fontS18{font-size: 16px;}
+.colorfff{color:#fff;}
+.color222{color:#222;}
+.color75{color:#757575;}
 
 
 /********** css responsive init **********/
@@ -134,7 +141,7 @@
 
 /* visual */
 .visualWrap{
-    height: 780px; width: 100%;    
+    width: 100%;    
     position: absolute;
     left: 0;
     top: 100px;
@@ -191,7 +198,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 100%;
+    height: 70%;  
   }
   
 .visualWrap .wrap_txt .b_txt {
@@ -214,12 +221,11 @@
     transition: all .4s ease;
   }
 
-
   .visualWrap .wrap_swiper_navi {
     position: absolute;
     left: 0;
     right: 0;
-    top: 50%;
+    top: 35%;
     width: 100%;
     max-width: 1565px;
     margin: 0 auto;
@@ -253,7 +259,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 80%;
+    top: 53%;
     width: 100%;  
     margin: 0 auto; 
   }
@@ -290,9 +296,71 @@
 .mo_only {
     display: none !important;
   }
-
 /* main Swiper end */
 
+
+
+/* ####  section 시작 ##### */
+/* contents  */
+
+#contents{}
+
+#contents .conWrap{ 
+    position: absolute;    
+    top: -215px;
+    display: flex;
+    position: relative;
+    z-index: 1; 
+}
+#contents .conWrap>ul{display: flex;flex-wrap:wrap;position: relative;}
+#contents .conWrap>ul>li{
+    width: 315px;
+    border: 1px solid #000;
+    height: 315px;
+    position: relative;
+    padding: 45px;
+}
+
+#contents .conWrap>ul>li:nth-child(1),
+#contents .conWrap>ul>li:nth-child(2),
+#contents .conWrap>ul>li:nth-child(3),
+#contents .conWrap>ul>li:nth-child(4),
+#contents .conWrap>ul>li:nth-child(5),
+#contents .conWrap>ul>li:nth-child(6),
+#contents .conWrap>ul>li:nth-child(7),
+#contents .conWrap>ul>li:nth-child(8)
+{
+    display: flex;
+    /* justify-content: center;align-items: center; */
+    cursor: pointer;
+}
+
+#contents .conWrap>ul>li:nth-child(1){background: #4E2BF4;}
+#contents .conWrap>ul>li:nth-child(2){background: #D3E0D9;}
+#contents .conWrap>ul>li:nth-child(3){background: #fff;}
+/* #contents .conWrap>ul>li:nth-child(4){background: #E8EAFF;} */
+#contents .conWrap>ul>li:nth-child(4){background: #F3D5D7;}
+#contents .conWrap>ul>li:nth-child(5){background: #E8EAFF;}
+#contents .conWrap>ul>li:nth-child(6){background: #6DB8E9;}
+/* #contents .conWrap>ul>li:nth-child(8){background: #6DB8E9;} */
+
+#contents .conWrap>ul>li:nth-child(3),
+#contents .conWrap>ul>li:nth-child(6)
+{width: 630px;}
+
+#contents .conWrap .title_30{
+    font-size: 35px; line-height: 40px; letter-spacing: -0.06em; padding-bottom: 18px;
+}
+#contents .conWrap .title_25{
+    font-size: 25px; letter-spacing: -0.05em; padding: 0 0 5px 0;
+}
+#contents .conWrap .title_20{
+    font-size: 20px; letter-spacing: -0.05em; padding: 34px 0 10px 0;
+}
+#contents .conWrap li .news01{background-color: #4E2BF4;}
+#contents .conWrap .news01 img{
+    display: flex; margin-left: auto;
+}
 
 
 
@@ -407,6 +475,16 @@
 
 
     /* 스와이퍼 */
+    
+    .visualWrap .slide_bg > div{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    .visualWrap .slide_bg > div{
+        background-position: center bottom;
+    }
     .visualWrap .wrap_txt {
         padding: 0 20px;
         display: block;
@@ -427,9 +505,7 @@
     .visualWrap .wrap_swiper_navi {
         visibility:hidden;
     }
-    .visualWrap .slide_bg > div{
-        background-position: center bottom;
-    }
+   
     .visualWrap .wrap_swiper_tools .swiper-pagination {
         text-align: left;
         padding-left: 20px;
@@ -451,6 +527,28 @@
         width: 100%;  
         margin: 0 auto; 
       }
+
+
+      /* section */
+
+      #contents .conWrap{ 
+        position: absolute;    
+        top: 100px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        background: pink;
+    }
+    #contents .conWrap ul{flex-direction:column;}
+    #contents .conWrap ul li{width: 100%;}
+       
+     #contents>ul>li:nth-child(1),
+     #contents>ul>li:nth-child(2),
+     #contents>ul>li:nth-child(3),
+     #contents>ul>li:nth-child(4){
+        width: 100%;
+        flex-basis: auto;
+    }
 
     
 
