@@ -5,3 +5,4 @@
 4. college https://jhkl0514.github.io/2022web_site/04college
 5. korass https://jhkl0514.github.io/2022web_site/05korass
 6. travel https://jhkl0514.github.io/2022web_site/06travel
+7. company https://jhkl0514.github.io/2022web_site/07company
