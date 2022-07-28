@@ -7,6 +7,7 @@
     <title>H.point</title>
     <!-- bxslidr -->
     <link rel="stylesheet" href="css/jquery.bxslider.css">
+    
     <!-- style -->
     <link rel="icon" href="images/favicon.svg" type="images/svg+xml">
     <link rel="stylesheet" href="css/reset.css">
@@ -27,6 +28,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      <!-- Swiper JS -->
      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     <script>$(function(){
+        var slide = $("slider").bxSlider({
+            
+            mode:"fade",
+            controls:false
+        })
+    
+        $(".next").click(function(){
+            slide.goToNextSlide()
+        });
+        $(".prev").click(function(){
+            slide.goToPrevSlide()
+        });
+    })</script>
+    
+    
   
 </head>
 <body>
@@ -186,73 +203,230 @@
         </div>
         <!-- 스와이퍼 끝 -->
     </div>    
-        <!-- section 시작 -->
-        
+        <!-- section 시작 -->        
         <section id="contents" >           
             <div class="conWrap container">
                 <ul>
-                    <li>
-                        <div>
+                    <li class="triangle">
+                        <div class="triangleBot triangle02">
                             <h2 class="title_30 fontC6 colorfff">H.포인트<br>쓰기</h2>
                             <p class="ontS18 fontC4 colorfff">의미있게 사용하는 가치있는<br>소비생활</p>
                         </div>
                     </li>
                     <li  style="background-image: url('images/main_point_01.jpg');">
                         <div>
-                            <p class="fontS16 fontC6 color01">01</p> 
+                            <p class="fontS16 fontC6 color01 numT">01</p> 
                             <h3 class="title_25 fontC6 color222">포인트샵</h3>
                             <p class="fontS14 fontC4 color75">H.Point로 하는 즐거운 소비생활</p> 
                         </div>
                     </li>
-                    <li>
-                        <div>
-                            <h4 class="color222 fontS20 fontC6">H.Point Pay 이용방법</h4>
-                            <p class="color01 title_20 fontC6">하나.</p>
-                            <p class="fontS14 fontC4 color75">백화점카드,<br>
-                                자주 이용하는 신용/체크카드를<br>
-                                쉽고 빠르게 등록하고 결제</p>
+
+                    <li class="pad0">
+                        <div class="swiper mySwiper_04">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <ul class="itemWrap">
+                                        <li class="trianglePay">
+                                            <div class="sTxt padding45">
+                                                <h4 class="color222 fontS20 fontC6">H.Point Pay 이용방법</h4>
+                                                <p class="color01 title_20 fontC6">하나.</p>
+                                                <p class="fontS14 fontC4 color75">백화점카드,<br>
+                                                    자주 이용하는 신용/체크카드를<br>
+                                                    쉽고 빠르게 등록하고 결제</p>
+                                            </div>                                    
+                                        </li>
+                                        <li class=".sImg">
+                                            <div class="bgBox padding45" style="background-image: url(images/main_pay_01.jpg);background-color: #D4D4D4;">
+                                                <p class="color01 fontS20 fontC6">하나.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="itemWrap">
+                                        <li class="trianglePay">
+                                            <div class="sTxt padding45">
+                                                <h4 class="color222 fontS20 fontC6">H.Point Pay 이용방법</h4>
+                                                <p class="color01 title_20 fontC6">둘.</p>
+                                                <p class="fontS14 fontC4 color75">백화점카드,<br>
+                                                    자주 이용하는 신용/체크카드를<br>
+                                                    쉽고 빠르게 등록하고 결제</p>
+                                            </div>                                    
+                                        </li>
+                                        <li class=".sImg">
+                                            <div class="bgBox padding45" style="background-image: url(images/main_pay_02.png); background-color: #D4D4D4;">
+                                                <p class="color01 fontS20 fontC6">둘.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="itemWrap">
+                                        <li class="trianglePay">
+                                            <div class="sTxt padding45">
+                                                <h4 class="color222 fontS20 fontC6">H.Point Pay 이용방법</h4>
+                                                <p class="color01 title_20 fontC6">셋.</p>
+                                                <p class="fontS14 fontC4 color75">백화점카드,<br>
+                                                    자주 이용하는 신용/체크카드를<br>
+                                                    쉽고 빠르게 등록하고 결제</p>
+                                            </div>                                    
+                                        </li>
+                                        <li class=".sImg">
+                                            <div class="bgBox padding45" style="background-image: url(images/main_pay_03.png); background-color: #D4D4D4;">
+                                                <p class="color01 fontS20 fontC6">셋.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>                               
+                            </div>              
                         </div>
-                    </li>  
-                    <!-- <li  style="background-image: url('images/main_pay_01.jpg');">
-                        <div>
-                            <p class="color01 fontS20 fontC6">하나.</p>
-                        </div>
-                    </li> -->
+                            <div class="sBtn">                                
+                                <div class="prev"><div class="box02"><img src="images/ic_arrow_a_prev.png" alt=""></div></div>                                        
+                                <div class="next"><div class="box01"><img src="images/ic_arrow_a_next.png" alt="" ></div></div>
+                            </div>
+                        
+                    </li>
+                    
+                    <!-- slider end -->
                     <li  style="background-image: url('images/main_point_02.jpg');">
                         <div>
-                            <p class="fontS16 fontC6 color01">02</p> 
+                            <p class="fontS16 fontC6 color01 numT">02</p> 
                             <h3 class="title_25 fontC6 color222">포인트선물</h3>
                             <p class="fontS14 fontC4 color75">친구끼리 포인트 선물 어때요?</p> 
                         </div>
                     </li>
                     <li  style="background-image: url('images/main_point_03.jpg');">
                         <div>
-                            <p class="fontS16 fontC6 color01">03</p> 
+                            <p class="fontS16 fontC6 color01 numT">03</p> 
                             <h3 class="title_25 fontC6 color222">포인트기부</h3>
                             <p class="fontS14 fontC4 color75">기부하는 당신이 세상의 영웅</p> 
                         </div>
                     </li>
-                    <li style="background-color:pink;">
-                        <div class="news01">
-                            <img src="images/main_news_03.jpg" alt="">
-                            <p class="fontC6 fontS25 colorfff">디뮤지엄 서울숲 개관 특별전</p>
-                            <p class="fontC5 fontS20 colorfff">[어쨌든, 사랑:Romanitc Days] 전시 입장권50% 할인</p>
+                    <li>
+                        <div class="swiper mySwiper_03">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="bgBox padding45" style="background-color: #6DB8E9;">
+                                        <div class="news01"> 
+                                            <img src="images/main_news_03.jpg" alt="">                 
+                                            <div class="a_end">
+                                                <p class="line"></p>
+                                                <p class="fontC6 fontS28 colorfff">디뮤지엄 서울숲 개관 특별전</p>
+                                                <p class="fontC5 fontS24 colorfff">[어쨌든, 사랑:Romanitc Days] 전시 입장권50% 할인</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bgBox padding45" style="background-color:#115588;">
+                                        <div class="news01">
+                                            <img src="images/main_news_04.jpg" alt="">                  
+                                            <div class="a_end">
+                                                <p class="line"></p>
+                                                <p class="fontC6 fontS28 colorfff">클럽메드 리조트 5만원 할인</p>
+                                                <p class="fontC5 fontS24 colorfff">프리미엄 올-인클루시브 리조트 클럽메드 특별 혜택</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                                                
+                              </div>                           
+                        </div>
+                    </li>
+
+                            <li class="triangleBot02">
+                        <div>
+                            <h2 class="title_30 fontC6 colorfff">지금 가장<br>인기 있는<br>이벤트<br>TOP3</h2>                            
                         </div>
                     </li>
                     <li>
-                        <div>NO8</div>
+                        <div class="swiper mySwiper_02">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="bgBox padding45" style="background-image: url(images/main_news_01.jpg);">
+                                        <div class="news01 ">                  
+                                            <div class="a_end">
+                                                <p class="line"></p>
+                                                <p class="fontC6 fontS28 colorfff">현대박화점의 지구사랑</p>
+                                                <p class="fontC5 fontS24 colorfff">그린프렌즈와 함께 실천하는 탄소중립</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="bgBox padding45" style="background-image: url(images/main_news_02.jpg);">
+                                        <div class="news01 ">                  
+                                            <div class="a_end">
+                                                <p class="line"></p>
+                                                <p class="fontC6 fontS28 colorfff">현대박화점의 지구사랑</p>
+                                                <p class="fontC5 fontS24 colorfff">그린프렌즈와 함께 실천하는 탄소중립</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                                                
+                              </div>                           
+                        </div>
+                    </li>
+                    <li style="background-image: url(images/main_play_01.jpg);">
+                        <div></div>
+                    </li>
+                    <li  style="background-image: url('images/main_event_01.jpg');">
+                        <div>
+                            <p class="fontS16 fontC6 color03 numT">01</p> 
+                            <h3 class="fontS25 fontC3 colorfff">현대백화점카드 X<br>
+                                더현대트래블</h3>                             
+                        </div>
+                    </li>
+                    <li  style="background-image: url('images/main_event_02.jpg');">
+                        <div>
+                            <p class="fontS16 fontC6 color03 numT">02</p> 
+                            <h3 class="fontS25 fontC3 colorfff">[H.Point] 띵동~! <br>
+                                PUSH 이벤트</h3>                             
+                        </div>
+                    </li>
+                    <li  style="background-image: url('images/main_event_03.jpg');">
+                        <div>
+                            <p class="fontS16 fontC6 color03 numT">03</p> 
+                            <h3 class="fontS25 fontC4 color222">[CLUB FRIENDS] 직장인이라면?<br>
+                                월급처럼 혜택받자!</h3>                             
+                        </div>
+                    </li> 
+                </ul>
+            </div>  
+        </section>
+
+        <section id="sec2st">
+            <div class="sec2stWrap container">
+                <ul class="icons">
+                    <li>
+                        <img src="images/left_picon_area.png" alt="">
+                        <p>지점안내</p>
+                    </li>
+                    <li>
+                        <img src="images/left_picon_card.png" alt="">
+                        <p>백화점카드</p>
+                    </li>
+                    <li>
+                        <img src="images/left_picon_culture.png" alt="">
+                        <p>문화센터</p>
+                    </li>
+                    <li>
+                        <img src="images/right_picon_new.png" alt="">
+                        <p>신상품</p>
+                    </li>
+                    <li>
+                        <img src="images/right_picon_sel.png" alt="">
+                        <p>셀렉션</p>
+                    </li>
+                    <li>
+                        <img src="images/right_picon_gift.png" alt="">
+                        <p>선물하기</p>
                     </li>
                 </ul>
-            </div>         
-
+            </div>
         </section>
         <!-- section 끝 -->
-  
-      
-        
-    </div>
-    <section style="height: 1000px;">
-    </section>
+
+    
         
 
     <script src="js/script.js"></script>
