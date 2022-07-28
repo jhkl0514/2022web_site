@@ -30,13 +30,18 @@
 /* common */
 .color01{color: #4e2bf4;}
 .color02{color: #111;}
+.color03{color: #6746F9;}
+
 .fontC3{font-family: 'S-CoreDream-3Light'}
 .fontC4{font-family: 'S-CoreDream-4Regular'}
 .fontC5{font-family: 'S-CoreDream-5Medium'}
 .fontC6{font-family: 'S-CoreDream-6Bold'}
 .fontK400{font-family: 'Noto Sans KR'; font-weight: 400; color:red;}
 .fontK500{font-family: 'Noto Sans KR'; font-weight: 500; }
+.fontS28{font-size: 28px;}
 .fontS25{font-size: 25px;}
+.fontS24{font-size: 24px; letter-spacing: -0.035em;}
+.fontS22{font-size: 22px;}
 .fontS20{font-size: 20px;}
 .fontS14{font-size: 14px;}
 .fontS12{font-size: 12px;}
@@ -303,7 +308,7 @@
 /* ####  section 시작 ##### */
 /* contents  */
 
-#contents{}
+#contents{margin-bottom: -80px;}
 
 #contents .conWrap{ 
     position: absolute;    
@@ -315,7 +320,7 @@
 #contents .conWrap>ul{display: flex;flex-wrap:wrap;position: relative;}
 #contents .conWrap>ul>li{
     width: 315px;
-    border: 1px solid #000;
+    _border: 1px solid #000;
     height: 315px;
     position: relative;
     padding: 45px;
@@ -335,19 +340,37 @@
     cursor: pointer;
 }
 
-#contents .conWrap>ul>li:nth-child(1){background: #4E2BF4;}
-#contents .conWrap>ul>li:nth-child(2){background: #D3E0D9;}
-#contents .conWrap>ul>li:nth-child(3){background: #fff;}
-/* #contents .conWrap>ul>li:nth-child(4){background: #E8EAFF;} */
-#contents .conWrap>ul>li:nth-child(4){background: #F3D5D7;}
-#contents .conWrap>ul>li:nth-child(5){background: #E8EAFF;}
-#contents .conWrap>ul>li:nth-child(6){background: #6DB8E9;}
-/* #contents .conWrap>ul>li:nth-child(8){background: #6DB8E9;} */
+#contents .conWrap>ul>li:nth-child(1){background: #4E2BF4;} /* H포인트 쓰기 */
+#contents .conWrap>ul>li:nth-child(2){background: #D3E0D9;} /* 01포인트샵 */
+#contents .conWrap>ul>li:nth-child(3){background: #ffffff;} /* 스라이드 (이용방법 */
+
+#contents .conWrap>ul>li:nth-child(4){background: #F3D5D7;} /* 02포인트선물 */
+#contents .conWrap>ul>li:nth-child(5){background: #E8EAFF;} /* 03포인트기부 */
+#contents .conWrap>ul>li:nth-child(6){background: #6DB8E9;} /* 뉴스1 */
+
+#contents .conWrap>ul>li:nth-child(7){background: #6746F9;} /* 지금 베스트Top3 */
+#contents .conWrap>ul>li:nth-child(8){background: #ffffff;} /* 뉴스2 */
+#contents .conWrap>ul>li:nth-child(9){background: #000000;} /* 모달 영상 */
+
+#contents .conWrap>ul>li:nth-child(10){background: #6772EE;} /* 01.현대카드 */
+#contents .conWrap>ul>li:nth-child(11){background: #B3B3EF;} /* 02.PUSH 이벤트 */
+#contents .conWrap>ul>li:nth-child(12){background: #ffffff;} /* 03.월급처럼 */
+
+ 
 
 #contents .conWrap>ul>li:nth-child(3),
-#contents .conWrap>ul>li:nth-child(6)
+#contents .conWrap>ul>li:nth-child(6),
+#contents .conWrap>ul>li:nth-child(8),
+#contents .conWrap>ul>li:nth-child(12)
 {width: 630px;}
 
+#contents .conWrap>ul>li:nth-child(3),
+#contents .conWrap>ul>li:nth-child(6),
+#contents .conWrap>ul>li:nth-child(8){
+    padding: 0px;
+}
+
+#contents .conWrap .numT{content: ""; position: absolute; top:20px }
 #contents .conWrap .title_30{
     font-size: 35px; line-height: 40px; letter-spacing: -0.06em; padding-bottom: 18px;
 }
@@ -357,13 +380,124 @@
 #contents .conWrap .title_20{
     font-size: 20px; letter-spacing: -0.05em; padding: 34px 0 10px 0;
 }
-#contents .conWrap li .news01{background-color: #4E2BF4;}
+#contents .conWrap ul li .news01{width: 100%;}
 #contents .conWrap .news01 img{
     display: flex; margin-left: auto;
+}
+.padding45 {padding: 45px;}
+#contents .conWrap .bgBox,
+#contents .pad0 .bgBox
+{
+    /* background-image: url(../images/main_news_01.jpg); */   
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;   
+  
+}
+#contents .conWrap .news01 .a_end{position: absolute; bottom: 40px;}
+#contents .conWrap .news01 .a_end p{line-height: 40px;}
+#contents .conWrap .news01 .line:after{
+    width: 22px; height: 5px; background: white;
+    content: "";
+    position: absolute; top:-10px; left: 0;
+}
+
+/* next 삼각형 */
+#contents .conWrap>ul>li.triangle:after{
+    content:"";display: block;
+    width:0;height:0;
+    border-width:20px;
+    border-style:solid; 
+    position: absolute;top: 50%;right: -40px;margin-top: -20px;
+    border-color: transparent transparent transparent #4E2BF4;
+    z-index: 200;
+}
+
+#contents .conWrap>ul>li>div.triangleBot:after{
+    content:"";display: block;
+    width:0;height:0;
+    border-width:20px;
+    border-style:solid;    
+    position: absolute; left: 45%; bottom: 0px; margin-bottom: -40px;
+    z-index: 202;    
+}
+#contents .conWrap>ul>li.triangleBot02:after{
+    content:"";display: block;
+    width:0;height:0;
+    border-width:20px;
+    border-style:solid; 
+    position: absolute;left: 45%; bottom: 0px; margin-bottom: -40px;
+    border-color: #6746F9 transparent transparent transparent;
+    z-index: 200;
+}
+.triangle01:after{
+    border-color: transparent transparent transparent #4E2BF4;
+}
+.triangle02:after{
+    border-color: #4E2BF4 transparent transparent transparent;
+}
+#contents .conWrap .pad0 ul>li.trianglePay::before{
+    content:"";display: block;
+    width:0;height:0;
+    border-width:20px;
+    border-style:solid; 
+    position: absolute;top: 50%; right: 275px; margin-top: -20px;
+    border-color: transparent transparent transparent #fff;
+    z-index: 200;
 }
 
 
 
+/* slider 이용방법 */
+#contents .conWrap>ul>li:nth-child(3){height: 315px;}
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0px #ccc;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 0px #ccc;
+    border: 0 none;   
+}
+#contents .conWrap>ul>li.pad0{padding: 0; }
+#contents .conWrap>ul>li.pad0 ul li{width: 315px; height: 315px;}
+#contents .conWrap .itemWrap{display: flex;}
+#contents .conWrap .sBtn{
+    position: absolute;bottom: 40px;display: flex; gap:5px; left: 280px; cursor:pointer;
+}
+   
+#contents .conWrap .sBtn .box01{    
+    box-sizing: border-box; 
+    position: absolute; bottom: 0; right:11px;
+    width: 40px;
+    height: 40px;
+    display: flex; justify-content: center; align-items: center;
+    border: 1px solid #B1B1B1;}
+
+ #contents .conWrap .sBtn .box02{    
+        box-sizing: border-box; 
+        position: absolute; bottom: 0; right: 50px;
+        width: 40px;
+        height: 40px;
+        display: flex; justify-content: center; align-items: center;
+        border: 1px solid #B1B1B1;}
+
+
+        
+/* ####  section sec2st 시작 ##### */
+#sec2st{background-color: #115588; margin-bottom: 80px;} 
+#sec2st ul{
+    margin: 0 auto;
+    display: flex; justify-content:space-between; align-items: center;
+}
+#sec2st ul li{padding: 80px 20px;  }
+
+#sec2st ul li p{
+    font-family: 'S-CoreDream-5Medium';
+    text-align: center;
+    font-size: 16px; ; color: #fff;
+}
 
 /********** css responsive **********/
 @media (max-width: 1399px) {
