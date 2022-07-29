@@ -36,13 +36,15 @@
 .fontC4{font-family: 'S-CoreDream-4Regular'}
 .fontC5{font-family: 'S-CoreDream-5Medium'}
 .fontC6{font-family: 'S-CoreDream-6Bold'}
-.fontK400{font-family: 'Noto Sans KR'; font-weight: 400; color:red;}
+.fontK400{font-family: 'Noto Sans KR'; font-weight: 400; }
 .fontK500{font-family: 'Noto Sans KR'; font-weight: 500; }
+.fontS35{font-size: 35px;}
 .fontS28{font-size: 28px;}
 .fontS25{font-size: 25px;}
 .fontS24{font-size: 24px; letter-spacing: -0.035em;}
 .fontS22{font-size: 22px;}
 .fontS20{font-size: 20px;}
+.fontS18{font-size: 18px;}
 .fontS14{font-size: 14px;}
 .fontS12{font-size: 12px;}
 .fontS16{font-size: 16px;}
@@ -50,6 +52,27 @@
 .colorfff{color:#fff;}
 .color222{color:#222;}
 .color75{color:#757575;}
+.color66{color:#666666;}
+.colorEE{background:#EEEDED;}
+.colorF5{background:#F5F5F5;}
+#F5F5F5
+
+.marginB20{margin-bottom: 20px;}
+.paddingB20{padding-bottom: 20px;}
+.marginB80{margin-bottom: 80px;}
+.bgBoxD{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+.boxS315P45{width: 315px;  height: 315px; padding: 45px; position: relative;}
+
+
+
 
 
 /********** css responsive init **********/
@@ -59,8 +82,6 @@
 /*------------------- header ---------------------*/
 #header{
     position: fixed; width: 100%; background: #fff; z-index: 100;
-}
-#header .navbarWrap{   
 }
 #header .navbarWrap .util{
     width: 150px; height: 30px; margin-left: auto;
@@ -308,7 +329,7 @@
 /* ####  section 시작 ##### */
 /* contents  */
 
-#contents{margin-bottom: -80px;}
+#contents{margin-bottom: -120px;}
 
 #contents .conWrap{ 
     position: absolute;    
@@ -417,7 +438,8 @@
     z-index: 200;
 }
 
-#contents .conWrap>ul>li>div.triangleBot:after{
+#contents .conWrap>ul>li>div.triangleBot:after
+{
     content:"";display: block;
     width:0;height:0;
     border-width:20px;
@@ -434,12 +456,31 @@
     border-color: #6746F9 transparent transparent transparent;
     z-index: 200;
 }
+#sec3st .conRight>div>ul>li.triangleBot:after{
+    content:"";display: block;
+    width:0;height:0;
+    border-width:20px;
+    border-style:solid;    
+    position: absolute; left: 45%; top: 0px; margin-top: -40px;
+    border-color: transparent transparent #F5F5F5 transparent;
+    z-index: 202; 
+}
+#sec3st .conRight>div>ul>li.triangleBot02:after{
+    content:"";display: block;
+    width:0;height:0;
+    border-width:20px;
+    border-style:solid;    
+    position: absolute; left: 45%; bottom: 0px; margin-bottom: -40px;
+    border-color: #F5F5F5 transparent  transparent transparent ;
+    z-index: 202; 
+}
 .triangle01:after{
     border-color: transparent transparent transparent #4E2BF4;
 }
 .triangle02:after{
     border-color: #4E2BF4 transparent transparent transparent;
 }
+
 #contents .conWrap .pad0 ul>li.trianglePay::before{
     content:"";display: block;
     width:0;height:0;
@@ -498,6 +539,62 @@
     text-align: center;
     font-size: 16px; ; color: #fff;
 }
+
+/* #### section sec3st 시작 #### */
+
+#sec3st .set3stWrap{ 
+    position: absolute;    
+    top: 0;
+    display: flex;
+    position: relative;
+    z-index: 1; 
+}
+#sec3st .set3stWrap>ul{display: flex;flex-wrap:wrap;position: relative;}
+#sec3st .set3stWrap .conLeft{
+    width: 315px;
+    height: 630px;
+    position: relative;
+    padding: 45px;
+}
+#sec3st .set3stWrap .conRight {
+    width: 945px;
+    height: 630px; 
+    display:flex;
+}
+#sec3st .set3stWrap .conRight ul>li{
+    width: 315px;
+    height: 315px;
+    position: relative;
+    padding: 45px;
+    background: #F5F5F5;
+}
+#sec3st .set3stWrap .conRigh div>ul>li{
+    position: absolute; left: 0; top: 0;
+    
+}
+span.like{    
+    position: absolute; 
+    bottom: 45px;
+    display: flex; align-items: center;
+    
+}
+
+/* #### section sec4st 시작 #### */
+#sec4st .sec4stWrap {
+    display: flex;
+}
+#sec4st .sec4stWrap ul li{
+    width: 630px; height: 315px; 
+    padding: 45px;
+}
+
+#sec4st .sec4stWrap .card{    
+    display: flex;
+}
+#sec4st .sec4stWrap .card .cText{
+    display:block;
+}
+
 
 /********** css responsive **********/
 @media (max-width: 1399px) {
