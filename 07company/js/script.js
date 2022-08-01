@@ -49,8 +49,11 @@ $(".navbarClone .mMenu>ul>li").mouseover(function(){
   });
 
 
-// 메인 스와이퍼 를 자져와서 복제하고 appendTo를 한다 ()
-$(".visualWrap>div").clone().appendTo(".mMswiper")
+// 이벤트 배너를 자져와서 복제하고 appendTo를 한다 ()
+$("#contents>.conWrap>ul>.event").clone().appendTo(".Mevent")
+
+// 뉴스 배너를 자져와서 복제하고 appendTo를 한다 ()
+$("#contents>.conWrap>ul>.news").clone().appendTo(".Mnews")
 
 //news01 Swiper
 var swiper = new Swiper(".mySwiper_02", {   
@@ -74,5 +77,52 @@ var swiper = new Swiper(".mySwiper_04", {
       }
     
 });
+
+var swiper = new Swiper(".mySwiper_05", {   
+  loop: true,
+  autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  var swiper = new Swiper(".mySwiper_06", {   
+    loop: true,
+    autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  
+    var swiper = new Swiper(".mySwiper_07", {   
+      loop: true,
+      autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+  
+
 
 // bxSlider
