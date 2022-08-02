@@ -197,6 +197,8 @@
  .visualWrap .swiper-slide {
     overflow: hidden;
     color: #fff;
+    width: 1920px;
+    height: 890px;
  }
 
 /* main Swiper */
@@ -211,6 +213,9 @@
     height: 100%;
     overflow: hidden;
   }
+
+
+  
   
 .visualWrap .slide_bg > div {
     width: 100%;
@@ -839,8 +844,9 @@ margin-bottom: 55px;
     }
     .visualWrap .wrap_swiper_navi {
         visibility:hidden;
+    
     }
-   
+
     .visualWrap .wrap_swiper_tools .swiper-pagination {
         text-align: left;
         padding-left: 45px;
@@ -868,7 +874,7 @@ margin-bottom: 55px;
 
     #contentsM {display: block;}
     #contents {display: none;}
-    .containerM{width: 767px; margin: 0 auto;}
+    .containerM{margin: 0 auto;}
 
     #contentsM{margin: 100px 0 0 0;}
          
@@ -877,9 +883,18 @@ margin-bottom: 55px;
     }  
    
     #contentsM .conWrapM .swiper-slide ul li{
-        width: 450px;
-        height: 350px;
+        width: 400px;
+        height: 300px;
         padding: 45px;
+    }
+ 
+    #contentsM .conWrapM .slide_bg
+    {
+        width: 100%;
+        height: 100%;
+        max-width: 767px;  
+        background-size: cover;
+        background-position: center;
     }
     #contentsM .conWrapM .swiper-slide .write{   
         margin: 50px 45px 130px 45px;
@@ -907,7 +922,15 @@ margin-bottom: 55px;
      #contentsM .conWrapM .swiper-slide .thumbanil{
         border-radius: 16px;             
         background-size: cover;        
+        background-position:center;        
+    }
+
+    #contentsM .conWrapM .swiper-slide .thumbanil02{
+        width: 100%;  height: 300px;        
+        background-size:cover;         
         background-position:center;
+        background-repeat: no-repeat;
+        
     }
 
     #contentsM .conWrapM  .wrap_swiper_tools {
@@ -929,17 +952,20 @@ margin-bottom: 55px;
     {
         border-radius: 0; background-color: #fff;
     }
-
-    .MeventWrap{padding: 45px 45px 0px 0;}
-    .MnewsWrap{padding: 0 45px 45px 0;}
+    .MnewsWrap .Mnews div{
+        width: 100%; height: 200px; 
+        _overflow: hidden;
+    }
     .Mevent img{
         width:30%; height:30%;
         _object-fit:contain;
     }
 
     
-  .magazineM{
-        height: 40px;
+    #contentsM .conWrapM p.magazineM{
+        padding: 20px 0;
+        text-align: center;
+        height: 30px;
     }
     
   #sec2st, #sec3st{display: none;}  
@@ -975,13 +1001,8 @@ margin-bottom: 55px;
        
     }
     #footer .fTxt li{
-    font-size: 12px;
-
+         font-size: 12px;
     }
-
-
- 
-
 }  
    
        
