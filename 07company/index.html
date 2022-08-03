@@ -28,20 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      <!-- Swiper JS -->
      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-     <script>$(function(){
-        var slide = $("slider").bxSlider({
-            
-            mode:"fade",
-            controls:false
-        })
     
-        $(".next").click(function(){
-            slide.goToNextSlide()
-        });
-        $(".prev").click(function(){
-            slide.goToPrevSlide()
-        });
-    })</script>
     
     
   
@@ -49,7 +36,7 @@
 <body>
     <header id="header">            
             <div class="navbarWrap container">
-                <div class="util">
+                <div class="util fixed">
                     <ul>
                         <li><a href="#">로그인</a></li>
                         <li><a href="#">회원가입</a></li>
@@ -148,11 +135,7 @@
                             <p class="s_txt">다양한 브랜드에서 적립하고 사용하는<br>즐거운 일상의 H.Point!</p>
                         </div>
                     </div>                    
-                </div>
-                <!-- <div class="swiper-slide"><img src="images/main_bar_bg_02.png" alt=""></div>
-                <div class="swiper-slide"><img src="images/main_bar_bg_03.png" alt=""></div>
-                <div class="swiper-slide"><img src="images/main_bar_bg_04.png" alt=""></div> -->
-                
+                </div> 
                 <div class="swiper-slide">
                     <div class="slide_inner">
                         <div class="slide_bg">											
@@ -280,11 +263,10 @@
                                 </div>                               
                             </div>              
                         </div>
-                            <div class="sBtn">                                
-                                <div class="prev"><div class="box02"><img src="images/ic_arrow_a_prev.png" alt=""></div></div>                                        
-                                <div class="next"><div class="box01"><img src="images/ic_arrow_a_next.png" alt="" ></div></div>
-                            </div>
-                        
+                            <div class="wrap_swiper_navi">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>                                
+                            </div>  
                     </li>
                     
                     <!-- slider end -->
@@ -646,13 +628,116 @@
                         <li>
                             <h3 class="fontS35 fontC6 colorfff marginB20">H.매거진
                             </h3>
-                            <p class="fontS18 fontC4 colorfff">최신 트렌드 정보는<br>H매거진에서 한 눈에</p>
-                                            
+                            <p class="fontS18 fontC4 colorfff">최신 트렌드 정보는<br>H매거진에서 한 눈에</p>                                            
+                        </li>
+                        <li>
+                            <div class="wrap_swiper_navi">
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>                         
                         </li>
                     </ul>
                 </div>
                 <div class="conRight">
-                    <div>
+                    <!-- swiper 매거진 시작 -->                    
+                    <div class="swiper mySwiper_08">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div>
+                                <ul>
+                                    <li style="background-image: url(images/main_magazin_02.jpg);">                              
+                                    </li>
+                                    <li class="triangleBot ">
+                                        <p class="color222 fontS20 fontC5 marginB20">[소리여행]INDA:보름달이 뜬 밤의 타지마할</p>
+                                        <p class="color66 fontS14 fontK00">보람달이 뜨는 날을 기다렸다가 델리에서 야무나 강을 따라 200km 정도 내려가면 인도의 마지막 왕조였던 무굴제국의 수도, 아그라(Agra)에 이릅니다.</p>
+                                        <span class="like color75 fontS14"><img src="images/icon_like.png" alt="">&nbsp; 100</span>
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div>
+                                <ul>                            
+                                    <li class="triangleBot02 triangle03">
+                                        <p class="color222 fontS20 fontC5 marginB20">여행은 트럽트래블과 함께</p>
+                                        <p class="color66 fontS14 fontK00">당장 떠나고 싶게 만드는
+                                            트래블 앨리스님(@travelaaalice) 영상!
+                                             괜히 뭉클하고 아련하다.<br><br>
+                                            나도 올해는 떠나 열심히 발품 파자!
+                                            H.Point 클럽트래블이
+                                             진짜 혜택!</p>
+                                         <span class="like color75 fontS14"><img src="images/icon_like.png" alt="">&nbsp; 100</span>     
+                                    </li>
+                                    <li style="background-image: url(images/main_magazin_03.jpg);">                              
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div>
+                                <ul>
+                                    <li style="background-image: url(images/main_magazin_04.jpg);">                              
+                                    </li>
+                                    <li class="triangleBot">
+                                        <p class="color222 fontS20 fontC5 marginB20">야외에서 즐겨요!</p>
+                                        <p class="color66 fontS14 fontK00">발코니, 정원 등을 리조트처럼 바꿔주는 아웃도어 가구를 소개한다.
+                                            야외용으로 가장 잘 어울리는 라운지 체어. 등받이 부터 시트까지 편안한 각도를 반영하여 안락함을 자랑한다.
+                                        </p>
+                                        <span class="like color75 fontS14"><img src="images/icon_like.png" alt="">&nbsp; 100</span>
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div>
+                                <ul>                                    
+                                    <li class="triangleBot02 ">
+                                        <p class="color222 fontS20 fontC5 marginB20">[소리여행]INDA:보름달이 뜬 밤의 타지마할</p>
+                                        <p class="color66 fontS14 fontK00">보람달이 뜨는 날을 기다렸다가 델리에서 야무나 강을 따라 200km 정도 내려가면 인도의 마지막 왕조였던 무굴제국의 수도, 아그라(Agra)에 이릅니다.</p>
+                                        <span class="like color75 fontS14"><img src="images/icon_like.png" alt="">&nbsp; 100</span>
+                                    </li>
+                                    <li style="background-image: url(images/main_magazin_02.jpg);">                              
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div>
+                                <ul> 
+                                    <li style="background-image: url(images/main_magazin_03.jpg);">                              
+                                    </li>                           
+                                    <li class="triangleBot triangle03">
+                                        <p class="color222 fontS20 fontC5 marginB20">여행은 트럽트래블과 함께</p>
+                                        <p class="color66 fontS14 fontK00">당장 떠나고 싶게 만드는
+                                            트래블 앨리스님(@travelaaalice) 영상!
+                                             괜히 뭉클하고 아련하다.<br><br>
+                                            나도 올해는 떠나 열심히 발품 파자!
+                                            H.Point 클럽트래블이
+                                             진짜 혜택!</p>
+                                         <span class="like color75 fontS14"><img src="images/icon_like.png" alt="">&nbsp; 100</span>     
+                                    </li>                                    
+                                </ul>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div>
+                                <ul>                                    
+                                    <li class="triangleBot02">
+                                        <p class="color222 fontS20 fontC5 marginB20">야외에서 즐겨요!</p>
+                                        <p class="color66 fontS14 fontK00">발코니, 정원 등을 리조트처럼 바꿔주는 아웃도어 가구를 소개한다.
+                                            야외용으로 가장 잘 어울리는 라운지 체어. 등받이 부터 시트까지 편안한 각도를 반영하여 안락함을 자랑한다.
+                                        </p>
+                                        <span class="like color75 fontS14"><img src="images/icon_like.png" alt="">&nbsp; 100</span>
+                                    </li>
+                                    <li style="background-image: url(images/main_magazin_04.jpg);">                              
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                      <!-- swiper 매거진 끝 -->
+                    <!-- <div>
                         <ul>
                             <li style="background-image: url(images/main_magazin_02.jpg);">                              
                             </li>
@@ -691,7 +776,7 @@
                                 <span class="like color75 fontS14"><img src="images/icon_like.png" alt="">&nbsp; 100</span>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>                
             </div>
         </section>
@@ -731,7 +816,7 @@
 
         <footer id="footer">
             <div class="fTopLine"></div>
-            <div class="fBottom ">
+            <div class="fBottom  ">
                 <div>
                     <ul>
                         <li class="fLogo"><img src="images/logo_ft.png" alt=""></li>
@@ -759,8 +844,7 @@
             </div>
 
         </footer>
-        <!-- section 끝 -->
-
+        <!-- section 끝 -->    
     
         
 
