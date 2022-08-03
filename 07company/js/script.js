@@ -73,10 +73,14 @@ var swiper = new Swiper(".mySwiper_03", {
 var swiper = new Swiper(".mySwiper_04", {   
     loop: true,
     autoplay: {
-        delay: 4000,
-      }
-    
-});
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    },
+  });   
 
 var swiper = new Swiper(".mySwiper_05", {   
   loop: true,
@@ -122,6 +126,35 @@ var swiper = new Swiper(".mySwiper_05", {
           prevEl: ".swiper-button-prev",
         },
       });
+
+      var swiper = new Swiper(".mySwiper_08", {         
+          watchSlidesProgress: true,
+          slidesPerView: 3,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          },
+        });  
+        
+        
+  // 메뉴 util 제거
+        $(window).scroll(function(){
+          let scrollY = window.pageYOffset;
+  
+          if( scrollY > 110 ){
+              // $(".util").attr("style","position:fixed")
+              $(".util").addClass("fixed")
+          }else{
+              // $(".util").attr("style","")
+              $(".util").removeClass("fixed")
+          }
+  
+          // $(".scroll").html(parseInt(scrollY))
+      })
   
 
 
