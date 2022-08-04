@@ -41,6 +41,21 @@ $(".navbarClone .mMenu>ul>li>a").click(function(e){
    
   })
 
+
+
+$(".navbarClone .mMenu>ul>li>ul>li>a").click(function(e){
+    e.preventDefault();
+
+    if($(this).hasClass("active")){
+      $(".mMenu>ul>li>ul>li>a").removeClass("active")
+    }else{       
+      $(this).addClass("active").addClass(""); 
+       
+
+    }
+   
+  })
+
   // $(".navbarClone .mMenu>ul>li>a").click(function(){
   //   $(this).parent().find(".submenu").stop().slideUp(200);
   // })
