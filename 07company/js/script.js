@@ -26,13 +26,26 @@ $(".overlay").click(function(){
 $(".navbar>ul").clone().appendTo(".mMenu")
 
 
-$(".navbarClone .mMenu>ul>li").mouseover(function(){
-    $(this).find(".submenu").stop().slideDown(200);
+$(".navbarClone .mMenu>ul>li>a").click(function(e){
+    e.preventDefault();
+    $(".mMenu>ul>li>a").parent().find(".submenu").slideUp(200);
+
+    if($(this).hasClass("active")){
+      $(".mMenu>ul>li>a").removeClass("active")
+    }else{
+      $(this).parent().find(".submenu").stop().slideDown(200);
+      $(".mMenu>ul>li>a").removeClass("active");
+      $(this).addClass("active").addClass("");    
+
+    }
+   
   })
 
-  $(".navbarClone .mMenu>ul>li").mouseout(function(){
-    $(this).find(".submenu").stop().slideUp(200);
-  })
+  // $(".navbarClone .mMenu>ul>li>a").click(function(){
+  //   $(this).parent().find(".submenu").stop().slideUp(200);
+  // })
+
+  
 
   //  메인 Initialize Swiper
   var swiper = new Swiper(".mySwiper", {

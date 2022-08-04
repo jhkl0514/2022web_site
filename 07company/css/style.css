@@ -1315,7 +1315,7 @@ span.like {
         color: #111;
     }
 
-    #header .navbarClone .mMenu>ul>li:hover a {
+    #header .navbarClone .mMenu>ul>li>a.active {
         color: #4e2bf4;
     }
 
@@ -1332,7 +1332,7 @@ span.like {
         background: #4e2bf4;
     }
 
-    #header .navbarClone .mMenu>ul>li:hover a.on:after {
+    #header .navbarClone .mMenu>ul>li.active a.on:after {
         opacity: 1;
     }
 
@@ -1368,7 +1368,7 @@ span.like {
         letter-spacing: -0.8px;
     }
 
-    #header .navbarClone .mMenu>ul>li>.submenu li:hover a {
+    #header .navbarClone .mMenu>ul>li>.submenu li a.active {
         color: #4e2bf4;
     }
 
