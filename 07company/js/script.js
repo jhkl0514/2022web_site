@@ -184,6 +184,22 @@ var swiper = new Swiper(".mySwiper_05", {
           // $(".scroll").html(parseInt(scrollY))
       })
   
+//pageTop 올라가기
+      $(".btn_top").click(function(){
+        $("html,body").animate({scrollTop:0},300)
+    })
+
+    $(window).scroll(function(){
+      let scrollY = window.pageYOffset
+    
+      if($("body").height()/5 < scrollY){ // 문서 반일때 스크롤 Y이 커질때 나타나라
+          $(".btn_top").fadeIn()
+      }else{
+          $(".btn_top").fadeOut()
+      }
+
+  })
+
 
 
 // bxSlider
