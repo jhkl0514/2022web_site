@@ -191,6 +191,19 @@
     background: #4e2bf4;
 }
 
+#header .navbar>ul>li a.on.active:after {
+    content: "";
+    transition: 0.3s;
+    opacity: 1;
+    position: absolute;
+    left: -5px;
+    top: 17px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4e2bf4;
+}
+
 #header .navbar>ul>li:hover a.on:after {
     opacity: 1;
 }
@@ -996,6 +1009,7 @@ span.like {
 }
 
 /* #### footer 시작 #### */
+#footer{display: block;}
 #footer .fTopLine {
     width: 100%;
     border: 1px solid #E4E4E4;
@@ -1070,85 +1084,89 @@ span.like {
   }
 
 /*############## sub Title ########### */
-#subTitle {  
+#subTitle {      
+    width: 100%;   
+    z-index: 1;
+} 
+#subTitle .titleWrap {
+    background: #4E2BF4;
     width: 100%;
-    height: 300px;
     position: absolute;
     left: 0;
-    top: 100px;
-    _display: flex;   
-    background: #4E2BF4;
+    top:0;
     position: relative;
-    z-index: 1;
-}  
-#subTitle .titleWrap{ 
+}
+#subTitle .titleWrap .titleTop{
     display: flex;
     justify-content: center; align-items: center;
 }
-
-#subTitle .titleWrap div{ 
-    display: flex; flex-direction: column;
-    align-items: center;
-    padding: 50px 0 20px 0;
-}
+#subTitle .titleWrap div{   
+    flex-direction: column;
+    padding: 150px 0 0 0;}
 
 #subTitle .titleWrap .tit{font-size: 45px;}
 #subTitle .titleWrap .desc{
     font-size: 18px; line-height: 1.5;
     letter-spacing: -0.5px;
-    margin-top: 25px;
+    margin-top: 15px;
     padding-bottom: 25px;
 }
 
-#subTitle .subContainer{width: 800px; margin: 0 auto;}
-#subTitle .subContainer ul{display: flex;}
-#subTitle .subContainer li{flex:1 1 25%}
-_#subTitle .subContainer li:nth-child(2n){background: skyblue;}
-_#subTitle .subContainer li {
-    display: flex;
-    padding: 30px;justify-content: center; align-items: center;
+#subTitle .titleWrap ul{display: flex;}
+#subTitle .titleWrap li{flex:1 1 25%}
+
+#subTitle .titleWrap ul{
+    width: 800px; margin: 0 auto; 
+}
+#subTitle .titleWrap .tab li{    
+    width: auto;    
+    text-align: center;
+    margin: 30px 0;
 }
 
-#subTitle .subContainer .tab li{    
-    width: auto; 
+#subTitle .titleWrap .tab li a{      
     font-size: 20px;
-    font-family: 'S-CoreDream-6Bold';
-    padding: 0 30px;
+    font-family: 'S-CoreDream-6Bold';   
     text-align: center;
     line-height: 50px;
-    font-size: 20px;
-    color: #fff;
-    opacity: 0.5;
+    color: #A594F9; 
 }
 
-#subTitle .subContainer .tab li.active{ 
+
+#subTitle .titleWrap .tab li a.active{ 
+    display: block;
     width: auto;
     height: 50px; 
     color: #111;  
     background: #fff;
     border-radius: 25px; 
-    opacity: 1;  
 }
 /* subpage  */
-
-
-/* #subTitle .sub .tab{display: flex;}
-#subTitle .sub .tab li{
-    flex:1 1 25%;height: 40px;
-    display: flex;justify-content: center;align-items: center;
-    background: lightgray;
-    cursor: pointer;
+#subTitle .sub .subContent {
+    width: 1260px; margin: 0 auto;
+    position: relative;  
 }
-#subTitle .sub .tab li.active{
-    background: skyblue;
-}
-#subTitle .sub .subContent div{
+
+#subTitle .sub .subContent .content{
     display: none;
-    border: 1px solid #000;
-    padding: 30px;
-    border-top: 0 none;
+    padding: 50px 0;
+    border-top: 0 none;    
 }
-#subTitle .sub .subContent div:nth-child(1){display: block;} */
+#subTitle .sub .subContent .content .location{
+    font-size: 16px;
+}
+#subTitle .sub .subContent .content .sT{   
+    padding: 30px 0; 
+    display: flex; justify-content: center;
+}
+#subTitle .sub .subContent .content h2{
+    display:inline-block;
+    font-family: 'S-CoreDream-5Medium';
+    font-size: 40px;
+    line-height: 60px; 
+    border-bottom: 5px solid #4E2BF4;
+}
+#subTitle .sub .subContent div:nth-child(1){display: block;}
 
 
 
@@ -1156,6 +1174,21 @@ _#subTitle .subContainer li {
 @media (max-width: 1399px) {}
 
 @media (max-width: 1199px) {
+    #header .toggle {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        cursor: pointer;
+    }
+    #header .headerWrap .navbar {
+        display: none;
+    }
+
+    #header .navbarWrap .util {
+        display: none;
+    }
+
     #header .navbarWrap {
         padding: 0 20px;
     }
@@ -1220,6 +1253,13 @@ _#subTitle .subContainer li {
         width: 1100px;
         margin: 0 auto;
     }
+       /* subpage  */
+       #subTitle .sub .subContent {
+        width: 100%; margin: 0 auto;
+    }
+    .subContainer .content{
+        margin: 0 25px;
+    }
 
 
 
@@ -1227,6 +1267,27 @@ _#subTitle .subContainer li {
 
 @media (max-width: 991px) {
     /* .navbar>ul>li>a{padding:0px 15px;} */
+    #header .toggle {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        cursor: pointer;
+    }
+    #header .headerWrap .navbar {
+        display: none;
+    }
+
+    #header .navbarWrap .util {
+        display: none;
+    }
+       /* subpage  */
+       #subTitle .sub .subContent {
+        width: 100%; margin: 0 auto;
+    }
+    .subContainer .content{
+        margin: 0 25px;
+    }
 
 
 }
@@ -1602,15 +1663,17 @@ _#subTitle .subContainer li {
     }
 
     #footer .fBottom {
-        width: 100%;
+        width: 100%;       
     }
 
     #footer .fBottom>div {
-        padding: 0 45px
+        padding: 0 0px;
     }
 
     #footer .fBottom ul {
         position: relative;
+        width: 100%;
+
     }
 
     #footer .fLogo img {
@@ -1622,13 +1685,14 @@ _#subTitle .subContainer li {
     }
 
     #footer .fSns img {  
-        width: 90%;
+        width: 80%;
         height: auto;
         display: block;     
     }
 
     #footer .fCopy div ul {
         display: flex;
+        padding-left: 20px;
     }
 
     #footer .fCopy .fBtn li {
@@ -1643,7 +1707,7 @@ _#subTitle .subContainer li {
     }
 
     #footer .fLogo {
-        width: 100%;
+        width: 80%;
     }
 
     #footer .fCopy {
@@ -1660,8 +1724,48 @@ _#subTitle .subContainer li {
         justify-content: space-between;
         align-items: flex-start;
     }
-}
 
+    /*############## sub Title ########### */
+
+    #subTitle .titleWrap ul{
+        width: 100%; margin: 0 auto; 
+    }
+
+    /* subpage  */
+    #subTitle .sub .subContent {
+        width: 100%; margin: 0 auto;
+    }
+
+    .subContainer .content{
+        margin: 0 25px;
+    }
+    
+    #subTitle .titleWrap .tab li a{      
+        font-size: 16px; 
+        line-height: 40px;
+    }
+
+
+    #subTitle .titleWrap .tab li a.active{ 
+        height: 40px; 
+    }
+
+    #subTitle .sub .subContent .content .location{
+        font-size: 12px;
+    }
+    #subTitle .sub .subContent .content h2{
+        font-size: 30px;
+        line-height: 40px; 
+
+    }    
+    #subTitle .titleWrap .tit{font-size: 40px;}
+    #subTitle .titleWrap .desc{
+        font-size: 16px;
+        margin-top: 15px;
+        padding-bottom: 5px;
+    }
+
+}
 
 
 @media (max-width: 575px) {}

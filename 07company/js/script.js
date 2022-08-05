@@ -27,7 +27,7 @@ $(".navbar>ul").clone().appendTo(".mMenu")
 
 
 $(".navbarClone .mMenu>ul>li>a").click(function(e){
-    e.preventDefault();
+     e.preventDefault();
     $(".mMenu>ul>li>a").parent().find(".submenu").slideUp(200);
 
     if($(this).hasClass("active")){
@@ -43,18 +43,12 @@ $(".navbarClone .mMenu>ul>li>a").click(function(e){
 
 
 
-$(".navbarClone .mMenu>ul>li>ul>li>a").click(function(e){
-    e.preventDefault();
 
-    if($(this).hasClass("active")){
-      $(".mMenu>ul>li>ul>li>a").removeClass("active")
-    }else{       
-      $(this).addClass("active").addClass(""); 
        
 
-    }
+//     }
    
-  })
+//   })
 
   // $(".navbarClone .mMenu>ul>li>a").click(function(){
   //   $(this).parent().find(".submenu").stop().slideUp(200);
@@ -202,4 +196,40 @@ var swiper = new Swiper(".mySwiper_05", {
 
 
 
-// bxSlider
+// Sub Tap menu
+
+    //depth2
+    let params = new URLSearchParams(location.search)
+    console.log(params.get("submenu")) // 그 중 이름을 가지고 오고 싶다
+
+    // $(".tab li").click(function(){
+    //     let i = $(this).index();
+    //     $(".tab li").removeClass("active");
+    //     $(this).addClass("active")
+
+    //     $(".content div").hide().eq(i).show();
+    // })
+
+    function tab(){
+        $("#subTitle .tab li").click(function(){
+                let i = $(this).index();
+                $("#subTitle .tab li").find("a").removeClass("active");
+                $(this).find("a").addClass("active")
+
+                $(".subContent>div.content").hide().eq(i).show();
+            })
+    }
+
+    function views(i){
+        if( i != null){
+            $("#subTitle .tab li").removeClass("active").eq(i).addClass("active");
+            $(".subContent>div.content").hide().eq(i).show(); //페이드 인
+
+            tab();
+
+        }else{
+           tab();
+        }    
+    }
+
+    views( params.get("submenu") )
