@@ -222,7 +222,8 @@ var swiper = new Swiper(".mySwiper_05", {
 
     function views(i){
         if( i != null){
-            $("#subTitle .tab li").removeClass("active").eq(i).addClass("active");
+            $("#subTitle .tab li").find("a").removeClass("active");
+            $("#subTitle .tab li").eq(i).find("a").addClass("active");
             $(".subContent>div.content").hide().eq(i).show(); //페이드 인
 
             tab();
