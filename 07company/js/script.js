@@ -42,18 +42,6 @@ $(".navbarClone .mMenu>ul>li>a").click(function(e){
   })
 
 
-
-
-       
-
-//     }
-   
-//   })
-
-  // $(".navbarClone .mMenu>ul>li>a").click(function(){
-  //   $(this).parent().find(".submenu").stop().slideUp(200);
-  // })
-
   
 
   //  메인 Initialize Swiper
@@ -224,7 +212,7 @@ var swiper = new Swiper(".mySwiper_05", {
         if( i != null){
             $("#subTitle .tab li").find("a").removeClass("active");
             $("#subTitle .tab li").eq(i).find("a").addClass("active");
-            $(".subContent>div.content").hide().eq(i).show(); //페이드 인
+            $(".subContent>div.content").hide().eq(i).show(); //페이드 인         
 
             tab();
 

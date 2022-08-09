@@ -70,6 +70,7 @@
 .marginB80 {margin-bottom: 80px;}
 .letS35 {letter-spacing: -0.035em;}
 .letS10 {letter-spacing: -0.1em;}
+.cP{cursor:pointer;}
 .bgBoxD {
     left: 0;
     top: 0;
@@ -465,13 +466,15 @@
     border-radius: 0;
 }
 
-.mo_none {
-    display: block !important;
-}
+.mo_none {display: block !important;}
+.mo_only {display: none !important;}
 
-.mo_only {
-    display: none !important;
-}
+.coPc {display: block !important;}
+.coPc img{ max-width: 100%; height: auto;}
+.coTb {display: none !important;}
+.coMo {display: none !important;}
+
+
 
 /* main Swiper end */
 
@@ -861,16 +864,29 @@
 }
 
 #sec2st ul li {
-    padding: 80px 20px;
+    padding: 80px 20px;   
 }
 
 #sec2st ul li p {
     font-family: 'S-CoreDream-5Medium';
     text-align: center;
-    font-size: 16px;
-    ;
+    font-size: 16px;    
     color: #fff;
 }
+#sec2st .jb-a{
+    position: relative;   
+}
+#sec2st .jb-b{display: block;}
+#sec2st .jb-c{
+        display: none;        
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 80px; left: 20px;
+        opacity: 0;
+        transition: opacity 0.5s linear;   
+    }
+#sec2st li:hover img.jb-c {display: block; opacity: 1;}
 
 /* #### section sec3st 시작 #### */
 
@@ -997,6 +1013,11 @@ span.like {
     padding: 10px 30px;
     line-height: 16px;
     margin-top: 40px;
+}
+
+#sec4st .card .view:hover {   
+    background: #666;
+    color:#fff;
 }
 
 #sec4st .card .cImg {
@@ -1270,10 +1291,127 @@ span.like {
     #header .toggle {
         display: flex;
         position: absolute;
+        top:20px;
         right: 10px;
-        top: 12px;
         cursor: pointer;
     }
+
+    #header .navbarClone {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 80px;
+        left: -100%;
+        background: white;
+        display: block;
+        transition: 0.5s
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        _background: rgb(255, 255, 255);
+        _opacity: 0.5;
+
+    }
+
+    #header .navbarClone .mMenu {
+        padding: 20px 20px 20px 40px;
+    }
+
+    #header .navbarClone .mMenu>ul>li>a {
+        display: block;
+        padding-right: 120px;
+        line-height: 50px;
+        font-size: 20px;
+        font-family: 'S-CoreDream-6Bold';
+        color: #111;
+    }
+
+    #header .navbarClone .mMenu>ul>li>a.active {
+        color: #4e2bf4;
+    }
+
+    #header .navbarClone .mMenu>ul>li a.on:after {
+        content: "";
+        transition: 0.3s;
+        opacity: 0;
+        position: absolute;
+        left: -5px;
+        top: 7px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #4e2bf4;
+    }
+
+    #header .navbarClone .mMenu>ul>li:hover a.on:after {
+        opacity: 1;
+    }
+
+    #header .navbarClone .mMenu>ul>li:last-child a {
+        padding-right: 0px;
+    }
+
+    #header .navbarClone .mMenu>ul>li {
+        padding: 0 0 20px 0;
+        position: relative;
+    }
+
+    #header .navbarClone .mMenu>ul>li>.submenu {
+        position: absolute;
+        display: none;
+        z-index: 2;
+        width: 180px;
+        height: 180px;
+        top: 15px;
+        left: 150px;
+        padding-bottom: 20px;
+    }
+
+    #header .navbarClone .mMenu>ul>li>.submenu li a {
+        padding: 5px;
+        display: block;
+        line-height: 30px;
+        border: 0;
+        font-family: 'Noto Sans KR';
+        font-weight: 400;
+        font-size: 16px;
+        color: #111;
+        letter-spacing: -0.8px;
+    }
+
+    #header .navbarClone .mMenu>ul>li>.submenu li a.active {
+        color: #4e2bf4;
+    }
+
+    #header .navbarClone .loginText {
+        padding: 15px 0 0 20px;
+        margin-bottom: 20px;
+    }
+
+    #header .navbarClone .appbanner {
+        width: 100%;
+        height: 65px;
+        background: #f1f3ff;
+        text-align: center;
+        font-size: 14px;
+        line-height: 65px;
+        font-weight: bold;
+    }
+
+    #header .navbarClone .appbanner span {
+        padding: 9px 55px 9px 0;
+        background-image: url(../images/ic_app1.png);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: right center;
+    }
+
     #header .headerWrap .navbar {
         display: none;
     }
@@ -1331,6 +1469,7 @@ span.like {
     #header .toggle {
         display: flex;
         position: absolute;
+        top:20px;
         right: 10px;
         cursor: pointer;
     }
@@ -1495,13 +1634,13 @@ span.like {
         padding-left: 45px;
     }
 
-    .mo_none {
-        display: none !important;
-    }
+    .mo_none {display: none !important;}
+    .mo_only {display: block !important;}
 
-    .mo_only {
-        display: block !important;
-    }
+    .coPc {display: none !important;}
+    .coTb {display:block !important;}
+    .coTb img{ max-width: 100%; height: auto;}
+    .coMo {display: none !important;}
 
     .visualWrap .wrap_swiper_tools {
         position: absolute;
@@ -1636,6 +1775,7 @@ span.like {
         display: none;
     }
 
+
     #sec4st .sec4stWrap {
         width: 100%
     }
@@ -1665,9 +1805,12 @@ span.like {
     #footer .fBottom {
         width: 100%;       
     }
+    #footer .fTopLine {   
+        margin-bottom: 25px;
+    }
 
     #footer .fBottom>div {
-        padding: 0 0px;
+        padding: 0 20px;
     }
 
     #footer .fBottom ul {
@@ -1676,12 +1819,10 @@ span.like {
 
     }
 
-    #footer .fLogo img {
-        max-width: 100%;
-        width: 45%;
-        height: auto;
+    #footer .fLogo img {  
+        width: 35%;
         display: block;
-        padding-bottom: 25px;
+        padding-bottom: 20px;
     }
 
     #footer .fSns img {  
@@ -1691,18 +1832,17 @@ span.like {
     }
 
     #footer .fCopy div ul {
-        display: flex;
-        padding-left: 20px;
+        display: flex;       
     }
 
     #footer .fCopy .fBtn li {
-        padding: 0 22px 22px 0;
-        font-size: 14px;
+        padding: 0 20px 20px 0;
+        font-size: 12px;
         letter-spacing: -0.1em;
     }
 
     #footer .fCopy .fTxt li {
-        font-size: 12px;
+        font-size: 11px;
         letter-spacing: -0.05em;
     }
 
@@ -1716,7 +1856,7 @@ span.like {
     }
 
     #footer .fSns {
-        width: 40%;
+        width: 30%;
         position: absolute;
         top: 5px;
         right: 0;
@@ -1726,9 +1866,12 @@ span.like {
     }
 
     /*############## sub Title ########### */
+    #subTitle .titleTop{
+        width: 100%;
+    }
 
     #subTitle .titleWrap ul{
-        width: 100%; margin: 0 auto; 
+        width: 100%; margin: 0 auto;       
     }
 
     /* subpage  */
@@ -1736,26 +1879,31 @@ span.like {
         width: 100%; margin: 0 auto;
     }
 
+    #subTitle .sub .subContent .content{
+        padding: 20px 0;   
+    }
+
     .subContainer .content{
         margin: 0 25px;
     }
     
     #subTitle .titleWrap .tab li a{      
-        font-size: 16px; 
+        font-size: 14px; 
         line-height: 40px;
     }
-
-
+   
     #subTitle .titleWrap .tab li a.active{ 
         height: 40px; 
     }
 
     #subTitle .sub .subContent .content .location{
-        font-size: 12px;
+        font-size: 11px;
+        color: #666;
     }
     #subTitle .sub .subContent .content h2{
-        font-size: 30px;
-        line-height: 40px; 
+        font-size: 22px;
+        line-height: 40px;
+        border-bottom: 3px solid #4E2BF4;
 
     }    
     #subTitle .titleWrap .tit{font-size: 40px;}
@@ -1768,4 +1916,9 @@ span.like {
 }
 
 
-@media (max-width: 575px) {}
+@media (max-width: 360px) {
+    .coPc {display: none !important;}
+    .coTb {display: none !important;}
+    .coMo {display:block !important;}
+    .coMo img{ max-width: 100%; height: auto;}
+}
