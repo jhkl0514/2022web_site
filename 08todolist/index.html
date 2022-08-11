@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,61 +10,153 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-<div class="visual">
-    <div class="visualWrap">
-      <div class="hearder">
-        <div class="titleWrap">
-          <h2>Todo List</h2>
-          <p>할 일을 작성하세요!</p>
+    <div class="visual">
+        <div class="visualWrap">
+            <div class="hearder">
+                <div class="titleWrap">
+                    <h2>Todo List</h2>
+                    <p>할 일을 작성하세요!</p>
+                </div>
+                <div class="timg"><img src="images/title_img.png" alt=""></div>
+            </div>
+
+            <div class="contents">
+                <ul class="viewData"> <!-- viewData -->                    
+                    <!-- <li class="line active">
+                        <button class="btnDon"><img src="images/btn_chack.png" alt=""></button>
+                        <div class="conTxt active"><span class="icon"></span>오늘의 할일 1</div>
+                        <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
+                    </li>
+
+                    <li class="line">
+                        <button class="btnDonCh"></button>
+                        <div class="conTxt"> 오늘의 할일 1</div>
+                        <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
+                    </li>
+                    <li class="line active">
+                        <button class="btnDon"><img src="images/btn_chack.png" alt=""></button>
+                        <div class="conTxt">오늘의 할일 1</div>
+                        <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
+                    </li>
+
+                    <li class="line">
+                        <button class="btnDon"><img src="images/btn_chack.png" alt=""></button>
+                        <div class="conTxt">오늘의 할일 1</div>
+                        <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
+                    </li> -->
+
+                </ul>
+
+            </div>
+
+            <div class="inpAdd">
+                <input type="text" class="inp" placeholder="오늘의 할 일을 입력하세요.">
+                <button class="btnAdd">
+                    <img src="images/btn_add.png" alt="">
+                </button>
+            </div>
         </div>
-        <div class="timg"><img src="images/title_img.png" alt=""></div>        
-      </div>
-
-      <div class="contents">
-        <ul>
-          <li class="line active">
-            <button class="btnDon"><img src="images/btn_chack.png" alt=""></button>
-            <div class="conTxt">오늘의 할일 1</div>
-            <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
-          </li>
-
-          <li class="line">
-            <button class="btnDonCh"></button>
-            <div class="conTxt"> <span class="icon"></span>   오늘의 할일 1</div>
-            <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
-          </li>
-          <li class="line active">
-            <button class="btnDon"><img src="images/btn_chack.png" alt=""></button>
-            <div class="conTxt">오늘의 할일 1</div>
-            <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
-          </li>
-
-          <li class="line">
-            <button class="btnDon"><img src="images/btn_chack.png" alt=""></button>
-            <div class="conTxt">오늘의 할일 1</div>
-            <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
-          </li>
-
-        </ul>
-        
-      </div>
-
-      <div class="inpAdd">
-        <input type="text" class="inp" placeholder="오늘의 할 일을 입력하세요.">
-        <button class="btnAdd">
-          <img src="images/btn_add.png" alt="">
-        </button>
-      </div>
     </div>
-  </div>
+
+
+    <script>
+        let listData = [
+            // {
+            //     todo: "오늘할일 1",
+            //     done: false,
+            // },
+            // {
+            //     todo: "오늘할일 2",
+            //     done: false,
+            // },
+            // {
+            //     todo: "오늘할일 3",
+            //     done: true,
+            // },
+        ];
+
+        const viewData = document.querySelector(".viewData");
+        const inp = document.querySelector(".inp");
+        const btnAdd = document.querySelector(".btnAdd");
+
+        btnAdd.addEventListener("click",function(){
+            if(inp.value != ""){
+                let value = {"todo":inp.value, "done":false};
+                listData.push(value);
+
+                let valueData = JSON.stringify(listData);
+                localStorage.setItem("todoData",valueData);
+
+
+                view();
+                inp.value="";
+            }else{
+                alert("오늘의 할일을 입력하세요.")
+                inp.fouce();
+            }
+        })
+
+
+        view();
+
+        function view() {
+
+            todoData='';
+            listData.forEach(function (item,i){
+                // console.log(item.todo);
+                console.log(listData[i]["todo"]);
+                // todoData += `<li>${listData[i]["todo"]}</li>`
+
+                    todoData +=     `<li class="line">`
+                if(item.done == true){                                               
+                    todoData +=        `<button class="btnDon" onclick="done(${i})"><img src="images/btn_chack.png" alt=""></button>`
+                }else{                    
+                    todoData +=         `<button class="btnDonCh" onclick="done(${i})"></button>`
+                }
+                
+                if(item.done == true){
+                    todoData +=        `<div class="conTxt active"><span class="icon"></span> ${listData[i]["todo"]}</div>`
+                }else{
+                    todoData +=        `<div class="conTxt"><span class="icon03"></span> ${listData[i]["todo"]}</div>`
+                }    
+                    todoData +=        `<button class="btnDel"  onclick="del(${i})"><img src="images/btn_del.png" alt=""></button>`
+                    todoData +=     `</li>`
+
+
+            });
+
+            viewData.innerHTML = todoData;
+        }
+
+        function del(idx){
+            listData.splice(idx,1);
+            let valueData = JSON.stringify(listData);
+            localStorage.setItem("todoData",valueData);
+
+            view();
+        }
+
+        function done(idx){
+            listData[idx].done = !listData[idx].done;
+            let valueData = JSON.stringify(listData);
+            localStorage.setItem("todoData",valueData);
+
+            view();
+        }
+
+
+
+
+    </script>
+    
 
 </body>
 

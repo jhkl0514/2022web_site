@@ -30,7 +30,7 @@ html,body{height: 100%;}
 }
 .hearder .timg{
   display: flex; align-items: flex-end;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .contents {
@@ -54,9 +54,10 @@ html,body{height: 100%;}
   color: #666;
   margin-bottom: 10px;
 }
-.contents .line.active{
-  background: #F6F6F6;
+.contents .conTxt.active{
   text-decoration-line: line-through;
+  color: #C0C0C0;
+  font-weight: 100;  
 }
 
 .contents .line .btnDon{
@@ -75,8 +76,7 @@ html,body{height: 100%;}
 }
 
 .contents .line .conTxt{
-  width: 220PX;
-  padding-left: 10PX;
+  width: 220PX; 
   display: flex; align-items: center;
   font-weight: 600;  
 }
@@ -84,8 +84,13 @@ html,body{height: 100%;}
     background-image: url(../images/icon_01.png);
     background-repeat: no-repeat;
     width: 20px; height: 20px;
-    margin-left: 10px;
-  
+    margin: 0 5px 0 10px;  
+}
+.contents .line .icon03{
+    background-image: url(../images/icon_03.png);
+    background-repeat: no-repeat;
+    width: 20px; height: 20px;
+    margin: 0 5px 0 10px;  
 }
 
 .btnDel{
