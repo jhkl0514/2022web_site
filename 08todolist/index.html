@@ -9,16 +9,62 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-
 <div class="visual">
-    <div class="title"></div>
-    <div class="contents"></div>
-    <div class="inpbox"></div>
-</div>
+    <div class="visualWrap">
+      <div class="hearder">
+        <div class="titleWrap">
+          <h2>Todo List</h2>
+          <p>할 일을 작성하세요!</p>
+        </div>
+        <div class="timg"><img src="images/title_img.png" alt=""></div>        
+      </div>
 
+      <div class="contents">
+        <ul>
+          <li class="line active">
+            <button class="btnDon"><img src="images/btn_chack.png" alt=""></button>
+            <div class="conTxt">오늘의 할일 1</div>
+            <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
+          </li>
 
-<script src="js/script.js"></script>
+          <li class="line">
+            <button class="btnDonCh"></button>
+            <div class="conTxt"> <span class="icon"></span>   오늘의 할일 1</div>
+            <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
+          </li>
+          <li class="line active">
+            <button class="btnDon"><img src="images/btn_chack.png" alt=""></button>
+            <div class="conTxt">오늘의 할일 1</div>
+            <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
+          </li>
+
+          <li class="line">
+            <button class="btnDon"><img src="images/btn_chack.png" alt=""></button>
+            <div class="conTxt">오늘의 할일 1</div>
+            <button class="btnDel"><img src="images/btn_del.png" alt=""></button>
+          </li>
+
+        </ul>
+        
+      </div>
+
+      <div class="inpAdd">
+        <input type="text" class="inp" placeholder="오늘의 할 일을 입력하세요.">
+        <button class="btnAdd">
+          <img src="images/btn_add.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>

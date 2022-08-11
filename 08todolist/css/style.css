@@ -1,3 +1,128 @@
 @charset "utf-8";
+html,body{height: 100%;}
 
-body, html{width: 100%;}
+
+.visual{width: 100%; height: 100%; background-color: #eee; display: flex; align-items: center; }
+.visualWrap{
+  margin: 0 auto;
+  width: 360px;
+  height: 640px;
+  background: #032E53;
+  border-radius:20px; 
+  padding: 20px;
+}
+.hearder{
+  display: flex;
+  padding: 20px 10px;
+}
+.titleWrap{
+  color: #eee;
+}
+.titleWrap h2{
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 40px;
+}
+.titleWrap p{
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: -0.005em; 
+}
+.hearder .timg{
+  display: flex; align-items: flex-end;
+  padding-left: 20px;
+}
+
+.contents {
+  width: 320px;
+  height: 400px;  
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin-bottom: 25px;
+  padding: 35px 12px; 
+}
+
+.contents .line{
+  display: flex;
+  padding: 10px 15px;
+  background: #F6F6F6;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.03em;  
+  color: #666;
+  margin-bottom: 10px;
+}
+.contents .line.active{
+  background: #F6F6F6;
+  text-decoration-line: line-through;
+}
+
+.contents .line .btnDon{
+  width: 30px;
+  height: 30px;
+  background: #032E53;
+  border-radius: 50px;
+  display: flex; justify-content: center; align-items: center; 
+}
+
+.contents .line .btnDonCh{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: 3px solid #032E53;
+}
+
+.contents .line .conTxt{
+  width: 220PX;
+  padding-left: 10PX;
+  display: flex; align-items: center;
+  font-weight: 600;  
+}
+.contents .line .icon{
+    background-image: url(../images/icon_01.png);
+    background-repeat: no-repeat;
+    width: 20px; height: 20px;
+    margin-left: 10px;
+  
+}
+
+.btnDel{
+  background: #F6F6F6;
+}
+
+.inpAdd{
+  width: 320px; 
+  height: 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px
+}
+
+.inpAdd{
+  display: flex; align-items: center;
+}
+.inpAdd .inp{
+  width: 247px; height: 30px;
+  margin-left: 25px;
+  border: 0 none
+}
+.inpAdd .inp:value{font-size: 10px;}
+.btnAdd {
+  width: 40px;
+  height: 40px;
+  background: #032E53;
+  border-radius: 50px;
+  display: flex; justify-content: center; align-items: center; 
+  cursor: pointer;
+}
+.btnAdd.active{
+  background: #fff;
+}
+input[type='text']::placeholder,
+textarea::placeholder{color:#bbb}
+input:focus{outline: none;}
+button{ border: 0 none;}
+
+
