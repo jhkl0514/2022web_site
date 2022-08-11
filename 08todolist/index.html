@@ -58,8 +58,8 @@
             </div>
 
             <div class="inpAdd">
-                <input type="text" class="inp" placeholder="오늘의 할 일을 입력하세요.">
-                <button class="btnAdd">
+                <input id="myIpunt" type="text" class="inp" onkeyup="enterkey()" placeholder="오늘의 할 일을 입력하세요.">
+                <button id="myBtn" class="btnAdd" >
                     <img src="images/btn_add.png" alt="">
                 </button>
             </div>
@@ -86,6 +86,17 @@
         const viewData = document.querySelector(".viewData");
         const inp = document.querySelector(".inp");
         const btnAdd = document.querySelector(".btnAdd");
+ 
+
+       
+
+        inp.addEventListener("keyup",function(envet){     
+                if(event.keyCode === 13){                
+                    event.preventDefault() ;
+                    document.getElementById("myBtn").click();
+                }
+        })
+        
 
         btnAdd.addEventListener("click",function(){
             if(inp.value != ""){
