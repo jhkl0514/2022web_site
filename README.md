@@ -6,4 +6,4 @@
 5. korass https://jhkl0514.github.io/2022web_site/05korass
 6. travel https://jhkl0514.github.io/2022web_site/06travel
 7. company https://jhkl0514.github.io/2022web_site/07company
-8. Todo list https://jhkl0514.github.io/2022web_site/08todolist
+8. TodoList https://jhkl0514.github.io/2022web_site/08todolist
