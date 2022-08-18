@@ -7,8 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS-->
     <link rel="stylesheet" href="css/style.css">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- isotope -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- cssgram -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.12/cssgram.min.css" integrity="sha512-kr3JaEexN5V5Br47Lbg4B548Db46ulHRGGwvyZMVjnghW1BKmqIjgEgVHV8D7V+Cbqm/VBgo3Rcbtv+mGLoWXA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="css/cssgram.css">
 
   </head>
   <body>
@@ -17,41 +24,232 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
           <div class="container">
             <a class="navbar-brand" href="#"><img src="images/logo_active.png" alt=""></a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            <button class="navbar-toggler d-sm-none " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0 text-Dark fs-6 fw-bold d-flex m-auto">
                     <li class="nav-item active">
-                        <a class="nav-link link-dark px-4" href="#">회사소개</a>
+                        <a class="nav-link link-dark px-4 d-sm-none d-md-block" href="#">회사소개</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-4" href="#">서비스</a>
+                        <a class="nav-link px-4 d-sm-none d-md-block " href="#">서비스</a>
                    </li>
                    <li class="nav-item">
-                        <a class="nav-link px-4" href="#">미디어센터</a>
+                        <a class="nav-link px-4 d-sm-none d-md-block " href="#">미디어센터</a>
                    </li>                    
                    <li class="nav-item">
-                    <a class="nav-link px-4" href="#">투자정보</a>
+                    <a class="nav-link px-4  d-sm-none d-md-block " href="#">투자정보</a>
                     </li>
                 </ul>               
-                <ul class="navbar-nav mt-2 mt-lg-0 d-flex flex-row-reverse gap-2">
+                <ul class="navbar-nav mt-2 mt-lg-0 d-flex mt-sm-0 flex-row-reverse gap-2">
                     <li class="nav-item active">
-                        <a class="nav-link px-4 py-1 bg-primary text-white rounded-5" href="#">채용</a>
+                        <a class="nav-link px-4 py-1 d-sm-none d-lg-block bg-primary text-white rounded-5" href="#">채용</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-4 py-1 bg-success text-white rounded-5" href="#">TECH블로그</a>
+                        <a class="nav-link px-4 py-1 d-sm-none d-lg-block bg-success text-white rounded-5" href="#">TECH블로그</a>
                    </li>                  
                 </ul> 
            </div>           
       </div>
     </nav>
-    <div class="visual bg-info">
+    <div class="visual bg-info mb-5 ">
         <div class="container text-white d-flex flex-column justify-content-center align-items-center">
             <h2 class="fs-1 fw-bolder">PEOPLE</h2>
-            <p >사람중심 철학과</p>
+            <p class="fs-5">사람중심 철학과</p>
         </div>
+    </div>
+
+    <div class="container cont-1st text-center pt-5 mb-5">
+      <h2 class="fs-1 fw-bold mb-5">기업문화</h2>
+      <p class="fs-4 mb-5">구성원과 함께 성장하며  혁신을 이루어 내는 곳입니다.</p>
+      <div class="row">
+        <!-- #1 cont s -->
+        <div class="col-md-4">          
+          <div class="card bg-white pt-3 rounded-4">
+            <img class="card-img-top m-auto" src="images/culture01.jpg" alt="Title">
+            <div class="card-body">
+              <h4 class="card-title fw-bold fs-1">Work</h4>
+              <h5 class="fs-4 mb-4">일하는 방식</h5>
+              <p class="card-text px-5">직원경험을 기반으로 만들어가는
+                            1등이 될 수 밖에 없었던 구성원들의
+                            일하는 방식입니다.</p>
+            </div>
+          </div>          
+        </div>
+        <!-- #1 cont1 e -->
+         <!-- #2 cont1 s -->
+         <div class="col-md-4">          
+          <div class="card bg-white pt-3 rounded-4">
+            <img class="card-img-top m-auto" src="images/culture02.jpg" alt="Title">
+            <div class="card-body">
+              <h4 class="card-title fw-bold fs-1">Welfare</h4>
+              <h5 class="fs-4 mb-4">사내복지</h5>
+              <p class="card-text px-5">건강, 휴가, 나아가 가족의 일까지 챙겨
+                마음 편히 행복하게 일할 수 있는
+                사람인HR입니다.</p>
+            </div>
+          </div>          
+        </div>
+        <!-- #2 cont1 e -->
+         <!-- #3 cont1 s -->
+         <div class="col-md-4">          
+          <div class="card bg-white pt-3 rounded-4">
+            <img class="card-img-top m-auto" src="images/culture03.jpg" alt="Title">
+            <div class="card-body">
+              <h4 class="card-titlbtn-ge fw-bold fs-1">Education</h4>
+              <h5 class="fs-4 mb-4">인재육성</h5>
+              <p class="card-text px-5">사람인HR은 직원들이 자신의 역량을
+                꾸준히 개발할 수 있도록 지원을
+                아끼지 않습니다.</p>
+            </div>
+          </div>          
+        </div>
+        <!-- #3 cont1 e -->      
+      </div>
+    </div>    
+    <div class="bg-gray cont-2st text-center pt-5 mb-5">
+      <div class="container cssgram01">
+        <h2 class="fs-1 fw-bold mb-5">사내복지</h2>
+        <p class="fs-4 mb-5">업무에 몰입할 수 있도록 아낌없이 지원합니다.</p>
+        <div class="row ">
+          <!-- #1 cont2 s --> 
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0"> 
+                <img class="card01 card-img-top bg-gray inkwell" src="images/wf01.png" alt="Title">              
+              <div class="card-body bg-gray">
+                <h5 class="card-title">든든한 사람인HR</h5>      
+              </div>
+            </div>
+          </div>
+          <!-- #1 cont2 e -->
+          <!-- #1 cont2 s --> 
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0  ">
+              <img class="card01 card-img-top bg-gray inkwell"" src="images/wf02.png" alt="Title">
+              <div class="card-body bg-gray">
+                <h5 class="card-title">몰입과 휴식 지원</h5>      
+              </div>
+            </div>
+          </div>
+          <!-- #1 cont2 e --> 
+          <!-- #1 cont2 s --> 
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0  ">
+              <img class="card01 card-img-top bg-gray inkwell" src="images/wf03.png" alt="Title">
+              <div class="card-body bg-gray">
+                <h5 class="card-title">열정에 대한 보상</h5>      
+              </div>
+            </div>
+          </div>
+          <!-- #1 cont2 e --> 
+          <!-- #1 cont2 s --> 
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0  ">
+              <img class="card01 card-img-top bg-gray inkwell" src="images/wf04.png" alt="Title">
+              <div class="card-body bg-gray">
+                <h5 class="card-title">즐거운 사람인HR</h5>      
+              </div>
+            </div>
+          </div>
+          <!-- #1 cont2 e -->
+          <!-- #1 cont2 s --> 
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0  ">
+              <img class="card01 card-img-top bg-gray inkwell" src="images/wf05.png" alt="Title">
+              <div class="card-body bg-gray">
+                <h5 class="card-title">소중한 가족 케어</h5>      
+              </div>
+            </div>
+          </div>
+          <!-- #1 cont2 e --> 
+          <!-- #1 cont2 s --> 
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0  ">
+              <img class="card01 card-img-top bg-gray inkwell" src="images/wf06.png" alt="Title">
+              <div class="card-body bg-gray  border-0">
+                <h5 class="card-title">사람인HR 건강 케어</h5>      
+              </div>
+            </div>
+          </div>
+          <!-- #1 cont2 e --> 
+        </div>
+      </div>
+    </div>
+
+    <div class="container cont-3st text-center pt-5 mb-5">
+      <h2 class="fs-1 fw-bold mb-5">우리는 함께 성장합니다.</h2>
+      <p class="fs-4 fs-md-5 mb-5">사람인HR은 개인의 성장을 통해 회사가 성장할 수 있다고 믿습니다.<br>
+        때문에 직원들이 자신의 역량을 꾸준히 개발해 커리어를 향상시킬 수 있도록 지원을 아끼지 않습니다.
+       </p>
+       <div class="row mt-5 pt-5">      
+        <div class="col-md-6 p-5 order-1 order-md-2">
+          <img src="images/upgrade01.png" alt="" class="img-fluid">
+          <!-- img-fluid 브라우저에 맞혀서 -->
+        </div>
+        <!-- div.col-md-6 -->
+        <div class="col-md-6 align-self-center order-2 order-md-1 text-center text-md-end px-4">
+          <h3 class="fw-bold">사내특강 및 지식공유</h3>
+          <p class="fs-5">업무 관련 및 트렌드에 맞는 다양한 분야의 외부 강사를 초빙해 폭넓은 지식을 나눕니다. 직원들도 각자 직무의 전문가가 되어 강연을 개설하고, 실무에 필요한 지식 및 노하우를 공유해 우리만의 지식 공동체를 만들어갑니다. 새롭게 입사한 사람인HR 직원이 있다면 걱정하지 마세요. 온보딩 프로그램과 정기적인 OJT를 통해 적응을 돕습니다.</p>                   
+       </div>   
+      </div>
+      <div class="row">  
+        <div class="col-md-6 align-self-center order-2 order-md-2 text-center text-md-end px-4">
+          <h3 class="fw-bold">사교육비 지원 제도</h3>
+          <p class="fs-5">개인의 역량개발을 위해 외부 교육을 지원합니다. 직무 관련 희망하는 교육이 있다면 교육기관과 일정을 자유롭게 선택해 신청하세요! 온라인, 오프라인 관계 없이 수강 가능합니다. 업무에 필요한 책이 있다면 팀별로 언제든지 구매 할 수 있도록 지원합니다.</p>                   
+        </div>   
+        <!-- div.col-md-6 -->
+        <div class="col-md-6 p-5 order-1 order-md-1">
+          <img src="images/upgrade02.png" alt="" class="img-fluid">
+          <!-- img-fluid 브라우저에 맞혀서 -->
+          </div>
+        
+      </div>
+    </div>
+
+
+    <div class="bg-gray text-center pt-5 mb-5">
+      <div class="container cont-4st ">
+        <h2 class="fs-1 fw-bold mb-5">일하는 방식</h2>
+         <p class="fs-4 fs-md-5 mb-5">일 좀 아는 사람들이 일하는 방법</p>
+         <div class="btn-g mb-5">         
+          <div class="btn btn-dark active active px-4" data-filter="">전체</div>
+          <div class="btn btn-dark px-4" data-filter=".a01">존중</div>
+          <div class="btn btn-dark px-4" data-filter=".a02">팀플레이</div>
+          <div class="btn btn-dark px-4" data-filter=".a03">사용자 중심</div>
+         </div>
+      <div class="row view popup-gallery">
+        <!-- .col-6.col-lg-3  / element-item 꽂아야 한다.-->        
+        <div class="col-6 col-lg-3 element-item a01 mb-3">
+            <img src="images/card_01.png" alt="" class="img-fluid rounded-5">
+        </div>
+        <div class="col-6 col-lg-3 element-item a01 mb-3">
+            <img src="images/card_02.png" alt="" class="img-fluid rounded-5">
+        </div>
+        <div class="col-6 col-lg-3 element-item a02 mb-3">
+            <img src="images/card_03.png" alt="" class="img-fluid rounded-5">
+        </div>
+        <div class="col-6 col-lg-3 element-item a03 mb-3">
+            <img src="images/card_04.png" alt="" class="img-fluid rounded-5">
+        </div>
+        <div class="col-6 col-lg-3 element-item a01 mb-3">
+            <img src="images/card_05.png" alt="" class="img-fluid rounded-5">
+        </div>
+        <div class="col-6 col-lg-3 element-item a02 mb-3">
+            <img src="images/card_06.png" alt="" class="img-fluid rounded-5">
+        </div>
+        <div class="col-6 col-lg-3 element-item a01 mb-3">
+            <img src="images/card_07.png" alt="" class="img-fluid rounded-5">
+        </div>
+        <div class="col-6 col-lg-3 element-item a02 mb-3">
+          <img src="images/card_08.png" alt="" class="img-fluid rounded-5">
+      </div>
+      <div class="col-6 col-lg-3 element-item a03 mb-3">
+        <img src="images/card_09.png" alt="" class="img-fluid rounded-5">
+      </div>
+      </div>
+      </div>
     </div>
     
 
@@ -63,7 +261,7 @@
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

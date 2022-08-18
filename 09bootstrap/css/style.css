@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+*{color: #333;}
+:root{
+    --bg-color1:#191b27;
+    --grandient-color1:linear-gradient(-40deg, #2AF598 0%, #009EFD 100%);
+    --shadow-color1:3px 3px 10px rgba(0,0,0,0.3);
+    --shadow-color2: 0px 0px 15px rgba(0, 0, 0, 0.25);
+}
+.bg-color1{background: var(--bg-color1);}
+.bg-gray{background: var(--bs-gray-300);}
+.btn-gprim{background: var(--grandient-color1); border: 0 none;}
+
 .visual{
     background-image: url(../images/mv01.jpg);
     background-repeat: no-repeat;
@@ -7,4 +18,27 @@
     background-position: center;       
 }
 
-.visual .container{height: 600px;}
+.visual .container{height: 600px; }
+
+.cont-1st .card{background: var(--bs-gray-100); transition: 0.3s; 
+    box-shadow: var(--shadow-color2); margin-bottom: 15px;
+}
+.cont-1st .card img{height: 230px; width: 236px;}
+.cont-1st .card:hover{
+    box-shadow: var(--shadow-color1);
+    transform: scale(1.05) translate(-5px, -5px);
+}
+
+.cont-1st,.cont-3st {padding-bottom: 50px}
+.cont-2st,.cont-4st {padding-bottom: 100px; }
+.cont-2st h2{padding-top: 50px; }
+.cont-2st .card{margin-bottom: 20px;}
+.cont-2st .card h5{font-weight: bold; }
+.cont-2st .card .moon{border: 0; background-color: gray;}
+
+
+
+.cssgram01 > .row > div{cursor: pointer;}
+
+.cont-4st .btn{border-radius: 30px; border:none}
+.cont-4st .btn.active{background-color: #4876EF;}
