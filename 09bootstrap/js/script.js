@@ -24,3 +24,14 @@ $(".cssgram01 > .row > div").hover(function(){
     $(".card01").addClass("inkwell")
     
 })
+
+
+$("#oslide1").owlCarousel({
+    loop:true,
+    autoplay:true,
+    margin:30,
+    responsive:{
+        0:{items:1},
+        760:{items:3}
+    }
+})
