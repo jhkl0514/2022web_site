@@ -35,3 +35,17 @@ $("#oslide1").owlCarousel({
         760:{items:3}
     }
 })
+
+
+    
+
+//!-- Initialize Swiper -->
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    loop: true,
+    pagination: {      
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+  });

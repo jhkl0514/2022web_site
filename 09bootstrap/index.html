@@ -36,6 +36,11 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- swiper_ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css" integrity="sha512-303pOWiYlJMbneUN488MYlBISx7PqX8Lo/lllysH56eKO8nWIMEMGRHvkZzfXYrHj4j4j5NtBuWmgPnkLlzFCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>        
 
   </head>
   <body>
@@ -74,11 +79,44 @@
            </div>           
       </div>
     </nav>
-    <div class="visual bg-info mb-5 ">
-        <div class="container text-white d-flex flex-column justify-content-center align-items-center">
-            <h2 class="fs-1 fw-bolder">PEOPLE</h2>
-            <p class="fs-5">사람중심 철학과</p>
-        </div>
+    <div class="visual mb-5 ">
+      <div class="bg-gray">
+        <!-- <div class="container ">
+            <h2 class="fw-bolder">PEOPLE</h2>
+            <p class="fs-5 text-white">사람중심 철학과</p>
+        </div> -->        
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper aa ">
+                <div class="swiper-slide visual01 " style="height: 600px">
+                  <div class="text-white text-center bb">
+                    <h2 class="fw-bolder">PEOPLE</h2>
+                    <p class="fs-5 text-white">사람중심 철학과</p>
+                  </div>
+                </div>
+                <div class="swiper-slide visual02" style="height: 600px">
+                  <div class="text-white text-center bb">
+                    <h2 class="fw-bolder">INTELLIGENT</h2>
+                     <p class="fs-5 text-white">고객에 맞는 지능형 서비스로</p>
+                  </div>
+                </div>
+                <div class="swiper-slide visual03" style="height: 600px">
+                  <div class="text-white text-center bb">
+                    <h2 class="fw-bolder">CONNECT</h2>
+                     <p class="fs-5 text-white">더 나은 내일로 연결합니다</p>
+                  </div>
+                </div>
+                <div class="swiper-slide visual04" style="height: 600px">
+                  <div class="text-white text-center bb">
+                    <h2 class="fw-bolder">사람중심 철학과</h2>
+                     <p class="fs-5 text-white">고객에 맞는 지능형 서비스로<br>더 나은 내일로 연결합니다</p>
+                  </div>
+                </div>             
+              </div>
+              <div class="swiper-scrollbar"></div>
+            </div>
+     </div>     
+    
     </div>
 
     <div class="container cont-1st text-center pt-5 mb-5">
@@ -367,7 +405,37 @@
     <footer class="footer py-5">
       <div class="container ">
         <div class="row py-5 ps-5 ps-md-0">
-          asdfjksd
+          
+            <div class="col-12 col-lg-2 text-center">
+              <img src="images/f_icon01.png" alt="">
+            </div>
+            <div class="col-12 col-lg-2 text-white opacity-75 fw-bold lh-a text-center text-lg-start">   
+              개인정보처리방침 <br>
+              내부정보관리규정 <br>
+              윤리경영 
+            </div>
+            <div class="col-12 col-lg-3 ">
+              <p class="text-white opacity-75 fw-normal lh-b align-lg-baseline text-center text-lg-start">
+                Email help@saramin.co.kr<br>
+                Tel 02. 2025. 4733<br>
+                Fax 02. 6937. 0039
+              </p>
+              <p class="gap-6 text-center text-lg-start">
+                <img src="images/sns01.png" alt="">
+                <img src="images/sns02.png" alt="">
+                <img src="images/sns03.png" alt="">
+                <img src="images/sns04.png" alt="">
+              </p>
+            </div>
+            <div class="col-12 col-lg-5  text-center text-lg-start">
+              <p class="text-white opacity-75 fw-normal lh-b">(주)사람인에이치알 대표이사 김용환<br>
+                (우) 08378 서울시 구로구 디지털로 34길 43 (구로동, 코오롱싸이언스밸리1차 201호)</p>
+              <p class="text-secondary fw-normal">
+                사업자등록번호 113-86-00917<br>
+                직업정보제공사업 서울관악 제 2005-6호
+              </p>  
+            </div>
+    
         </div>
       </div>
     </footer>    
