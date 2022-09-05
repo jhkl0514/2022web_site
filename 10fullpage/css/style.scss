@@ -1,0 +1,36 @@
+$fColor1:#333;
+$pColor1:#eee;
+
+*{margin: 0;padding: 0;}
+ul,li{list-style: none;}
+a:link,a:visited{text-decoration: none; color:$fColor1}
+.wrap{
+    height: 100vh;width: 100%;
+    display: flex; justify-content: center;align-items: center;
+}
+
+.navTop{
+    position: fixed; z-index: 1;
+    background: $pColor1;
+    width: 100%;
+    display: flex;
+    .gnb{
+        margin-left: auto;
+        ul{
+            height: 100%;      
+            display: flex;          
+        }
+        li{
+            height: 100%;
+            &:hover{background: pink;}                      
+            a{
+                height: 100%;                
+                padding: 0 30px;
+                display: flex;justify-content: center;align-items: center;
+            }
+        }
+
+    }
+
+   
+}
