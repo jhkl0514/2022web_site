@@ -22,7 +22,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
         }
         li{
             height: 100%;
-            &:hover{background: pink;}                      
+            &:hover,&.active{background: pink;}                      
             a{
                 height: 100%;                
                 padding: 0 30px;

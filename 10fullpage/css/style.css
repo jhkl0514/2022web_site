@@ -37,7 +37,7 @@ a:link, a:visited {
 .navTop .gnb li {
   height: 100%;
 }
-.navTop .gnb li:hover {
+.navTop .gnb li:hover, .navTop .gnb li.active {
   background: pink;
 }
 .navTop .gnb li a {

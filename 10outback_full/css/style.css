@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap div {
+  position: absolute;
+}
+
+.section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.section.page1 .txtWrap {
+  transform: translateY(100px);
+  transition: 0.3s;
+  opacity: 0;
+}
+.section.page1 .txtWrap.move {
+  transform: translateY(0);
+  opacity: 1;
+}
+.section.page1 #myVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section.page2 {
+  background-image: url(../images/con01_bg01.png);
+}
+.section.page2 .st0 {
+  fill: #fff;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+.section.page2 .scrollBtn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: xScroll 1s infinite alternate;
+          animation: xScroll 1s infinite alternate;
+}
+@-webkit-keyframes xScroll {
+  100% {
+    bottom: 50px;
+  }
+}
+@keyframes xScroll {
+  100% {
+    bottom: 50px;
+  }
+}
+.section.page3 {
+  background-image: url(../images/bg3.jpg);
+}
+.section.page4 {
+  background-image: url(../images/bg4.jpg);
+}
+.section.page4 .container {
+  transform: translateY(-100px);
+}/*# sourceMappingURL=style.css.map */
