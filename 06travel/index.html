@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/colorbox.css"><!-- 모달 -->
     <link rel="stylesheet" href="css/style.css">
+        <!-- jquery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
         
     
     <!-- 달력 -->
@@ -35,7 +38,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- 달력 -->
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    
+
     <script>
         $(document).ready(function(){
             $("#sdate,#edate,#adate,#bdate,#cdate,#ddate,#xdate,#ydate").datepicker({
@@ -600,13 +603,54 @@
                      
                 </li>
                 <!-- sec2st weather cont05-->
-                <li class="cont05 box1" onclick="location.href='honeymoon.html'">
-                    <h2 class="font_paly700">TOKYO</h2>
-                    <div class="weather" onclick="location.href='tip.html'">
-                        <h3>20c 구름조금</h3>
-                        <p>습도 60% 바람 남남동 2m/s</p>
+                <li class="cont05 box1" onclick="" style="text-align: center;">
+                    <h2 class="font_paly700 city">TOKYO</h2>
+                    <div class="img"></div>
+                    <div class="weather" onclick="">
+                        <h3><span  class="temp"></span> / <span  class="w_id"></span></h3>
+                        <select name="inpCity" class="inpCity">
+                            <option value="Seoul">Seoul</option>
+                            <option value="London">London</option>
+                            <option value="Tokyo">Tokyo</option>
+                            <option value="Lasvegas">Lasvegas</option>
+                            <option value="Toronto">Toronto</option>
+                            <option value="Paris">Paris</option>
+                        </select>
+                        <!-- <div class="inpCity"><em class="seoul">SEOUL</em>  <em class="tokyo">TOKYO</em>  <em class="newyork">NewYork</em></div> -->
                     </div>
                 </li>
+                <script>
+                    const myid = "75547e663dc2536a069b55a05f0cc19c"
+                    // let loc = "seoul";
+                    $(".inpCity").change(function(){
+                    $(".inpCity option:selected").each(function(){
+                        loca($(this).val())
+                        console.log($(this).val())
+                    })
+                })
+
+                loca("seoul");
+                function loca(loc){
+                    $.ajax({
+                        url:"https://api.openweathermap.org/data/2.5/weather?q="+ loc +"&appid="+myid+"&units=metric",
+                        dataType:"json",
+                        success:locData
+                    })
+                }
+                    function locData(data){
+                        console.log(data);
+                        let city = data.name;
+                        let weather = data.weather[0].description
+                        let icon = data.weather[0].icon;
+                        let iUrl = `<img src="https://openweathermap.org/img/wn/${icon}@4x.png">`;
+                        let temp = parseInt(data.main.temp)+"&#x2103";   
+                
+                        $(".city").html(city)
+                        $(".w_id").html(weather)
+                        $(".temp").html(temp)
+                        $(".img").html(iUrl)                
+                    }
+                </script>
                 <!-- sec2st review cont06-->
                 <li class="cont06 box1" >
                     <h4>이달의 베스트<br><span>여행후기</span></h4>

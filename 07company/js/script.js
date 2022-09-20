@@ -222,3 +222,27 @@ var swiper = new Swiper(".mySwiper_05", {
     }
 
     views( params.get("submenu") )
+
+
+    //weather
+                    // const myid = "75547e663dc2536a069b55a05f0cc19c"
+                    // let loc = "seoul";
+                    // $.ajax({
+                    //     url:"https://api.openweathermap.org/data/2.5/weather?q="+ loc +"&appid="+myid+"&units=metric&lang=kr",
+                    //     dataType:"json",
+                    //     success:locData
+                    // })
+                    // function locData(data){
+                    //     console.log(data);
+                    //     let city = data.name;
+                    //     let weather = data.weather[0].description
+                    //     let icon = data.weather[0].icon;
+                    //     let iUrl = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png">`;
+                    //     let temp = parseInt(data.main.temp)+"&#x2103";   
+                
+                    //     $(".city").html(city)                     
+                    //     $(".w_id").html(weather)
+                    //     $(".temp").html(temp)
+                    //     $(".img").html(iUrl)                
+                    // }
+             

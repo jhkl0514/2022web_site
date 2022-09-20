@@ -13,6 +13,23 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
         position: absolute;
     }
 }
+.navTop{
+    position: fixed; z-index: 1; 
+    overflow: hidden;    
+    width: 100%;
+    &.active{
+        .logo{
+            .st0{fill:#AC2B2C;}
+        }
+    }
+    .logo{
+        width: 200px; height: 80px;
+        margin: 0 auto;
+        margin-top: 15px;      
+        .st0{fill:#fff;fill-rule:evenodd;clip-rule:evenodd}
+    }
+}
+
 
 .section{
     background-position: center;
@@ -21,6 +38,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
     overflow: hidden;
     &.page1{
         // overflow: hidden;
+      
         .txtWrap{
             transform: translateY(100px);
             transition: 0.3s;
@@ -38,11 +56,45 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             transform: translate(-50%,-50%);
             object-fit: cover;
         }
+        .scrollBtn{
+            z-index: 2;             
+            width: 100%; height: 100px;
+            position: relative;
+            left: 50%;top: 50%;
+            transform: translate(-50%,-50%);            
+            
+           
+            .scrollBtn01{               
+                margin: 0 auto;
+                width: 50px; height: 70px;         
+                animation: scrollBtn 1.5s linear infinite alternate;                
+                .st1{fill:#fff;}    
+            }                        
+        }       
+        }
+        @keyframes scrollBtn{
+            100%{transform:translateY(20px)};
+        } 
         
-    } 
+        
+
     &.page2{
-        .st0{fill:#fff;fill-rule:evenodd;clip-rule:evenodd}
-        background-image: url(../images/con01_bg01.png);
+        // .owl-theme .owl-nav [class*=owl-]:hover{background:initial;color:red}
+        // .owl-nav {font-size: 40px;}
+        // .owl-nav .owl-prev{position: absolute;left: -80px;top: 50%;transform: translateY(-70%);}
+        // .owl-nav .owl-next{position: absolute;right: -80px;top: 50%;transform: translateY(-70%);}
+
+
+        // .owl-item{padding:20px;_background: red;transition:0.3s;opacity:0.3;}
+        // .owl-item.center{padding:0px;_background: red;opacity: 1;}
+
+        // .lazy-load{transform: translateY(300px); transition: 0.5s; opacity: 0;}
+        // .lazy-load.fade{
+        //     transform: translateY(0); opacity: 1;
+        // }
+    }
+    &.page3{
+        background-image: url(../images/con01_bg01.png);   
         .scrollBtn{
             position: absolute;
             bottom: 20px;
@@ -57,7 +109,6 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             100%{bottom:50px;}
         }
     }
-    &.page3{background-image: url(../images/bg3.jpg);}
     &.page4{
         background-image: url(../images/bg4.jpg);
         // .fp-tableCell{vertical-align: top;}

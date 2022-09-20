@@ -23,6 +23,27 @@ a:link, a:visited {
   position: absolute;
 }
 
+.navTop {
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+}
+.navTop.active .logo .st0 {
+  fill: #AC2B2C;
+}
+.navTop .logo {
+  width: 200px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.navTop .logo .st0 {
+  fill: #fff;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
 .section {
   background-position: center;
   background-repeat: no-repeat;
@@ -48,15 +69,39 @@ a:link, a:visited {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.section.page2 {
+.section.page1 .scrollBtn {
+  z-index: 2;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section.page1 .scrollBtn .scrollBtn01 {
+  margin: 0 auto;
+  width: 50px;
+  height: 70px;
+  -webkit-animation: scrollBtn 1.5s linear infinite alternate;
+          animation: scrollBtn 1.5s linear infinite alternate;
+}
+.section.page1 .scrollBtn .scrollBtn01 .st1 {
+  fill: #fff;
+}
+@-webkit-keyframes scrollBtn {
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes scrollBtn {
+  100% {
+    transform: translateY(20px);
+  }
+}
+.section.page3 {
   background-image: url(../images/con01_bg01.png);
 }
-.section.page2 .st0 {
-  fill: #fff;
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-}
-.section.page2 .scrollBtn {
+.section.page3 .scrollBtn {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -73,9 +118,6 @@ a:link, a:visited {
   100% {
     bottom: 50px;
   }
-}
-.section.page3 {
-  background-image: url(../images/bg3.jpg);
 }
 .section.page4 {
   background-image: url(../images/bg4.jpg);

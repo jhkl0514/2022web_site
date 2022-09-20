@@ -501,7 +501,9 @@ body, html{width: 100%;}
 /* 스와이퍼 끝*/
 
 /* sec2st weather cont05 */
-.sec2st .cont05{background-image: url(../images/poto_05.png); position: relative;}
+.sec2st .cont05{background-image: linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) ), url(../images/poto_05.png); position: relative;}
+/* .sec2st .cont05{background:#333; position: relative;} */
+.sec2st .cont05 .img{position: relative;top: -48px; left:-10px; transform: scale(0.8);}
 .sec2st .cont05 .weather{
     height: 75px; width: 234px; background: #fff;
     position: absolute; left:0px; bottom: 0px; padding: 0 25px;    
@@ -509,6 +511,9 @@ body, html{width: 100%;}
 .sec2st .cont05 h2{color: #fff; text-align: center;}
 .sec2st .cont05 .weather h3{font-size: 18px; letter-spacing: -0.05em; padding-top: 12px; padding-bottom: 5px;}
 .sec2st .cont05 .weather p{letter-spacing: -0.08em}
+.sec2st .cont05 em{background: #fff; border: 1px solid #E44033; font-size: 12px; padding: 5px; border-radius: 3px;}
+.sec2st .cont05 em:hover{background: #E44033; color:white}
+.sec2st .cont05 select {width: 100%;  border: 1px solid #E44033; font-size: 12px; padding: 3px;}
 
 
 /* sec2st review cont06 */
