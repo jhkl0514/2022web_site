@@ -2,7 +2,7 @@ $fColor1:#333;
 $fColor2:#fff;
 $fColor3:#eee;
 
-*{margin: 0;padding: 0;}
+*{margin: 0;padding: 0; font-family: "Noto Sans KR";}
 ul,li{list-style: none;}
 a:link,a:visited{text-decoration: none; color:$fColor1}
 
@@ -17,6 +17,8 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
     position: fixed; z-index: 1; 
     overflow: hidden;    
     width: 100%;
+    padding: 20px;
+    // background: #eee;
     &.active{
         .logo{
             .st0{fill:#AC2B2C;}
@@ -78,20 +80,49 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
         
         
 
-    &.page2{
-        // .owl-theme .owl-nav [class*=owl-]:hover{background:initial;color:red}
-        // .owl-nav {font-size: 40px;}
-        // .owl-nav .owl-prev{position: absolute;left: -80px;top: 50%;transform: translateY(-70%);}
-        // .owl-nav .owl-next{position: absolute;right: -80px;top: 50%;transform: translateY(-70%);}
+    &.page2{          
+            .owl-nav{
+                [class*=owl-]:hover {background: #fff;}
+                .owl-prev{position: absolute;left: -80px;top: 50%;transform: translateY(-70%);}
+                .owl-next{position: absolute;right: -80px;top: 50%;transform: translateY(-70%);} 
+            }
+            .owl-dots{display: none;}
+            .svgBtnPrev{ 
+                fill:#AC2B2C;
+                transform-origin: center;              
+                transform: rotate(180deg);
+                background-color: #333;
+                &:hover{stroke:#AC2B2C; stroke-width: 2; fill:#fff; background: white !important;}
+                
+            }
+            
+            .svgBtnNext{
+                fill:#AC2B2C;
+                &:hover{stroke:#AC2B2C; stroke-width: 1; fill:#fff;}           
+            }
+            
 
+            .owl-item{
+                padding-top:30px; transition:0.3s; transform: scale(0.6);
+                &.center{padding-top:50px;  transition:0.3s;   transform: scale(1)}
+                
+                div{
+                    h2,p{text-align: center;}
+                    h2{
+                        padding-top: 20px;
+                        font-family: 'Fjalla One';
+                    }
+                    p{
+                       font-size: 18px;
+                    }
+                }
+                
+            }
 
-        // .owl-item{padding:20px;_background: red;transition:0.3s;opacity:0.3;}
-        // .owl-item.center{padding:0px;_background: red;opacity: 1;}
-
-        // .lazy-load{transform: translateY(300px); transition: 0.5s; opacity: 0;}
-        // .lazy-load.fade{
-        //     transform: translateY(0); opacity: 1;
-        // }
+            // .lazy-load{transform: translateY(300px); transition: 0.5s; opacity: 0;}
+            // .lazy-load.fade{
+            //     transform: translateY(0); opacity: 1;
+            // }
     }
     &.page3{
         background-image: url(../images/con01_bg01.png);   

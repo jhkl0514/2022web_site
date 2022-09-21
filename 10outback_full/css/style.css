@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Noto Sans KR";
 }
 
 ul, li {
@@ -28,6 +29,7 @@ a:link, a:visited {
   z-index: 1;
   overflow: hidden;
   width: 100%;
+  padding: 20px;
 }
 .navTop.active .logo .st0 {
   fill: #AC2B2C;
@@ -97,6 +99,64 @@ a:link, a:visited {
   100% {
     transform: translateY(20px);
   }
+}
+.section.page2 .owl-nav [class*=owl-]:hover {
+  background: #fff;
+}
+.section.page2 .owl-nav .owl-prev {
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-70%);
+}
+.section.page2 .owl-nav .owl-next {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-70%);
+}
+.section.page2 .owl-dots {
+  display: none;
+}
+.section.page2 .svgBtnPrev {
+  fill: #AC2B2C;
+  transform-origin: center;
+  transform: rotate(180deg);
+  background-color: #333;
+}
+.section.page2 .svgBtnPrev:hover {
+  stroke: #AC2B2C;
+  stroke-width: 2;
+  fill: #fff;
+  background: white !important;
+}
+.section.page2 .svgBtnNext {
+  fill: #AC2B2C;
+}
+.section.page2 .svgBtnNext:hover {
+  stroke: #AC2B2C;
+  stroke-width: 1;
+  fill: #fff;
+}
+.section.page2 .owl-item {
+  padding-top: 30px;
+  transition: 0.3s;
+  transform: scale(0.6);
+}
+.section.page2 .owl-item.center {
+  padding-top: 50px;
+  transition: 0.3s;
+  transform: scale(1);
+}
+.section.page2 .owl-item div h2, .section.page2 .owl-item div p {
+  text-align: center;
+}
+.section.page2 .owl-item div h2 {
+  padding-top: 20px;
+  font-family: "Fjalla One";
+}
+.section.page2 .owl-item div p {
+  font-size: 18px;
 }
 .section.page3 {
   background-image: url(../images/con01_bg01.png);
