@@ -20,7 +20,7 @@ a:link, a:visited {
   justify-content: center;
   align-items: center;
 }
-.wrap div {
+.wrap > div {
   position: absolute;
 }
 
@@ -51,6 +51,7 @@ a:link, a:visited {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  position: relative;
 }
 .section.page1 .txtWrap {
   transform: translateY(100px);
@@ -135,7 +136,7 @@ a:link, a:visited {
 }
 .section.page2 .svgBtnNext:hover {
   stroke: #AC2B2C;
-  stroke-width: 1;
+  stroke-width: 2;
   fill: #fff;
 }
 .section.page2 .owl-item {
@@ -159,7 +160,107 @@ a:link, a:visited {
   font-size: 18px;
 }
 .section.page3 {
-  background-image: url(../images/con01_bg01.png);
+  background-image: url(../images/con03_bg01.png);
+}
+.section.page3 svg {
+  font-family: "Fjalla One" sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.section.page3 svg text {
+  text-transform: uppercase;
+  -webkit-animation: stroke 5s infinite alternate;
+          animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #fff;
+  font-size: 5em;
+}
+@-webkit-keyframes stroke {
+  0% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-dashoffset: 10%;
+    stroke-dasharray: 0 30%;
+    stroke-width: 1;
+  }
+  70% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgb(255, 255, 255);
+  }
+  80% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-width: 2;
+  }
+  100% {
+    fill: rgb(255, 255, 255);
+    stroke: rgba(0, 0, 0, 0);
+    stroke-dashoffset: -10%;
+    stroke-dasharray: 30% 0;
+    stroke-width: 0;
+  }
+}
+@keyframes stroke {
+  0% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-dashoffset: 10%;
+    stroke-dasharray: 0 30%;
+    stroke-width: 1;
+  }
+  70% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgb(255, 255, 255);
+  }
+  80% {
+    fill: rgba(0, 0, 0, 0);
+    stroke: rgb(255, 255, 255);
+    stroke-width: 2;
+  }
+  100% {
+    fill: rgb(255, 255, 255);
+    stroke: rgba(0, 0, 0, 0);
+    stroke-dashoffset: -10%;
+    stroke-dasharray: 30% 0;
+    stroke-width: 0;
+  }
+}
+.section.page3 .text {
+  transform: translateY(120px);
+  opacity: 0;
+  -webkit-animation: txtAni1 5s alternate infinite forwards;
+          animation: txtAni1 5s alternate infinite forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.section.page3 .text h5 {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+}
+@-webkit-keyframes txtAni1 {
+  50% {
+    transform: translateY(100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0.5;
+  }
+}
+@keyframes txtAni1 {
+  50% {
+    transform: translateY(100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0.5;
+  }
 }
 .section.page3 .scrollBtn {
   position: absolute;
@@ -180,8 +281,20 @@ a:link, a:visited {
   }
 }
 .section.page4 {
-  background-image: url(../images/bg4.jpg);
+  background-image: url(../images/con04_bg01.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100;
 }
-.section.page4 .container {
-  transform: translateY(-100px);
+.section.page4 .box {
+  position: absolute;
+  left: 230px;
+  top: 46px;
+  width: 850px;
+  height: 950px;
+  transform-origin: center;
+}
+.section.page4 .box .svgbone {
+  fill: #fff;
+  opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */

@@ -9,7 +9,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
 .wrap{
     width: 100%;height: 100%;
     display:flex;justify-content: center; align-items: center;
-    div{
+    >div{
         position: absolute;
     }
 }
@@ -33,11 +33,13 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
 }
 
 
+
 .section{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    position: relative;
     &.page1{
         // overflow: hidden;
       
@@ -98,7 +100,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             
             .svgBtnNext{
                 fill:#AC2B2C;
-                &:hover{stroke:#AC2B2C; stroke-width: 1; fill:#fff;}           
+                &:hover{stroke:#AC2B2C; stroke-width: 2; fill:#fff;}           
             }
             
 
@@ -125,7 +127,53 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             // }
     }
     &.page3{
-        background-image: url(../images/con01_bg01.png);   
+        background-image: url(../images/con03_bg01.png);
+        svg {
+            font-family: 'Fjalla One' sans-serif;
+            position: absolute;
+            width: 100%;height: 100%;
+            left: 50%;top: 50%;
+            transform: translate(-50%,-50%);
+          }
+          svg text {
+            text-transform: uppercase;
+            animation: stroke 5s infinite alternate;
+            stroke-width: 2;
+            stroke: #fff;
+            font-size: 5em;
+          }
+          @keyframes stroke {
+            0%   {
+              fill: rgba(0, 0, 0, 0); stroke: rgb(255, 255, 255, 1);
+              stroke-dashoffset: 10%; stroke-dasharray: 0 30%; stroke-width: 1;
+            }
+            70%  {fill: rgba(0, 0, 0, 0); stroke: rgba(255, 255, 255, 1); }
+            80%  {fill: rgba(0, 0, 0, 0); stroke: rgba(255, 255, 255, 1); stroke-width: 2; }
+            100% {
+              fill: rgba(255, 255, 255, 1); stroke: rgba(0, 0, 0, 0); 
+              stroke-dashoffset: -10%; stroke-dasharray: 30% 0; stroke-width: 0;
+            }
+          }
+          .text {
+            transform: translateY(120px);
+            opacity: 0;
+            animation: txtAni1 5s alternate infinite forwards;
+            animation-delay: 3s;
+            // animation-iteration-count:infinite;
+            h5{
+                color: #fff;
+                text-align: center;
+                font-size: 2em;
+              }
+             @keyframes txtAni1 {                
+                50%{transform: translateY(100px);opacity: 1;}
+                100%{transform: translateY(100px);opacity: 0.5;}
+                
+            }  
+          }
+          
+         
+          
         .scrollBtn{
             position: absolute;
             bottom: 20px;
@@ -139,10 +187,23 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             // 0%{bottom:20px} 초기 값이 같으면 삭제 가능
             100%{bottom:50px;}
         }
+        
     }
-    &.page4{
-        background-image: url(../images/bg4.jpg);
-        // .fp-tableCell{vertical-align: top;}
-        .container{transform: translateY(-100px);}
-    }
+    &.page4{      
+   
+        background-image: url(../images/con04_bg01.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100;
+        
+        
+        .box{
+            position: absolute;
+            left: 230px; top: 46px;
+            width: 850px; height: 950px;
+            transform-origin: center;
+            .svgbone{fill:#fff; opacity: 0.5;}
+        }
+      }  
+    
 }
