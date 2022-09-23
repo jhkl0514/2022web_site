@@ -46,6 +46,16 @@ a:link, a:visited {
   clip-rule: evenodd;
 }
 
+.page2 .wrap {
+  transform: translateY(-100px);
+  transition: 0.3s;
+  opacity: 0;
+}
+.page2 .wrap.move {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .section {
   background-position: center;
   background-repeat: no-repeat;
@@ -162,7 +172,19 @@ a:link, a:visited {
 .section.page3 {
   background-image: url(../images/con03_bg01.png);
 }
-.section.page3 svg {
+.section.page3.active text {
+  -webkit-animation: stroke 5s infinite alternate;
+          animation: stroke 5s infinite alternate;
+}
+.section.page3.active .text {
+  -webkit-animation: txtAni1 5s alternate infinite forwards;
+          animation: txtAni1 5s alternate infinite forwards;
+}
+.section.page3 div {
+  width: 100%;
+  height: 100%;
+}
+.section.page3 div svg {
   font-family: "Fjalla One" sans-serif;
   position: absolute;
   width: 100%;
@@ -171,10 +193,9 @@ a:link, a:visited {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.section.page3 svg text {
+.section.page3 div svg text {
+  position: absolute;
   text-transform: uppercase;
-  -webkit-animation: stroke 5s infinite alternate;
-          animation: stroke 5s infinite alternate;
   stroke-width: 2;
   stroke: #fff;
   font-size: 5em;
@@ -229,18 +250,22 @@ a:link, a:visited {
     stroke-width: 0;
   }
 }
-.section.page3 .text {
+.section.page3 div .text {
   transform: translateY(120px);
   opacity: 0;
-  -webkit-animation: txtAni1 5s alternate infinite forwards;
-          animation: txtAni1 5s alternate infinite forwards;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
-.section.page3 .text h5 {
+.section.page3 div .text h5 {
+  position: absolute;
   color: #fff;
   text-align: center;
   font-size: 2em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 @-webkit-keyframes txtAni1 {
   50% {
@@ -284,17 +309,224 @@ a:link, a:visited {
   background-image: url(../images/con04_bg01.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100;
+  background-size: cover;
 }
-.section.page4 .box {
+.section.page4.active .svgbone1 {
+  -webkit-animation: b1Ani 3.5s alternate forwards;
+          animation: b1Ani 3.5s alternate forwards;
+}
+.section.page4.active .svgbone2 {
+  -webkit-animation: b2Ani 2.5s alternate forwards;
+          animation: b2Ani 2.5s alternate forwards;
+}
+.section.page4.active .objimg01 > img {
+  -webkit-animation: objAni 1s alternate infinite linear;
+          animation: objAni 1s alternate infinite linear;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.section.page4.active .objtext01 > h1 {
+  -webkit-animation: abjtAni 2.5s alternate forwards;
+          animation: abjtAni 2.5s alternate forwards;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.section.page4.active .objtext01 > h5 {
+  -webkit-animation: objt02Ani 2.5s alternate forwards;
+          animation: objt02Ani 2.5s alternate forwards;
+  -webkit-animation-delay: 4.2s;
+          animation-delay: 4.2s;
+}
+.section.page4.active .objtext01 > p {
+  -webkit-animation: objt03Ani 2.5s alternate forwards;
+          animation: objt03Ani 2.5s alternate forwards;
+  -webkit-animation-delay: 4.3s;
+          animation-delay: 4.3s;
+}
+.section.page4 .objimg01 {
+  z-index: 1;
   position: absolute;
-  left: 230px;
-  top: 46px;
-  width: 850px;
-  height: 950px;
+}
+.section.page4 .objimg01 img {
+  width: 100%;
+  transform: rotate(0deg) translateY(0px);
   transform-origin: center;
 }
-.section.page4 .box .svgbone {
-  fill: #fff;
-  opacity: 0.5;
+@-webkit-keyframes objAni {
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes objAni {
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+.section.page4 .svgBox {
+  z-index: 2;
+  position: absolute;
+  width: 882px;
+  height: 980px;
+  transform-origin: center;
+}
+.section.page4 .svgBox .svgbone1 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  opacity: 1;
+  stroke-dasharray: 1850;
+  stroke-dashoffset: 1850;
+  opacity: 0;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+@-webkit-keyframes b1Ani {
+  50% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes b1Ani {
+  50% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+.section.page4 .svgBox .svgbone2 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  opacity: 1;
+  stroke-dasharray: 2212;
+  stroke-dashoffset: 2212;
+  opacity: 0;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+@-webkit-keyframes b2Ani {
+  70% {
+    opacity: 0.7;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes b2Ani {
+  70% {
+    opacity: 0.7;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+.section.page4 .objtext01 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section.page4 .objtext01 h1 {
+  z-index: 3;
+  font-family: "Noto Sans KR";
+  position: absolute;
+  color: #fff;
+  font-size: 9em;
+  font-weight: 700;
+  transform: translateY(200px);
+  opacity: 0;
+}
+.section.page4 .objtext01 h5 {
+  z-index: 4;
+  font-family: "Noto Sans KR";
+  position: absolute;
+  color: #fff;
+  font-size: 3em;
+  font-weight: 400;
+  transform: translateY(250px);
+  opacity: 0;
+}
+.section.page4 .objtext01 p {
+  z-index: 4;
+  font-family: "Noto Sans KR";
+  position: absolute;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 200;
+  text-align: center;
+  transform: translateY(300px);
+  opacity: 0;
+}
+@-webkit-keyframes abjtAni {
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+}
+@keyframes abjtAni {
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes objt02Ani {
+  100% {
+    transform: translateY(120px);
+    opacity: 0.8;
+  }
+}
+@keyframes objt02Ani {
+  100% {
+    transform: translateY(120px);
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes objt03Ani {
+  100% {
+    transform: translateY(220px);
+    opacity: 0.6;
+  }
+}
+@keyframes objt03Ani {
+  100% {
+    transform: translateY(220px);
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 767px) {
+  .section.page4.active .objimg01 > img {
+    -webkit-animation: objAni 1s alternate infinite linear;
+            animation: objAni 1s alternate infinite linear;
+  }
+  .section.page4.active .objtext01 > h1 {
+    -webkit-animation: abjtAni 2.5s alternate forwards;
+            animation: abjtAni 2.5s alternate forwards;
+  }
+  .section.page4 .svgBox {
+    display: none;
+  }
+  .section.page4 .objtext01 h1 {
+    font-size: 2em;
+  }
 }/*# sourceMappingURL=style.css.map */
