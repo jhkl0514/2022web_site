@@ -33,6 +33,43 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
 }
 
 
+.page2{
+    .wrap{
+        transform: translateY(-100px);
+        transition: 0.3s;
+        opacity: 0;
+        &.move{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+// .page3{
+//     .wrap{
+//         transform: translateX(-100px);
+//         transition: 0.3s;
+//         opacity: 0;
+//         &.move{
+//             transform: translateX(0);
+//             opacity: 1;
+//         }
+//     }
+// }
+
+// .page4{
+//     .wrap{
+//         transform: translateX(-200px);
+//         transition: 0.3s;
+//         opacity: 0;
+//         &.move{
+//             transform: translateX(0);
+//             opacity: 1;
+//         }
+//     }
+// }
+
+
 
 .section{
     background-position: center;
@@ -128,20 +165,28 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
     }
     &.page3{
         background-image: url(../images/con03_bg01.png);
-        svg {
-            font-family: 'Fjalla One' sans-serif;
-            position: absolute;
-            width: 100%;height: 100%;
-            left: 50%;top: 50%;
-            transform: translate(-50%,-50%);
-          }
-          svg text {
-            text-transform: uppercase;
-            animation: stroke 5s infinite alternate;
-            stroke-width: 2;
-            stroke: #fff;
-            font-size: 5em;
-          }
+        &.active text{animation: stroke 5s infinite alternate;}
+        &.active .text{animation: txtAni1 5s alternate infinite forwards;}
+
+        div {
+            width: 100%;height: 100%;            
+            svg {
+                font-family: 'Fjalla One' sans-serif;
+                position: absolute;
+                width: 100%;height: 100%;
+                left: 50%;top: 50%;
+                transform: translate(-50%,-50%);          
+      
+            text {
+                position: absolute;    
+                text-transform: uppercase;
+                // animation: stroke 5s infinite alternate;
+                stroke-width: 2;
+                stroke: #fff;
+                font-size: 5em;
+                }
+            }
+        
           @keyframes stroke {
             0%   {
               fill: rgba(0, 0, 0, 0); stroke: rgb(255, 255, 255, 1);
@@ -154,23 +199,28 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
               stroke-dashoffset: -10%; stroke-dasharray: 30% 0; stroke-width: 0;
             }
           }
-          .text {
+         
+          .text {  
             transform: translateY(120px);
             opacity: 0;
-            animation: txtAni1 5s alternate infinite forwards;
+            // animation: txtAni1 5s alternate infinite forwards;
             animation-delay: 3s;
-            // animation-iteration-count:infinite;
-            h5{
-                color: #fff;
-                text-align: center;
-                font-size: 2em;
+            animation-iteration-count:infinite;
+                h5{position: absolute;  
+                    color: #fff;
+                    text-align: center;
+                    font-size: 2em;                
+                    left: 50%;top: 50%;
+                    transform: translate(-50%,-50%);             
+                     
+                }              
               }
-             @keyframes txtAni1 {                
+            }
+            @keyframes txtAni1 {                
                 50%{transform: translateY(100px);opacity: 1;}
                 100%{transform: translateY(100px);opacity: 0.5;}
                 
-            }  
-          }
+            } 
           
          
           
@@ -189,21 +239,149 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
         }
         
     }
-    &.page4{      
-   
+    &.page4{        
         background-image: url(../images/con04_bg01.jpg);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 100;
+        background-size: cover;
+       
+        &.active .svgbone1{animation: b1Ani 3.5s alternate forwards;}
+        &.active .svgbone2{animation: b2Ani 2.5s alternate forwards;}
+        &.active .objimg01>img{animation: objAni 1s alternate infinite linear ; animation-delay:4s}
+        &.active .objtext01>h1{animation: abjtAni 2.5s alternate forwards; animation-delay:4s}
+        &.active .objtext01>h5{animation: objt02Ani 2.5s alternate forwards; animation-delay:4.2s}
+        &.active .objtext01>p{animation: objt03Ani 2.5s alternate forwards; animation-delay:4.3s}
+       
         
-        
-        .box{
-            position: absolute;
-            left: 230px; top: 46px;
-            width: 850px; height: 950px;
-            transform-origin: center;
-            .svgbone{fill:#fff; opacity: 0.5;}
+        .objimg01{
+            z-index: 1;
+            position: absolute; 
+            img{
+                width: 100%;
+                transform: rotate(0deg) translateY(0px) ;
+                // animation: objAni 1s alternate infinite linear ;
+                transform-origin: center;   
+                // animation-delay:5s;
+                }    
+                @keyframes objAni{
+                50%{ transform: rotate(-5deg) ;}
+                100%{ transform: rotate(5deg) ;}
+                }
         }
-      }  
+        .svgBox{
+            z-index: 2;
+            position: absolute;
+            width: 882px; height: 980px;             
+            transform-origin: center;
+            .svgbone1{                
+                fill:none;stroke:#fff;
+                stroke-width:4;stroke-miterlimit:10;
+                opacity: 1;
+                stroke-dasharray: 1850;
+                stroke-dashoffset: 1850;
+                // animation: b1Ani 3.5s alternate forwards;
+                opacity: 0;
+                animation-delay:0.5s;
+                
+                // document.querySelector(".svgbone1").getTotalLength()
+            }
+            @keyframes b1Ani{
+                50%{
+                    opacity: 1;
+                    stroke-dashoffset: 0;
+                }
+                100%{
+                    opacity: 0;
+                    stroke-dashoffset: 0;
+                }
+            }
+            .svgbone2{                
+                fill:none;stroke:#fff;
+                stroke-width:4;stroke-miterlimit:10;
+                opacity: 1;
+                stroke-dasharray: 2212;
+                stroke-dashoffset: 2212;
+                // animation: b2Ani 2.5s alternate forwards;
+                opacity: 0;
+                animation-delay:1.5s;
+            }
+            @keyframes b2Ani{
+                70%{
+                    opacity: 0.7;
+                    stroke-dashoffset: 0;
+                }
+                100%{
+                    opacity: 0;
+                    stroke-dashoffset: 0;
+                }
+            }
+            
+        }
+        .objtext01{
+            width: 100%; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            h1{
+                z-index: 3;
+                font-family: 'Noto Sans KR';
+                position: absolute; 
+                color: #fff;
+                font-size: 9em;
+                font-weight: 700; 
+                // animation: abjtAni 2.5s alternate forwards;
+                transform: translateY(200px);
+                opacity: 0;               
+            }
+            h5{
+                z-index: 4;
+                font-family: 'Noto Sans KR';
+                position: absolute; 
+                color: #fff;
+                font-size: 3em;
+                font-weight: 400; 
+                // animation: objt02Ani 2.5s alternate forwards;
+                transform: translateY(250px);
+                opacity: 0;               
+            }
+            p{
+                z-index: 4;
+                font-family: 'Noto Sans KR';
+                position: absolute; 
+                color: #fff;
+                font-size: 1.2em;
+                font-weight: 200; 
+                text-align: center;
+                // animation: objt03Ani 2.5s alternate forwards;
+                transform: translateY(300px);
+                opacity: 0;               
+            }
+        }
+        @keyframes abjtAni {           
+            100%{transform: translateY(0);opacity: 0.8;}
+        }
+
+        @keyframes objt02Ani {           
+            100%{transform: translateY(120px);opacity: 0.8;}
+        }
+        @keyframes objt03Ani {           
+            100%{transform: translateY(220px);opacity: 0.6;}
+        }
+    }       
     
+}
+
+
+@media (max-width: 767px) {
+    .section{
+        &.page4{
+            &.active .objimg01>img{animation: objAni 1s alternate infinite linear ;}
+            &.active .objtext01>h1{animation: abjtAni 2.5s alternate forwards;}
+            .svgBox{display: none;}
+            .objtext01{
+                h1{
+                    font-size: 2em;
+                }
+            }
+
+        }
+    }
 }
