@@ -1,9 +1,9 @@
 $("#fullpage").fullpage({
     menu: ".navTop",
-    anchors: ["m1st", "m2st", "m3st", "m4st"],
+    anchors: ["m1st", "m2st", "m3st", "m4st", "m5st"],
     navigation: true,
     navigationPosition: "fp-right",
-    navigationTooltips: ["first", "second", "third", "fouth"],
+    navigationTooltips: ["first", "second", "third", "fouth", "five"],
     responsiveWidth: 900,
     afterLoad: function (anchorslink, index) {
         console.log(anchorslink, index);

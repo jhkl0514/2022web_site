@@ -1,6 +1,8 @@
 $fColor1:#333;
 $fColor2:#fff;
 $fColor3:#eee;
+$font01:'Noto Sans KR';
+$font02:'Fjalla One' sans-serif;
 
 *{margin: 0;padding: 0; font-family: "Noto Sans KR";}
 ul,li{list-style: none;}
@@ -28,7 +30,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
         width: 200px; height: 80px;
         margin: 0 auto;
         margin-top: 15px;      
-        .st0{fill:#fff;fill-rule:evenodd;clip-rule:evenodd}
+        .st0{fill:$fColor2;fill-rule:evenodd;clip-rule:evenodd}
     }
 }
 
@@ -44,31 +46,6 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
         }
     }
 }
-
-// .page3{
-//     .wrap{
-//         transform: translateX(-100px);
-//         transition: 0.3s;
-//         opacity: 0;
-//         &.move{
-//             transform: translateX(0);
-//             opacity: 1;
-//         }
-//     }
-// }
-
-// .page4{
-//     .wrap{
-//         transform: translateX(-200px);
-//         transition: 0.3s;
-//         opacity: 0;
-//         &.move{
-//             transform: translateX(0);
-//             opacity: 1;
-//         }
-//     }
-// }
-
 
 
 .section{
@@ -109,7 +86,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                 margin: 0 auto;
                 width: 50px; height: 70px;         
                 animation: scrollBtn 1.5s linear infinite alternate;                
-                .st1{fill:#fff;}    
+                .st1{fill:$fColor2;}    
             }                        
         }       
         }
@@ -121,7 +98,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
 
     &.page2{          
             .owl-nav{
-                [class*=owl-]:hover {background: #fff;}
+                [class*=owl-]:hover {background: $fColor2;}
                 .owl-prev{position: absolute;left: -80px;top: 50%;transform: translateY(-70%);}
                 .owl-next{position: absolute;right: -80px;top: 50%;transform: translateY(-70%);} 
             }
@@ -131,13 +108,13 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                 transform-origin: center;              
                 transform: rotate(180deg);
                 background-color: #333;
-                &:hover{stroke:#AC2B2C; stroke-width: 2; fill:#fff; background: white !important;}
+                &:hover{stroke:#AC2B2C; stroke-width: 2; fill:$fColor2; background: white !important;}
                 
             }
             
             .svgBtnNext{
                 fill:#AC2B2C;
-                &:hover{stroke:#AC2B2C; stroke-width: 2; fill:#fff;}           
+                &:hover{stroke:#AC2B2C; stroke-width: 2; fill:$fColor2;}           
             }
             
 
@@ -171,7 +148,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
         div {
             width: 100%;height: 100%;            
             svg {
-                font-family: 'Fjalla One' sans-serif;
+                font-family: $font02;
                 position: absolute;
                 width: 100%;height: 100%;
                 left: 50%;top: 50%;
@@ -182,7 +159,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                 text-transform: uppercase;
                 // animation: stroke 5s infinite alternate;
                 stroke-width: 2;
-                stroke: #fff;
+                stroke: $fColor2;
                 font-size: 5em;
                 }
             }
@@ -207,7 +184,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             animation-delay: 3s;
             animation-iteration-count:infinite;
                 h5{position: absolute;  
-                    color: #fff;
+                    color: $fColor2;
                     text-align: center;
                     font-size: 2em;                
                     left: 50%;top: 50%;
@@ -274,7 +251,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             width: 882px; height: 980px;             
             transform-origin: center;
             .svgbone1{                
-                fill:none;stroke:#fff;
+                fill:none;stroke:$fColor2;
                 stroke-width:4;stroke-miterlimit:10;
                 opacity: 1;
                 stroke-dasharray: 1850;
@@ -296,7 +273,7 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                 }
             }
             .svgbone2{                
-                fill:none;stroke:#fff;
+                fill:none;stroke:$fColor2;
                 stroke-width:4;stroke-miterlimit:10;
                 opacity: 1;
                 stroke-dasharray: 2212;
@@ -322,9 +299,9 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             display: flex; justify-content: center; align-items: center;
             h1{
                 z-index: 3;
-                font-family: 'Noto Sans KR';
+                font-family: $font01;
                 position: absolute; 
-                color: #fff;
+                color: $fColor2;
                 font-size: 9em;
                 font-weight: 700; 
                 // animation: abjtAni 2.5s alternate forwards;
@@ -333,9 +310,9 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             }
             h5{
                 z-index: 4;
-                font-family: 'Noto Sans KR';
+                font-family: $font01;
                 position: absolute; 
-                color: #fff;
+                color: $fColor2;
                 font-size: 3em;
                 font-weight: 400; 
                 // animation: objt02Ani 2.5s alternate forwards;
@@ -344,9 +321,9 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             }
             p{
                 z-index: 4;
-                font-family: 'Noto Sans KR';
+                font-family: $font01;
                 position: absolute; 
-                color: #fff;
+                color: $fColor2;
                 font-size: 1.2em;
                 font-weight: 200; 
                 text-align: center;
@@ -365,9 +342,137 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
         @keyframes objt03Ani {           
             100%{transform: translateY(220px);opacity: 0.6;}
         }
-    }       
+    }
     
-}
+    &.page5{
+        background: #003125;       
+        &.bgimg{
+            background-image: url(../images/member_bg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:100% 70%; 
+        }
+
+        &.active .objtext02>h1{animation: abjt02_01Ani 1s alternate forwards; animation-delay:0.5s;  }
+        &.active .objtext02>p{animation: abjt02_02Ani 1s alternate forwards; animation-delay:1s; }     
+        
+        .objtext02{
+            width: 100%; height: 100%;
+            display: flex; justify-content: center; align-items: center;
+            h1{          
+                font-family: $font01;
+                position: absolute;                            
+                font-size: 3em;
+                font-weight: 700;                
+                // animation: abjt02_01Ani 2.5s alternate forwards;
+                transform: translateY(500px);
+                opacity: 0;
+                           
+            } 
+            @keyframes abjt02_01Ani {           
+                100%{transform: translateY(-160px);opacity: 1;}
+            }          
+            p{               
+                font-family: $font01;
+                position: absolute;                 
+                font-size: 1.2em;
+                font-weight: 200;                 
+                // animation: abjt02_02Ani 2.5s alternate forwards;
+                transform: translateY(500px);
+                opacity: 0;                 
+            }
+                @keyframes abjt02_02Ani {           
+                    100%{transform: translateY(-100px);opacity: 1;}
+                             
+            }
+        }
+        
+                .imgG{
+                    display: flex; gap:50px; transform: translateY(100px);
+                    .imgG01{
+                       width: 200px; height: 300px;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                       position: relative;
+                        .img{
+                          position: absolute;  z-index: 1;
+                        }
+                        .svgWrap{
+                            width: 200px;height: 300px;
+                            position: absolute;top:-38px;                            
+                            .fork{transform:rotate(0deg);transform-origin: 100px 129px;}
+                            .nife{transform:rotate(0deg);transform-origin: 100px 129px;}
+                        }
+                    }
+                    .imgG02{
+                        width: 200px; height: 300px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                         .img{
+                           position: absolute;  z-index: 1;
+                         }
+ 
+                         .svgWrap{
+                             width: 200px;height: 300px;
+                             position: absolute;top:-32px; left: 9px;                                                         
+                             
+                         }
+                     }
+                     .imgG03{
+                        width: 200px; height: 300px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                         .img{
+                           position: absolute;  z-index: 1;
+                         } 
+                         .svgWrap{
+                             width: 200px;height: 300px;
+                             position: absolute;top:-32px; left: 5px;                                                         
+                             
+                         }
+                     }
+                     .imgG04{
+                        width: 200px; height: 300px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                         .img{
+                           position: absolute;  z-index: 1;
+                         } 
+                         .svgWrap{
+                             width: 200px;height: 300px;
+                             position: absolute;top:-20px; left: 20px;  
+                         }
+                     }
+                     .imgG07{
+                        width: 200px; height: 300px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                         .img{
+                           position: absolute;  z-index: 1;
+                         } 
+                         .svgWrap{
+                             width: 200px;height: 300px;
+                             position: absolute;top:-20px; left: 0px;  
+                         }
+                     }
+                }
+            }
+        }   
+        
+               
+        
+   
+    
+
 
 
 @media (max-width: 767px) {
