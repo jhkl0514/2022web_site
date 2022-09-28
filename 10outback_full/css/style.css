@@ -607,10 +607,36 @@ a:link, a:visited {
 .section.page5 .imgG .imgG01 .svgWrap .fork {
   transform: rotate(0deg);
   transform-origin: 100px 129px;
+  -webkit-animation: forkAni 2.5s alternate infinite;
+          animation: forkAni 2.5s alternate infinite;
 }
-.section.page5 .imgG .imgG01 .svgWrap .nife {
+.section.page5 .imgG .imgG01 .svgWrap .knife {
   transform: rotate(0deg);
   transform-origin: 100px 129px;
+  -webkit-animation: knifeAni 2.5s alternate infinite;
+          animation: knifeAni 2.5s alternate infinite;
+}
+@-webkit-keyframes forkAni {
+  100% {
+    transform: rotate(45deg);
+    transform-origin: 90px 129px;
+  }
+}
+@keyframes forkAni {
+  100% {
+    transform: rotate(45deg);
+    transform-origin: 90px 129px;
+  }
+}
+@-webkit-keyframes knifeAni {
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes knifeAni {
+  100% {
+    transform: rotate(-45deg);
+  }
 }
 .section.page5 .imgG .imgG02 {
   width: 200px;
@@ -628,8 +654,40 @@ a:link, a:visited {
   width: 200px;
   height: 300px;
   position: absolute;
-  top: -32px;
+  top: -45px;
   left: 9px;
+}
+.section.page5 .imgG .imgG02 .svgWrap .cst3 {
+  fill: #d7651f;
+  -webkit-animation: wcAni1 3.5s alternate forwards linear infinite;
+          animation: wcAni1 3.5s alternate forwards linear infinite;
+}
+.section.page5 .imgG .imgG02 .svgWrap .cst4 {
+  fill: #d7371f;
+  -webkit-animation: wcAni2 4s alternate forwards linear infinite;
+          animation: wcAni2 4s alternate forwards linear infinite;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+@-webkit-keyframes wcAni1 {
+  100% {
+    transform: translate(0px, 0px) scaleY(0.9);
+  }
+}
+@keyframes wcAni1 {
+  100% {
+    transform: translate(0px, 0px) scaleY(0.9);
+  }
+}
+@-webkit-keyframes wcAni2 {
+  100% {
+    transform: translate(100px, 10px) scaleY(0.8);
+  }
+}
+@keyframes wcAni2 {
+  100% {
+    transform: translate(100px, 10px) scaleY(0.8);
+  }
 }
 .section.page5 .imgG .imgG03 {
   width: 200px;
@@ -647,8 +705,25 @@ a:link, a:visited {
   width: 200px;
   height: 300px;
   position: absolute;
-  top: -32px;
+  top: -20px;
   left: 5px;
+}
+.section.page5 .imgG .imgG03 .svgWrap .pork02 {
+  transform: translateY(-20px);
+  -webkit-animation: pork02Ani 2s alternate infinite;
+          animation: pork02Ani 2s alternate infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes pork02Ani {
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes pork02Ani {
+  100% {
+    transform: translateY(0px);
+  }
 }
 .section.page5 .imgG .imgG04 {
   width: 200px;
@@ -669,6 +744,50 @@ a:link, a:visited {
   top: -20px;
   left: 20px;
 }
+.section.page5 .imgG .imgG04 .svgWrap .st04_0 {
+  stroke-dasharray: 10 10;
+  stroke-dashoffset: 132;
+  -webkit-animation: line_01Ani 2s infinite;
+          animation: line_01Ani 2s infinite;
+  opacity: 1;
+}
+.section.page5 .imgG .imgG04 .svgWrap .st04_2 {
+  stroke-dasharray: 10 10;
+  stroke-dashoffset: 110;
+  -webkit-animation: line_02Ani 2s infinite;
+          animation: line_02Ani 2s infinite;
+  opacity: 1;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+@-webkit-keyframes line_01Ani {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes line_01Ani {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes line_02Ani {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes line_02Ani {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.section.page5 .imgG .imgG05, .section.page5 .imgG .imgG06 {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+}
 .section.page5 .imgG .imgG07 {
   width: 200px;
   height: 300px;
@@ -688,6 +807,34 @@ a:link, a:visited {
   top: -20px;
   left: 0px;
 }
+.section.page5 .imgG .imgG07 .svgWrap .st07_0 {
+  stroke-dasharray: 52;
+  stroke-dashoffset: 52;
+  -webkit-animation: sLine 1.5s alternate forwards infinite;
+          animation: sLine 1.5s alternate forwards infinite;
+}
+.section.page5 .imgG .imgG07 .svgWrap .s7-1 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.section.page5 .imgG .imgG07 .svgWrap .s7-2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.section.page5 .imgG .imgG07 .svgWrap .s7-3 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+@-webkit-keyframes sLine {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes sLine {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 
 @media (max-width: 767px) {
   .section.page4.active .objimg01 > img {
@@ -703,5 +850,39 @@ a:link, a:visited {
   }
   .section.page4 .objtext01 h1 {
     font-size: 2em;
+  }
+  .section.page4 .objtext01 p {
+    font-size: 0.8em;
+  }
+  .section.page5 .objtext02 h1 {
+    font-size: 2em;
+  }
+  .section.page5 .objtext02 p {
+    font-size: 1em;
+  }
+  .section.page5 .imgG {
+    transform: scale(60%);
+  }
+  .section.page5 .imgG .imgG01, .section.page5 .imgG .imgG02, .section.page5 .imgG .imgG03 {
+    transform: translateY(250px);
+  }
+  .section.page5 .imgG .imgG02 .svgWrap {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: -45px;
+    left: -20px;
+  }
+  .section.page5 .imgG .imgG03 .svgWrap {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: -45px;
+    left: -30px;
+  }
+  .section.page5 .imgG .imgG07 .svgWrap {
+    position: absolute;
+    top: -20px;
+    left: -30px;
   }
 }/*# sourceMappingURL=style.css.map */

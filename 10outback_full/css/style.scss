@@ -401,8 +401,20 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                         .svgWrap{
                             width: 200px;height: 300px;
                             position: absolute;top:-38px;                            
-                            .fork{transform:rotate(0deg);transform-origin: 100px 129px;}
-                            .nife{transform:rotate(0deg);transform-origin: 100px 129px;}
+                            .fork{
+                                transform:rotate(0deg);transform-origin: 100px 129px;
+                                animation: forkAni 2.5s alternate infinite;
+                            }
+                            .knife{
+                                transform:rotate(0deg);transform-origin: 100px 129px;
+                                animation: knifeAni 2.5s alternate infinite;
+                            }
+                            @keyframes forkAni {           
+                                100%{transform:rotate(45deg);transform-origin: 90px 129px}
+                            }
+                            @keyframes knifeAni {           
+                                    100%{transform:rotate(-45deg)}
+                            }    
                         }
                     }
                     .imgG02{
@@ -413,12 +425,26 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                         position: relative;
                          .img{
                            position: absolute;  z-index: 1;
-                         }
- 
+                         } 
                          .svgWrap{
                              width: 200px;height: 300px;
-                             position: absolute;top:-32px; left: 9px;                                                         
-                             
+                             position: absolute;top:-45px; left: 9px;
+                             .cst3 {
+                                fill:#d7651f;
+                                animation: wcAni1 3.5s alternate forwards linear infinite;
+                            }
+                            .cst4 {
+                                fill:#d7371f;
+                                animation: wcAni2 4s alternate forwards linear infinite;
+                                animation-delay: 0.3s;  
+                            }
+                    
+                            @keyframes wcAni1 { 
+                                100%{transform: translate(0px,0px) scaleY(0.9);}                                
+                            }
+                            @keyframes wcAni2 {
+                                100%{transform: translate(100px,10px) scaleY(0.8);}                                
+                            } 
                          }
                      }
                      .imgG03{
@@ -432,9 +458,16 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                          } 
                          .svgWrap{
                              width: 200px;height: 300px;
-                             position: absolute;top:-32px; left: 5px;                                                         
-                             
-                         }
+                             position: absolute;top:-20px; left: 5px;
+                             .pork02{
+                                transform: translateY(-20px);
+                                animation: pork02Ani 2s alternate infinite;
+                                animation-timing-function:linear
+                             }                                                 
+                        }
+                        @keyframes pork02Ani {           
+                            100%{transform: translateY(0px);}
+                         }                        
                      }
                      .imgG04{
                         width: 200px; height: 300px;
@@ -448,6 +481,38 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                          .svgWrap{
                              width: 200px;height: 300px;
                              position: absolute;top:-20px; left: 20px;  
+                             .st04_0{
+                                stroke-dasharray: 10 10;
+                                stroke-dashoffset: 132;
+                                animation: line_01Ani 2s  infinite;                                       
+                                opacity: 1; 
+                            }
+                            .st04_2{
+                                stroke-dasharray: 10 10;
+                                stroke-dashoffset: 110;
+                                animation: line_02Ani 2s  infinite;                                       
+                                opacity: 1;
+                                animation-delay: 1s;
+                            }                               
+                         }
+                        
+                         @keyframes line_01Ani {           
+                            100%{stroke-dashoffset: 0;}
+                        }
+                        @keyframes line_02Ani {           
+                            100%{stroke-dashoffset: 0;}
+                        }
+                     }
+                     .imgG05,.imgG06{
+                        width: 200px; height: 300px;
+                        display: flex;
+                        // justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        gap: 50px;
+                         .img{
+                        //    position: absolute;                             
+                        // display: flex; 
                          }
                      }
                      .imgG07{
@@ -461,7 +526,22 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                          } 
                          .svgWrap{
                              width: 200px;height: 300px;
-                             position: absolute;top:-20px; left: 0px;  
+                             position: absolute;top:-20px; left: 0px;
+                             .st07_0{
+                                stroke-dasharray: 52;
+                                stroke-dashoffset: 52;
+                                animation: sLine 1.5s alternate forwards infinite ;
+                                // animation-delay: 1s;
+                                 
+                             }
+                             .s7-1{animation-delay: 1.5s;}   
+                             .s7-2{animation-delay: 2s;}
+                             .s7-3{animation-delay: 2.5s;} 
+                             @keyframes sLine{
+                                100%{
+                                    stroke-dashoffset:0 ;
+                                }
+                            }
                          }
                      }
                 }
@@ -481,12 +561,41 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
             &.active .objimg01>img{animation: objAni 1s alternate infinite linear ;}
             &.active .objtext01>h1{animation: abjtAni 2.5s alternate forwards;}
             .svgBox{display: none;}
-            .objtext01{
-                h1{
-                    font-size: 2em;
-                }
+            .objtext01{                
+                h1{font-size: 2em;}
+                p{font-size: 0.8em;}
             }
+        }
 
+        &.page5{
+            .objtext02{ 
+                h1{font-size: 2em;}          
+                p{font-size: 1em;}                  
+            }
+            .imgG{
+                transform: scale(60%);            
+                .imgG01,.imgG02,.imgG03{
+                    transform: translateY(250px);
+                }
+                .imgG02{
+                     .svgWrap{
+                         width: 200px;height: 300px;
+                         position: absolute;top:-45px; left: -20px; 
+                     }
+                 }
+                 .imgG03{
+                    .svgWrap{
+                        width: 200px;height: 300px;
+                        position: absolute;top:-45px; left: -30px; 
+                    }
+                }                
+                .imgG07{
+                    .svgWrap{                     
+                        position: absolute;top:-20px; left: -30px; 
+                    }
+                }
+              
+            }
         }
     }
 }
