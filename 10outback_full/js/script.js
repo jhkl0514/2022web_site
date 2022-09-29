@@ -1,9 +1,9 @@
 $("#fullpage").fullpage({
     menu: ".navTop",
-    anchors: ["m1st", "m2st", "m3st", "m4st", "m5st"],
+    anchors: ["m1st", "m2st", "m3st", "m4st", "m5st", "m6st"],
     navigation: true,
     navigationPosition: "fp-right",
-    navigationTooltips: ["first", "second", "third", "fouth", "five"],
+    navigationTooltips: ["", "", "", "", "",""],
     responsiveWidth: 900,
     afterLoad: function (anchorslink, index) {
         console.log(anchorslink, index);
@@ -11,11 +11,15 @@ $("#fullpage").fullpage({
             $(".navTop").addClass("active");
         } else {
             $(".navTop").removeClass("active");
-        }
+        } 
+
+        
     }
 
 
 })
+
+
 
 $("#oslide2").owlCarousel({
     loop: true,
