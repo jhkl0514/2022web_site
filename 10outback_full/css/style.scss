@@ -62,22 +62,61 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
         li:hover{
             a.active{
                 span{    
-                height: 14px;
-                width: 14px;
-                margin: -6px 0 0 -6px;
-                border-radius: 100%;
-                background: #b82734;
+                height: 18px;
+                width: 18px;
+                margin: -8px 0 0 -8px;  
+                // border-radius: 100%;
+                background: #eee;
+                border: 2px solid #b82734;                
             }}
         }
         li  a.active{
             span{
-            background: #b82734;
+            display: block;
+            background: #b82734; 
+            margin: -11px 0 0 -8px;          
+            height: 16px;
+            width: 16px; 
+            border: 2px solid #DDD;                 
+            position: relative;
+            }          
+            span::before{
+                content:"";
+                position: absolute;
+                display: block;
+                background: #DDD;
+                margin: -5px 0 0 0px;  
+                width: 20px;        
+                height: 20px;
+                opacity:0;                
+                animation: fp-navAni  1s infinite; 
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 50%;
+            }
+            @keyframes fp-navAni {
+               
+                100%{transform:translateX(-50%) scale(1.1);opacity: 1;}
+                
+            }
+            span::after{
+                content:"";
+                position: absolute;
+                display: block;
+                background: #b82734; 
+                margin: -3px 0 0 0px;          
+                height: 16px;
+                width: 16px; 
+                border: 2px solid #eee;     
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 50%;
             }
         }
     }
 }
 
-
+ 
 
 #fp-nav,.fp-slidesNav{ul{li:hover{a{span{
     width: 12px;
