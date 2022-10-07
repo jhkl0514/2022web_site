@@ -38,7 +38,9 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
 }
 
 
-#fp-nav { ul{ li{ a{
+#fp-nav { ul{ li{    
+    height: 30px;
+    a{
     span {
         border-radius: 50%;
         position: absolute;
@@ -58,23 +60,12 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
 }
 
 #fp-nav,.fp-slidesNav {
-      ul{
-        li:hover{
-            a.active{
-                span{    
-                height: 18px;
-                width: 18px;
-                margin: -8px 0 0 -8px;  
-                // border-radius: 100%;
-                background: #eee;
-                border: 2px solid #b82734;                
-            }}
-        }
+      ul{      
         li  a.active{
             span{
             display: block;
             background: #b82734; 
-            margin: -11px 0 0 -8px;          
+            // margin: 0px 0px 0px -6px;         
             height: 16px;
             width: 16px; 
             border: 2px solid #DDD;                 
@@ -85,9 +76,9 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                 position: absolute;
                 display: block;
                 background: #DDD;
-                margin: -5px 0 0 0px;  
-                width: 20px;        
-                height: 20px;
+                margin: -6px 0px 0 0px;  
+                width: 22px;        
+                height: 22px;
                 opacity:0;                
                 animation: fp-navAni  1s infinite; 
                 left: 50%;
@@ -104,9 +95,9 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
                 position: absolute;
                 display: block;
                 background: #b82734; 
-                margin: -3px 0 0 0px;          
-                height: 16px;
-                width: 16px; 
+                margin: -4px 0 0 0px;          
+                height: 17px;
+                width: 17px; 
                 border: 2px solid #eee;     
                 left: 50%;
                 transform: translateX(-50%);
@@ -124,6 +115,10 @@ a:link,a:visited{text-decoration: none; color:$fColor1}
     margin: -5px 0px 0px -5px;
     background: #b82734;
 }} } } } 
+
+#fp-nav.fp-right {
+    right: 40px;
+}
     
 
 
